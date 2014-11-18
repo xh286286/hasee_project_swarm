@@ -1,0 +1,17 @@
+*.obj
+
+*.manifest
+
+*.rc
+
+*.res
+
+*.pdb
+
+*.Debug
+
+*.Release
+
+*.o
+
+*.ilk
