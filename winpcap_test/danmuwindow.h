@@ -5,6 +5,7 @@
 #include <QGraphicsView>
 #include <QList>
 #include <QMap>
+#include <QSet>
 #include <QColor>
 class Danmu;
 

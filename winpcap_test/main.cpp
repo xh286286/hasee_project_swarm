@@ -1,6 +1,10 @@
-﻿#include <QDate>
-
+﻿typedef  unsigned int u_int;
+typedef  unsigned short u_short;
+typedef  unsigned char u_char;
 #include "pcap.h"
+#include <QDate>
+
+
 #include <QString>
 #include <algorithm>
 #include <cassert>
@@ -23,11 +27,11 @@
 #include <QMessageBox>
 using namespace std;
 
-#include "messagecenter.h"
+#include "../share_library/messagecenter.h"
 #include "workerthread.h"
 #include "windowsizesetting.h"
 #include "danmuwindow.h"
-#include "Util.h"
+#include "../share_library/Util.h"
 #include "mymenu.h"
 /* prototype of the packet handler */
 

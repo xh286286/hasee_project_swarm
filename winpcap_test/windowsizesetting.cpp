@@ -1,7 +1,7 @@
 ﻿#include <QJsonObject>
 
 #include "windowsizesetting.h"
-#include "Util.h"
+#include "../share_library/Util.h"
 #include "danmuwindow.h"
 #include <QDebug>
 #include <QCloseEvent>

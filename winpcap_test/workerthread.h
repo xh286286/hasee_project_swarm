@@ -4,6 +4,9 @@
 #include <QThread>
 
 #define HAVE_REMOTE
+typedef  unsigned int u_int;
+typedef  unsigned short u_short;
+typedef  unsigned char u_char;
 #include "pcap.h"
 
 class WorkerThread : public QThread

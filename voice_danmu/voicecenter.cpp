@@ -1,5 +1,5 @@
 ﻿#include "voicecenter.h"
-#include "Util.h"
+#include "../share_library/Util.h"
 #include <QJsonDocument>
 VoiceCenter::VoiceCenter(QWidget *parent) :
     QWidget(parent)

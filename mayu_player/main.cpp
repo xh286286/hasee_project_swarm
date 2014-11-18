@@ -10,12 +10,12 @@
 #include <QDate>
 #include <QDir>
 #include "mydialog.h"
-#include "messagecenter.h"
+#include "../share_library/messagecenter.h"
 #include "player.h"
-#include "httpfiledownloader.h"
+#include "../share_library/httpfiledownloader.h"
 #include "userbank.h"
 #include "CHotKeyEventFilter.hpp"
-#include "Util.h"
+#include "../share_library/Util.h"
 
 #include <cstdlib>
 #include <iostream>

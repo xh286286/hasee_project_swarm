@@ -20,11 +20,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    messagecenter.cpp \
     voicecenter.cpp \
-    Util.cpp
+    ../share_library/messagecenter.cpp \
+    ../share_library/Util.cpp
 
 HEADERS += \
-    messagecenter.h \
     voicecenter.h \
-    Util.h
+    ../share_library/messagecenter.h \
+    ../share_library/Util.h

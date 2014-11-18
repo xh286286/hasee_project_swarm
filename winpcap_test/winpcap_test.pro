@@ -6,40 +6,46 @@
 
 
 
-QT       += core gui
+QT       += core gui network
 QT += widgets
 TARGET = winpcap_test
 
 CONFIG += console
 CONFIG   -= app_bundle
-
+CONFIG += c++11
 TEMPLATE = app
 
-INCLUDEPATH += D:/git_qt/WpdPack_4_1_2/WpdPack/Include
-LIBS += D:/git_qt/WpdPack_4_1_2/WpdPack/Lib/wpcap.lib
-LIBS += D:\git_qt\WpdPack_4_1_2\WpdPack\Lib\ws2_32\WS2_32.Lib
+INCLUDEPATH += D:/weiyun_tongbu/project/WpdPack_4_1_2/WpdPack/Include
+LIBS += D:/weiyun_tongbu/project/WpdPack_4_1_2/WpdPack/Lib/wpcap.lib
+
 SOURCES += main.cpp \
     workerthread.cpp \
     danmuwindow.cpp \
     danmu.cpp \
-    Util.cpp \
     danmustate.cpp \
     windowsizesetting.cpp \
     mymenu.cpp \
-    messagecenter.cpp
+    ../share_library/httpfiledownloader.cpp \
+    ../share_library/messagecenter.cpp \
+    ../share_library/Util.cpp
 
 HEADERS += \
     workerthread.h \
     danmuwindow.h \
     danmu.h \
-    Util.h \
     danmustate.h \
     windowsizesetting.h \
     mymenu.h \
-    messagecenter.h
+    ../share_library/httpfiledownloader.h \
+    ../share_library/messagecenter.h \
+    ../share_library/Util.h
 
 OTHER_FILES += \
-    parse.txt
+    parse.txt \
+    ../share_library/share_library.pro.user
 
 RESOURCES += \
     ziyuan.qrc
+
+SUBDIRS += \
+    ../share_library/share_library.pro

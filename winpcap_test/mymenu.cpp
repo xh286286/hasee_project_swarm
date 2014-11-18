@@ -2,7 +2,7 @@
 #include "mymenu.h"
 #include "workerthread.h"
 #include "danmuwindow.h"
-#include "Util.h"
+#include "../share_library/Util.h"
 MyMenu::MyMenu()
 {
 }

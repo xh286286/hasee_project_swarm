@@ -1,4 +1,4 @@
-﻿#include "messagecenter.h"
+﻿#include "../share_library/messagecenter.h"
 #include "voicecenter.h"
 #include <QApplication>
 #include <QTimer>

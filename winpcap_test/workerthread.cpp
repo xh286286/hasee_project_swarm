@@ -1,4 +1,6 @@
-﻿#include <QString>
+﻿#include <qt_windows.h>
+
+#include <QString>
 #include <algorithm>
 #include <cassert>
 #include <iostream>
@@ -13,7 +15,7 @@
 
 #include "workerthread.h"
 #include "danmuwindow.h"
-#include "Util.h"
+#include "../share_library/Util.h"
 using namespace std;
 bool threadEndFlag;
 QMutex m1;
@@ -88,13 +90,15 @@ bool WorkerThread::stopDetecting()
 //获取本地IP地址
 QString getIp(pcap_if_t *d)
 {
+
+    return "";
     char  revIP[30];
     memset(revIP,	0,	30);
 
     pcap_addr *paddr = d->addresses;
     //paddr->addr->
     sockaddr_in *sin;
-    QString re;
+    QString re;/*
     for(	;paddr;	paddr = paddr->next)
     {
         sin = (struct sockaddr_in *)paddr->addr;
@@ -113,6 +117,7 @@ QString getIp(pcap_if_t *d)
         }
 
     }
+    */
     return re;
 }
 void WorkerThread::stopWork()
@@ -256,8 +261,9 @@ void WorkerThread::work()
     char*  ch;
     QByteArray ba = filter.toLatin1();
     ch=ba.data();
-    cout<<"filter string " << ch<<endl;
-    if (pcap_compile(adhandle, &fcode, ch, 1, netmask) <0 )
+    //cout<<"filter string " << ch<<endl;
+    //if (pcap_compile(adhandle, &fcode, ch, 1, netmask) <0 )
+    if (false)
     {
         fprintf(stderr,"\nUnable to compile the packet filter. Check the syntax.\n");
         /* 释放设备列表 */
@@ -309,7 +315,14 @@ void WorkerThread::work()
         //QString s((const char *) pkt_data);
         //locate the tcp packet
         u_char a[5] = { 'c','m','d','i','d'};
-        int length = min(header->len,200);
+
+        int length;
+        if ( header->len < 200) {
+            length = header->len;
+        }
+        else {
+            length = 200;
+        }
         int tt = search(pkt_data,  pkt_data+ length,a,a+5) - pkt_data;
 
         if (tt == length) continue;
@@ -385,8 +398,14 @@ void packet_handler(u_char *param, const struct pcap_pkthdr *header, const u_cha
     //QString s((const char *) pkt_data);
     //int r= header->len;
     u_char a[5] = { 'c','m','d','i','d'};
-
-    int tt = search(pkt_data, pkt_data+min(header->len,200),a,a+5) - pkt_data;
+    int length;
+    if ( header->len < 200) {
+        length = header->len;
+    }
+    else {
+        length = 200;
+    }
+    int tt = search(pkt_data, pkt_data+ length,a,a+5) - pkt_data;
 
     if (tt == header->len) return;
     u_char b[2] = { '\'', '{'};

@@ -9,7 +9,7 @@
 #include "danmu.h"
 #include "danmustate.h"
 #include "danmuwindow.h"
-#include "Util.h"
+#include "../share_library/Util.h"
 
 Danmu::Danmu(DanmuWindow * p)
 {

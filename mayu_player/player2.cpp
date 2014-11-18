@@ -44,8 +44,8 @@
 #include "playercontrols.h"
 #include "playlistmodel.h"
 #include "histogramwidget.h"
-#include "httpfiledownloader.h"
-#include "Util.h"
+#include "../share_library/httpfiledownloader.h"
+#include "../share_library/Util.h"
 #include "userbank.h"
 #include <QMediaService>
 #include <QMediaPlaylist>

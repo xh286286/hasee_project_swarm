@@ -13,7 +13,7 @@
 
 #include <QTimer>
 
-#include "Util.h"
+#include "../share_library/Util.h"
 #include "danmuwindow.h"
 #include "workerthread.h"
 #include "danmu.h"
