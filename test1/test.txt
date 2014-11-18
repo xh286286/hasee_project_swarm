@@ -1,0 +1,8 @@
+﻿("Server", "Date", "Content-Type", "Connection", "Content-Length", "Last-Modifie
+d", "Expires", "Cache-Control", "Accept-Ranges")
+(QPair("Server","httpserver") ,  QPair("Date","Mon, 03 Nov 2014 05:59:23 GMT") ,
+  QPair("Content-Type","audio/mpeg") ,  QPair("Connection","keep-alive") ,  QPai
+r("Content-Length","3537110") ,  QPair("Last-Modified","Tue, 22 Apr 2014 12:42:1
+5 GMT") ,  QPair("Expires","Mon, 03 Nov 2014 05:59:23 GMT") ,  QPair("Cache-Cont
+rol","max-age=0") ,  QPair("Accept-Ranges","bytes") )
+finished

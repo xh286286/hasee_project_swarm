@@ -1,0 +1,31 @@
+﻿
+
+raw string   "{"cmdid":"Level.Anchor","data":{"fight":"78540","level":11,"name":"獒犬2","nextLevelFight":112000,"nextLevelNeedFight":33460,"rank":"middle","uid":566711}}
+"
+
+raw string   "{"cmdid":"Gift.Use","data":{"action":"","anchorname":"DD  ","classifier":"","count":10,"curexp":"10","desc":"这个锅你背了！","gameId":"0","gid":1788078659,"icon":"http://dlpic.cdn.zhanqi.tv/uploads/2014/09/gifticon-2014091708063214948.png","id":"4","image":"http://dlpic.cdn.zhanqi.tv/uploads/2014/09/giftspic-2014091708065916882.gif","leftexp":20,"level":1,"name":"锅","nextexp":30,"nickname":"Burning_FAN","object":566711,"parser":"common","pid":4,"rank":"primary","roomid":737,"show":"1","status":"1","tid":"2","uid":100016113}}
+"
+
+"
+
+
+raw string   "{"cmdid":"Level.Anchor","data":{"fight":"78579","level":11,"name":"獒犬2","nextLevelFight":112000,"nextLevelNeedFight":33421,"rank":"middle","uid":566711}}
+"
+
+raw string   "{"cmdid":"Gift.Use","data":{"action":"","anchorname":"DD  ","classifier":"","count":38,"curexp":"38","desc":"我顶！~","gameId":"0","gid":1836156999,"icon":"http://dlpic.cdn.zhanqi.tv/uploads/2014/09/gifticon-2014091708055010360.png","id":"3","image":"http://dlpic.cdn.zhanqi.tv/uploads/2014/09/giftspic-2014091708055050897.gif","leftexp":42,"level":2,"name":"顶","nextexp":80,"nickname":"围观大神","object":566711,"parser":"common","pid":3,"rank":"primary","roomid":737,"show":"1","status":"1","tid":"1","uid":142456}}
+"
+
+
+
+"{"cmdid":"Level.Anchor","data":{"fight":"14765","level":7,"name":"土狼1","nextLevelFight":20000,"nextLevelNeedFight":5235,"rank":"primary","uid":623894}}
+"
+
+"{"cmdid":"Gift.Use","data":{"action":"","anchorname":"东东东东","classifier":"","count":1,"curexp":"0","desc":"666666666","gameId":"0","gid":1679348276,"icon":"http://dlpic.cdn.zhanqi.tv/uploads/2014/09/gifticon-2014091708043058166.png","id":"1","image":"http://dlpic.cdn.zhanqi.tv/uploads/2014/09/giftspic-2014091708043003838.gif","leftexp":"10","level":"0","name":"溜","nextexp":"10","nickname":"永远的WE丶","object":623894,"parser":"common","pid":1,"rank":"primary","roomid":801,"show":"1","status":"1","tid":"3","uid":"100198580"}}
+"
+
+
+
+"{"cmdid":"Level.Anchor","data":{"fight":"80045","level":11,"name":"獒犬2","nextLevelFight":112000,"nextLevelNeedFight":31955,"rank":"middle","uid":566711}}
+"
+
+"{"cmdid":"Gift.Use","data":{"action":"点了","anchorname":"DD  ","classifier":"碗","count":1,"curexp":"256","desc":"吃了这一碗，还有下一碗。","gameId":"0","gid":1695167946,"icon":"http://dlpic.cdn.zhanqi.tv/uploads/2014/09/gifticon-2014091708051426948.png","id":"2","image":"http://dlpic.cdn.zhanqi.tv/uploads/2014/09/giftspic-2014091708051487492.gif","leftexp":124,"level":4,"name":"麻辣烫","nextexp":380,"nickname":"zhiqu","object":566711,"parser":"x`x`common","pid":2,"rank":"primary","roomid":737,"show":"1""
