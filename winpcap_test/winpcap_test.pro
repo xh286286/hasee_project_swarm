@@ -27,7 +27,9 @@ SOURCES += main.cpp \
     mymenu.cpp \
     ../share_library/httpfiledownloader.cpp \
     ../share_library/messagecenter.cpp \
-    ../share_library/Util.cpp
+    ../share_library/Util.cpp \
+    ../tcp_socket_test/danmuconnection.cpp \
+    ../share_library/zhanqiutil.cpp
 
 HEADERS += \
     workerthread.h \
@@ -38,7 +40,9 @@ HEADERS += \
     mymenu.h \
     ../share_library/httpfiledownloader.h \
     ../share_library/messagecenter.h \
-    ../share_library/Util.h
+    ../share_library/Util.h \
+    ../tcp_socket_test/danmuconnection.h \
+    ../share_library/zhanqiutil.h
 
 OTHER_FILES += \
     parse.txt \

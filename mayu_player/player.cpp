@@ -98,9 +98,9 @@ Player::Player(QWidget *parent)
     connect(player, SIGNAL(error(QMediaPlayer::Error)), this, SLOT(displayErrorMessage()));
 
 //! [2]
-    videoWidget = new VideoWidget(this);
-    player->setVideoOutput(videoWidget);
-    videoWidget->hide();
+//    videoWidget = new VideoWidget(this);
+//    player->setVideoOutput(videoWidget);
+//    videoWidget->hide();
 
     playlistModel1 = new PlaylistModel(this);
     playlistModel1->setPlaylist(playlist1);
@@ -163,7 +163,7 @@ Player::Player(QWidget *parent)
     connect(controls, SIGNAL(changeMuting(bool)), player, SLOT(setMuted(bool)));
     connect(controls, SIGNAL(changeRate(qreal)), player, SLOT(setPlaybackRate(qreal)));
 
-    connect(controls, SIGNAL(stop()), videoWidget, SLOT(update()));
+   // connect(controls, SIGNAL(stop()), videoWidget, SLOT(update()));
 
     connect(controls, SIGNAL(next()), this, SLOT(playNextSong()));
 
@@ -385,11 +385,14 @@ void Player::stateChanged(QMediaPlayer::State state)
         break;
     }
 }
+void Player::resumeMute() {
+    player->setMuted(false);
+}
 
 void Player::statusChanged(QMediaPlayer::MediaStatus status)
 {
     handleCursor(status);
-
+    qDebug()<<status;
     // handle status message
     bool loadingFlag = false;
 
@@ -400,6 +403,8 @@ void Player::statusChanged(QMediaPlayer::MediaStatus status)
     case QMediaPlayer::BufferingMedia:
     case QMediaPlayer::BufferedMedia:
         setStatusInfo(QString());
+        player->setMuted(true);
+        QTimer::singleShot(200,this,SLOT(resumeMute()));
         break;
     case QMediaPlayer::LoadingMedia:
         setStatusInfo(tr("Loading..."));
@@ -443,9 +448,9 @@ void Player::bufferingProgress(int progress)
 
 void Player::videoAvailableChanged(bool available)
 {
+    return;
     if (!available) {
-        disconnect(acceptOrderButton, SIGNAL(clicked(bool)),
-                    videoWidget, SLOT(setFullScreen(bool)));
+        disconnect(acceptOrderButton, SIGNAL(clicked(bool)), videoWidget, SLOT(setFullScreen(bool)));
         disconnect(videoWidget, SIGNAL(fullScreenChanged(bool)),
                 acceptOrderButton, SLOT(setChecked(bool)));
         videoWidget->setFullScreen(false);
@@ -505,6 +510,7 @@ void Player::updateDurationInfo(qint64 currentInfo)
 #ifndef PLAYER_NO_COLOROPTIONS
 void Player::showColorDialog()
 {
+    return;
     if (!colorDialog) {
         QSlider *brightnessSlider = new QSlider(Qt::Horizontal);
         brightnessSlider->setRange(-100, 100);

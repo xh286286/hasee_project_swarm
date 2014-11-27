@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_DanmuWindow_t {
-    QByteArrayData data[7];
-    char stringdata[70];
+    QByteArrayData data[10];
+    char stringdata[110];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,11 +34,15 @@ QT_MOC_LITERAL(1, 12, 14),
 QT_MOC_LITERAL(2, 27, 0),
 QT_MOC_LITERAL(3, 28, 1),
 QT_MOC_LITERAL(4, 30, 10),
-QT_MOC_LITERAL(5, 41, 16),
-QT_MOC_LITERAL(6, 58, 11)
+QT_MOC_LITERAL(5, 41, 11),
+QT_MOC_LITERAL(6, 53, 16),
+QT_MOC_LITERAL(7, 70, 11),
+QT_MOC_LITERAL(8, 82, 11),
+QT_MOC_LITERAL(9, 94, 15)
     },
     "DanmuWindow\0broadcastDanmu\0\0s\0getMessage\0"
-    "addOneDebugInfor\0updateLater"
+    "getMessage2\0addOneDebugInfor\0updateLater\0"
+    "hideandshow\0postDanmuMessge"
 };
 #undef QT_MOC_LITERAL
 
@@ -48,7 +52,7 @@ static const uint qt_meta_data_DanmuWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -56,20 +60,26 @@ static const uint qt_meta_data_DanmuWindow[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   34,    2, 0x06 /* Public */,
+       1,    1,   49,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       4,    0,   37,    2, 0x0a /* Public */,
-       5,    1,   38,    2, 0x0a /* Public */,
-       6,    0,   41,    2, 0x0a /* Public */,
+       4,    0,   52,    2, 0x0a /* Public */,
+       5,    0,   53,    2, 0x0a /* Public */,
+       6,    1,   54,    2, 0x0a /* Public */,
+       7,    0,   57,    2, 0x0a /* Public */,
+       8,    0,   58,    2, 0x0a /* Public */,
+       9,    1,   59,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    3,
 
  // slots: parameters
     QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void, QMetaType::QString,    3,
     QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    3,
 
        0        // eod
 };
@@ -81,8 +91,11 @@ void DanmuWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         switch (_id) {
         case 0: _t->broadcastDanmu((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 1: _t->getMessage(); break;
-        case 2: _t->addOneDebugInfor((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 3: _t->updateLater(); break;
+        case 2: _t->getMessage2(); break;
+        case 3: _t->addOneDebugInfor((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 4: _t->updateLater(); break;
+        case 5: _t->hideandshow(); break;
+        case 6: _t->postDanmuMessge((*reinterpret_cast< QString(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -122,13 +135,13 @@ int DanmuWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 7)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 4;
+        _id -= 7;
     }
     return _id;
 }

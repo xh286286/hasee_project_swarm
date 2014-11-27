@@ -18,9 +18,11 @@ TEMPLATE = app
 SOURCES += main.cpp \
     httpfiledownloader.cpp \
     messagecenter.cpp \
-    Util.cpp
+    Util.cpp \
+    zhanqiutil.cpp
 
 HEADERS += \
     httpfiledownloader.h \
     messagecenter.h \
-    Util.h
+    Util.h \
+    zhanqiutil.h

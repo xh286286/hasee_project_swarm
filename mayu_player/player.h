@@ -87,7 +87,7 @@ public slots:
 protected:
     void	closeEvent(QCloseEvent * event);
 private slots:
-
+    void resumeMute();
     void setPlayInfo();
     void refreshOrderList();
     void addHintInfo(QString s);
@@ -159,7 +159,7 @@ private:
     QString netAuthor, netTitle;
     qint64 duration;
 
-    QTimer loadingTimer;
+    QTimer loadingTimer ;
 
     bool continuePlayFlag;
     bool manualChangeSongFlag;

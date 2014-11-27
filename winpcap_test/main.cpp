@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
     DanmuWindow danmu_win;
 
     QObject::connect(&danmu_win, &DanmuWindow::broadcastDanmu, &mc, &MessageCenter::broadcast);
-
+    QObject::connect( &mc, &MessageCenter::sendMessage, &danmu_win, &DanmuWindow::postDanmuMessge);
     WindowSizeSetting sizeSetting_win(0,& danmu_win);
     sizeSetting_win.hide();
 
@@ -86,10 +86,11 @@ int main(int argc, char *argv[])
 
     MyMenu myMenu;
     myMenu.addAction(myTr("欢迎使用麻由的弹幕小助手"), &myMenu, SLOT(about()) );
+    myMenu.addAction(myTr("QQ群 310439712"), &myMenu, SLOT(about()) );
     myMenu.addAction(myTr("设置弹幕显示区域"), &sizeSetting_win, SLOT(show()) );
-    myMenu.addAction(myTr("找回弹幕显示"), &myMenu, SLOT(hideAndShow()) );
-    myMenu.addAction(myTr("重启弹幕"), &myMenu, SLOT(startDectecting()) );
-    myMenu.addAction(myTr("停止弹幕"), &myMenu, SLOT(stopDectecting()) );
+    //myMenu.addAction(myTr("找回弹幕显示"), &myMenu, SLOT(hideAndShow()) );
+    myMenu.addAction(myTr("重启监测模块"), &myMenu, SLOT(startDectecting()) );
+    myMenu.addAction(myTr("停止监测模块"), &myMenu, SLOT(stopDectecting()) );
     myMenu.addAction(myTr("退出"), &myMenu, SLOT(endProgram()) );
     //myMenu.hide();
 
@@ -106,7 +107,7 @@ int main(int argc, char *argv[])
 
         t.start(10000);
         QObject::connect(&t, &QTimer::timeout, [&]() {
-             qDebug()<<"test";
+            //qDebug()<<"test";
             QDate d = QDate::currentDate();
             if (d.month()!=3) {
                 t.stop();;

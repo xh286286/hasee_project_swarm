@@ -23,10 +23,30 @@ int get16_2(const char * s) {
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-#if 1
+#if 0
     DanmuConnection dc;
-    dc.login("aabbdaabbd","aabbcaabbc", "113289","317");
+    dc.debugFlag = true;
+    dc.login("mayumayu","yumayuma", "113289","317");
+    QTime t;
+    t.start();
+    while(true) {
+        bool a;
+        if (t.elapsed() >5000)  {
+            a = dc.postDanmu("测试自动发言");
 
+          if (a) break;
+        }
+        QCoreApplication::processEvents();
+    }
+    return a.exec();
+#else
+
+    DanmuConnection dc;
+    dc.debugFlag = true;
+    dc.login("aabbeaabbe","aabbdaabbd", "113289","317");
+    DanmuConnection dc1;
+
+    dc1.login("aabbeaabbe","aabbdaabbd", "113289","317");
     return a.exec();
 #endif
     QTcpSocket ts;

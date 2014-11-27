@@ -141,7 +141,7 @@ bool HttpFileDownloader::getFileFromURL(const QUrl &url, const QString &filePath
     okflag = false;
     this->timeout = timeout;
     _timeOut->stop();
-   // _timeOut->start(timeout);
+    _timeOut->start(timeout);
     /* confirm the url is valid or not */
     if (!url.isValid())
     {
@@ -167,6 +167,7 @@ bool HttpFileDownloader::getFileFromURL(const QUrl &url, const QString &filePath
         return false;
     }
     _file.close();
+
     _file.setFileName(filePath);
     if (!_file.open(QIODevice::WriteOnly))
     {
@@ -233,12 +234,13 @@ void HttpFileDownloader::replyFinished(QNetworkReply* reply) /* download finishe
         _file.waitForBytesWritten(10000);/* wait 10s for write to file complete, can comment this */
         if (0 == _file.size())
         {
-           // qDebug()<<"Nothing be downloaded.";
+           //  qDebug()<<"Nothing be downloaded.";
         }
         else
         {
             /* add our updateUI code here... */
           //  qDebug()<<"finished";
+           // qDebug()<<dataLength;
         }
 
         _file.close();
@@ -303,7 +305,7 @@ void HttpFileDownloader::slotReadyRead() /* if this is not been fired for 30s, w
 void HttpFileDownloader::slotError(QNetworkReply::NetworkError errorCode) /* handle error */
 {
     _errno = errorCode;
-  //  qDebug()<<"error:"<<errorCode;
+     qDebug()<<"error:"<<errorCode;
     setErrorMessage(QString("Error:NetworkError code:%1").arg(errorCode));
     if (_file.isOpen())
     {

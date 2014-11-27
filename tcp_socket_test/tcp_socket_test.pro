@@ -21,11 +21,15 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     danmuconnection.cpp \
-    httpfiledownloader.cpp
+    ../share_library/httpfiledownloader.cpp \
+    ../share_library/zhanqiutil.cpp \
+    ../share_library/Util.cpp
 
 HEADERS += \
     danmuconnection.h \
-    httpfiledownloader.h
+    ../share_library/httpfiledownloader.h \
+    ../share_library/zhanqiutil.h \
+    ../share_library/Util.h
 
 OTHER_FILES += \
     connect.txt

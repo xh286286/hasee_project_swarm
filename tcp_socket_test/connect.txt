@@ -33,3 +33,17 @@ CC BB 00 00 00 00 68 00 00 00 10 27 7B 22 63 6D 64 69 64 22 3A 22 4C 65 76 65 6C
 CC BB 00 00 00 00 4A 00 00 00 10 27 7B 22 63 6D 64 69 64 22 3A 22 6E 6F 74 65 66 61 6E 73 6C 65 76 65 6C 22 2C 22 64 61 74 61 22 3A 7B 22 66 61 6E 73 6C 65 76 65 6C 22 3A 31 31 2C 22 66 61 6E 73 6E 61 6D 65 22 3A 22 E5 A4 A9 E8 9D 8E 31 30 30 30 22 7D 7D 0A
 Ì»....J....'{"cmdid":"notefanslevel","data":{"fanslevel":11,"fansname":"å¤©è1000"}}.
 
+
+
+QJsonObject({"cmdid":"chatmessage","content":"测试2","level":15,"showmedal":1,"s
+peakinroom":1,"style":null,"toid":0,"usexuanzi":0})
+
+
+330   QJsonDocument({"chatid":"10665214585","cmdid":"chatmessage","content":"你
+还玩吗","fromid":1855428059,"fromname":"进击のsaber酱","fromuid":299998,"intotal
+list":0,"inweeklist":0,"ip":"183.152.153.201","level":4,"permission":10,"rank":"
+primary","showmedal":1,"speakinroom":1,"style":null,"time":"22:34","toid":0,"use
+xuanzi":0})
+
+128   QJsonObject({"action":1,"blockname":"苏洋","blockuid":100504384,"cmdid":"b
+lockusernotify","operatename":"管理员","type":1})

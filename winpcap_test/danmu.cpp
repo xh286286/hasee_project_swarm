@@ -84,7 +84,7 @@ void Danmu::init()
 
     }
 
-    animation.push_back(new DanmuState(r1,a1, pWin->c_outTime));
+    animation.push_back(new DanmuState(r,a1, pWin->c_outTime));
 
     if (chatFlag) {
         displayString = "["+name + "]  :  " + content;
@@ -101,7 +101,7 @@ void Danmu::init()
 void Danmu::paint(QPainter & painter) {
     qint64 passT = pWin->paintingTime - lastCheckTime;
     lastCheckTime = pWin->paintingTime;
-
+   //qDebug()<<animation.size();
     while (animation.front()->leftLife < passT) {
         originState = *(animation.front());
         passT -= animation.front()->leftLife;
@@ -150,6 +150,7 @@ int Danmu::level()
     if (gift==myTr("溜")) return 3;
     if (gift==myTr("麻辣烫")) return 3*60;
     if (gift==myTr("超人内裤")) return 3*660;
+    if (gift==myTr("女盆友")) return 3*660;
     if (gift==myTr("大宝剑")) return 3*20000;
     if (gift==myTr("")) return 1;
     if (gift==myTr("")) return 1;

@@ -17,6 +17,8 @@ protected:
 public slots:
     void broadcast(QString s);
     bool addOutput(QString title);
+    bool addInput(QString title);
+    bool addPartner(QString title);
     bool registerHotkey(UINT,UINT);
     bool unregisterHotkey();
 private:

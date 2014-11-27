@@ -39,6 +39,7 @@ DanmuWindow::DanmuWindow(QWidget *parent) :
     QTimer * timer=new QTimer;
     timer->setSingleShot(false);
     connect(timer,SIGNAL(timeout()),this,SLOT(getMessage()));
+    connect(timer,SIGNAL(timeout()),this,SLOT(getMessage2()));
     timer->start(100);
 
     test ="console text";
@@ -50,8 +51,10 @@ DanmuWindow::DanmuWindow(QWidget *parent) :
     c_rectHeight = 30;
     c_flowerChannel = 6;
 
+    c_moveChangeFlag = true;
+
     c_inTime = 300;
-    c_lastTime = 10000;
+    c_lastTime = 12000;
     c_flowerLastTime = 1000;
     c_outTime = 300;
 
@@ -59,13 +62,57 @@ DanmuWindow::DanmuWindow(QWidget *parent) :
     c_backRectColor = QColor(Qt::gray);
 
 
+    danmuConnectionPool.push_back( new DanmuConnection);
+    danmuConnectionPool[0]->login("mayumayu","yumayuma", "113289","317");
+
+    danmuConnectionPool.push_back( new DanmuConnection);
+    danmuConnectionPool[1]->login("","", "113289","317");
+
+    danmuConnectionPool[0]->debugFlag = true;
+
+    autohideandshowTimer.start(10000);
+    QObject::connect(&autohideandshowTimer, &QTimer::timeout, this, &DanmuWindow::hideandshow);
+}
+
+bool DanmuWindow::checkDuplicated(QString a) {
+
+    if ( historySet.contains(a)) {
+
+        return false;
+    }
+    else {
+        historySet.insert(a);
+        historyList.push_back(a);
+
+        if (historyList.size()>3000) {
+            historySet.remove(historyList.front());
+            historyList.pop_front();
+        }
+
+        return true;
+    }
+
+}
+void DanmuWindow::hideandshow() {
+    hide();
+    show();
+}
+void DanmuWindow::postDanmuMessge(QString s) {
+    danmuConnectionPool[0]->postDanmu(s);
 }
 
 void DanmuWindow::dealOneMessage(QJsonObject a)
 {
+
+
     QString cmdid = a["cmdid"].toString();
 
     if (cmdid == "chatmessage") {
+        if (danmuPool.size()==0){
+            hideandshow();
+        }
+
+        if (!checkDuplicated(a["chatid"].toString() + "chatid" )) return;
         QString s = a["content"].toString();
         //&quot;&apos;&amp;
         s.replace("&quot;","\"");
@@ -91,6 +138,9 @@ void DanmuWindow::dealOneMessage(QJsonObject a)
         //qDebug()<<myTr("御园麻由mayu").toUtf8().toPercentEncoding()<<endl;
         //"/alyssasearrs"
         if (b["url"].toString() !="/mayu") return;
+
+        if (!checkDuplicated(b["curexp"].toString() + "curexp" )) return;
+
         addOnePresent(b["gid"].toInt(), b["count"].toInt(), b["nickname"].toString(), b["name"].toString());
     }
     else {
@@ -100,21 +150,10 @@ void DanmuWindow::dealOneMessage(QJsonObject a)
 
 void DanmuWindow::messageDecode(QString s)
 {
-    if ( historySet.contains(s)) {
-        return;
-    }
-    else {
-        historySet.insert(s);
-        historyList.push_back(s);
 
-        if (historyList.size()>2000) {
-            historySet.remove(historyList.front());
-            historyList.pop_front();
-        }
-    }
 
     QJsonObject a = QJsonDocument::fromJson(s.toUtf8()).object();
-    qDebug()<<a;
+    //qDebug()<<a;
     QString cmdid = a["cmdid"].toString();
     if (cmdid!="") {
         dealOneMessage(a);
@@ -122,21 +161,28 @@ void DanmuWindow::messageDecode(QString s)
         emit broadcastDanmu(s);
     }
     else {
-        qDebug()<<s;
+        //qDebug()<<s;
     }
+
+}
+void DanmuWindow::getMessage2() {
+    auto a = danmuConnectionPool[0]->getALLMess();
+
+    for (int i=0; i<a.size(); i++) {
+        dealOneMessage (a[i]);
+    }
+
 
 }
 
 
 void DanmuWindow::getMessage()
 {
+
     static int count = 0;
     count++;
     if (count == 19) {
-        if (danmuPool.size()==0){
-            //hide();
-           // show();
-        }
+
 
          count = 0;
     }
@@ -156,7 +202,8 @@ void DanmuWindow::getMessage()
         if (now - lastTime > 60000 ) {
             lastTime = now + 10000;
             addOneDebugInfor(myTr("长时间未检测到战旗通讯"));
-            WorkerThread::startDetecting();
+            addOneDebugInfor(myTr("如有需要，请手动重启监测模块"));
+            //WorkerThread::startDetecting();
         }
         return;
     }
@@ -213,7 +260,11 @@ void DanmuWindow::addOneMessage(QString chatid, QString name, QString content)
 //    QMap<int, Danmu* > mIntDanmu;
     int count = 0;
     for (int i=0; i<danmuPool.size(); i++) {
-        if (danmuPool[i]->chatid == chatid) return;
+        if (danmuPool[i]->chatid == chatid) {
+            qDebug()<<"impossible";
+            assert(false);
+            return;
+        }
         if (danmuPool[i]->chatFlag) count++;
     }
     Danmu * d = new Danmu(this);
@@ -252,6 +303,9 @@ void DanmuWindow::addOnePresent(int gid, int count, QString uname, QString gname
     for (int i=0; i<danmuPool.size(); i++) {
         if (danmuPool[i]->presentFlag == false) continue;
         if (danmuPool[i]->name == uname) {
+            if (danmuPool[i]->gift == gname) {
+                count+= danmuPool[i]->inc;
+            }
             danmuPool[i]->gift = gname;
             danmuPool[i]->refresh(count);
             //flowerRank[name] += inc;
@@ -275,7 +329,7 @@ void DanmuWindow::addOnePresent(int gid, int count, QString uname, QString gname
     }
 
     d->channel = nowFlowerChannel;
-    bool display;
+    bool display = true;
     for (int x =0; x<c_flowerChannel; x++, d->channel++) {
         if (d->channel == c_flowerChannel) d->channel = 0;
         display = true;

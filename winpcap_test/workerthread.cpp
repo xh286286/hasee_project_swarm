@@ -98,26 +98,29 @@ QString getIp(pcap_if_t *d)
     pcap_addr *paddr = d->addresses;
     //paddr->addr->
     sockaddr_in *sin;
-    QString re;/*
+
+    QString re;
+    int x;
     for(	;paddr;	paddr = paddr->next)
     {
         sin = (struct sockaddr_in *)paddr->addr;
         switch(sin->sin_family){
         case	AF_INET:
             printf("IPV4 ");
-            strcpy(revIP,	inet_ntoa(sin->sin_addr));
+            //strcpy(revIP,	inet_ntoa(sin->sin_addr));
             re = QString(revIP);
             printf(" address : %s  %d\n",	revIP, sin->sin_addr);
+
             break;
         case	AF_INET6:
             printf("IPV6 ");
-            strcpy(revIP,	inet_ntoa(sin->sin_addr));
+            //strcpy(revIP,	inet_ntoa(sin->sin_addr));
             printf(" address : %s  %d\n",	revIP, sin->sin_addr);
             break;
         }
 
     }
-    */
+
     return re;
 }
 void WorkerThread::stopWork()

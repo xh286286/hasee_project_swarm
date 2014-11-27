@@ -6,6 +6,7 @@
 #include <QJsonArray>
 #include <QJsonObject>
 #include <QList>
+#include <QMap>
 class VoiceCenter : public QWidget
 {
     Q_OBJECT
@@ -19,9 +20,14 @@ public slots:
     void getDanmu(QString);
     void playNextVoice();
 private:
+
+
     QMediaPlayer * player;
     QList<QJsonObject> danmuPool;
     bool continuePlayFlag;
+    QMap<int, int>  voiceCD;
+    QMap<QString, QString> langMap;
+    int state;
 };
 
 #endif // VOICECENTER_H

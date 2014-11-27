@@ -7,6 +7,8 @@
 #include <QMap>
 #include <QSet>
 #include <QColor>
+
+#include "../tcp_socket_test/danmuconnection.h"
 class Danmu;
 
 class DanmuWindow : public QWidget
@@ -40,11 +42,15 @@ signals:
     void broadcastDanmu(QString s);
 public slots:
     void getMessage();
-
+    void getMessage2();
     void addOneDebugInfor(QString s);
 
     void updateLater();
 
+    void hideandshow();
+
+
+    void postDanmuMessge(QString s);
 protected:
     void paintEvent(QPaintEvent *);
     void resizeEvent(QResizeEvent *);
@@ -57,9 +63,15 @@ protected:
 
     void clearDead();
 
+    bool checkDuplicated(QString s);
+
+
+
     int nowChatChannel;
     int nowFlowerChannel;
     int totalChannel;
+
+    QTimer autohideandshowTimer;
 
     QString test;
     QList<Danmu *> danmuPool;
@@ -68,9 +80,10 @@ protected:
 
     Qt::WindowFlags flags;
 
-    QList<QString> historyList;
+    QList< QString > historyList;
     QSet<QString> historySet;
 
+    QList< DanmuConnection *> danmuConnectionPool;
 };
 
 #endif // DANMUWINDOW_H

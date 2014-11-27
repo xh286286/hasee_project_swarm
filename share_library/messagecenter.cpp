@@ -27,7 +27,7 @@ bool MessageCenter::registerTitle(QString title)
     return true;
 }
 
-bool  MessageCenter::nativeEvent(const QByteArray & eventType, void * message, long * result)
+bool  MessageCenter::nativeEvent(const QByteArray & , void * message, long *  )
 {
     //qDebug()<<eventType;
     MSG* m = (MSG*) message;
@@ -43,31 +43,8 @@ bool  MessageCenter::nativeEvent(const QByteArray & eventType, void * message, l
         if (s.indexOf("[req]")==0) {
             QString title;
             title = s.mid(5);
+            addInput(title);
 
-            QByteArray a = title.toLatin1();
-
-            WCHAR wszClassName[1256];
-            memset(wszClassName,0,sizeof(wszClassName));
-            MultiByteToWideChar(CP_ACP,0,a.data() ,strlen(a.data())+1,wszClassName,
-            sizeof(wszClassName)/sizeof(wszClassName[0]));
-
-            HWND hWnd = ::FindWindowW(NULL, wszClassName);
-            if (hWnd == NULL)  return false;
-            else {
-                bool dup = false;
-                for (int i=0; i<targetPool.size(); i++) {
-                    if (hWnd == targetPool[i]) {
-                        dup = true;
-                        break;
-                    }
-                }
-                if (dup) {
-                //    qDebug()<< " duplicate connection with WinMessage";
-                    return false;
-                }
-                qDebug()<<" add listener "<<title;
-                targetPool.push_back(hWnd);
-            }
         }
         else if (s.indexOf("[brc]") ==0) {
             QString s1;
@@ -102,12 +79,46 @@ void MessageCenter::broadcast(QString s) {
         cpd.cbData = ba.length()+1;
         cpd.lpData = ba.data();
         //qDebug()<< ba.data();
-        bool ok = ::SendMessageW(hWnd, WM_COPYDATA, NULL, (LPARAM)&cpd);
+          ::SendMessageW(hWnd, WM_COPYDATA, NULL, (LPARAM)&cpd);
         if (true) newList.push_back(hWnd);
     }
     targetPool = newList;
 }
 
+
+bool MessageCenter::addPartner(QString title) {
+    bool a , b;
+    a = addInput(title);
+    b = addOutput(title);
+    return a&&b;
+}
+bool MessageCenter::addInput(QString title) {
+    QByteArray a = title.toLatin1();
+
+    WCHAR wszClassName[1256];
+    memset(wszClassName,0,sizeof(wszClassName));
+    MultiByteToWideChar(CP_ACP,0,a.data() ,strlen(a.data())+1,wszClassName,
+    sizeof(wszClassName)/sizeof(wszClassName[0]));
+
+    HWND hWnd = ::FindWindowW(NULL, wszClassName);
+    if (hWnd == NULL)  return false;
+    else {
+        bool dup = false;
+        for (int i=0; i<targetPool.size(); i++) {
+            if (hWnd == targetPool[i]) {
+                dup = true;
+                break;
+            }
+        }
+        if (dup) {
+        //    qDebug()<< " duplicate connection with WinMessage";
+            return false;
+        }
+        qDebug()<<" add listener "<<title;
+        targetPool.push_back(hWnd);
+    }
+    return true;
+}
 bool MessageCenter::addOutput(QString title) {
     QByteArray a = title.toLatin1();
 

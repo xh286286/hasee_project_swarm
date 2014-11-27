@@ -18,7 +18,7 @@ int UserBank::evaluateGift(QString u)
     if (u == myTr("锅")) return 1;
     if (u == myTr("溜")) return 1;
     if (u == myTr("麻辣烫")) return 60;
-    if (u == myTr("超人内裤")) return 660;
+    if (u == myTr("女盆友")) return 660;
     if (u == myTr("大宝剑")) return 6660;
     if (u == myTr("")) return 0;
     return 0;
@@ -59,7 +59,7 @@ bool UserBank::load()
         QJsonObject b = a[i].toObject();
         record[b["name"].toString()] = b["money"].toInt();
     }
-    //record[myTr("天蝎1000")] = 10000000;
+    record[myTr("天蝎1000")] = 10000000;
     record[myTr("天蝎10000")] = 10000000;
     return true;
 }

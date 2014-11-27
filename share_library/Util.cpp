@@ -63,3 +63,30 @@ QString myTr(const char * s)
 {
     return getCodec()->toUnicode(s);
 }
+QByteArray consoleTr(QString s) {
+    QByteArray ba;
+
+    static QTextCodec *codec1 = QTextCodec::codecForName("GBK");
+    static QTextCodec *codec2 = QTextCodec::codecForName("GB18030");
+    static QTextCodec *codec3 = QTextCodec::codecForName("GB2312");
+    if (codec1) {
+        ba   = codec1->fromUnicode(s);
+
+    }
+    else if (codec2) {
+        ba   = codec2->fromUnicode(s);
+
+    }
+    else if (codec3) {
+        ba   = codec2->fromUnicode(s);
+
+    }
+    else {
+        ba = s.toUtf8();
+    }
+
+    return ba;
+}
+void debugToConsole(QString s) {
+    qDebug()<< consoleTr(s);
+}
