@@ -112,7 +112,7 @@ bool MessageCenter::addInput(QString title) {
         }
         if (dup) {
         //    qDebug()<< " duplicate connection with WinMessage";
-            return false;
+            return true;
         }
         qDebug()<<" add listener "<<title;
         targetPool.push_back(hWnd);

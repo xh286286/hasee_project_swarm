@@ -47,8 +47,10 @@ int CHotKeyEventFilter::RegisterHotKeys(void)
             qDebug() << "HotKey registered success!" << " mOwnId is " << mOwnId;
             return 0;
         }
-    else
-        qDebug() << "HotKey registered failed!";
+        else{
+            //    qDebug() << "HotKey registered failed!";
+        }
+
     return -1;
 }
 

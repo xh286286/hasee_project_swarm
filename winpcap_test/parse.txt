@@ -29,3 +29,11 @@ raw string   "{"cmdid":"Gift.Use","data":{"action":"","anchorname":"DD  ","class
 "
 
 "{"cmdid":"Gift.Use","data":{"action":"点了","anchorname":"DD  ","classifier":"碗","count":1,"curexp":"256","desc":"吃了这一碗，还有下一碗。","gameId":"0","gid":1695167946,"icon":"http://dlpic.cdn.zhanqi.tv/uploads/2014/09/gifticon-2014091708051426948.png","id":"2","image":"http://dlpic.cdn.zhanqi.tv/uploads/2014/09/giftspic-2014091708051487492.gif","leftexp":124,"level":4,"name":"麻辣烫","nextexp":380,"nickname":"zhiqu","object":566711,"parser":"x`x`common","pid":2,"rank":"primary","roomid":737,"show":"1""
+
+
+QJsonObject({"action":1,"cmdid":"blockuser","ip":"111.8.57.138","msg":"111","nam
+e":"九千万亿电竞女神","type":1,"uid":100305463})
+
+
+QJsonObject({"action":0,"cmdid":"blockuser","hash":"hash_0","ip":"111.8.57.138",
+"name":"九千万亿电竞女神","type":1,"uid":100305463})

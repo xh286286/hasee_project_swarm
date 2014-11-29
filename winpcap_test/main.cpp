@@ -33,6 +33,8 @@ using namespace std;
 #include "danmuwindow.h"
 #include "../share_library/Util.h"
 #include "mymenu.h"
+#include "autothankgift.h"
+
 /* prototype of the packet handler */
 
 int main(int argc, char *argv[])
@@ -40,7 +42,7 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
 
-
+    AutoThankGift  atg;
     MessageCenter mc;
 
     if (mc.registerTitle("mayu danmu")) {
@@ -65,6 +67,10 @@ int main(int argc, char *argv[])
 
     QObject::connect(&danmu_win, &DanmuWindow::broadcastDanmu, &mc, &MessageCenter::broadcast);
     QObject::connect( &mc, &MessageCenter::sendMessage, &danmu_win, &DanmuWindow::postDanmuMessge);
+
+    QObject::connect(&danmu_win, &DanmuWindow::informGift,  &atg, &AutoThankGift::dealPresent);
+    QObject::connect(&atg, &AutoThankGift::postThankMessage,  &danmu_win, &DanmuWindow::postDanmuMessge  );
+
     WindowSizeSetting sizeSetting_win(0,& danmu_win);
     sizeSetting_win.hide();
 

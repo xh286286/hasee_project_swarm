@@ -57,18 +57,19 @@ int main(int argc, char *argv[])
     CHotKeyEventFilter hk(mc.winId());
     app.installNativeEventFilter(&hk);
 
+    QTimer t1;
 
 
     if (mc.registerTitle("mayu player")) {
-        if (mc.addOutput("mayu danmu") ) {
-
-        }
-        else {
-
-            //QMessageBox::warning(0, "warning",  "Danmu assistant is not running!"   );
-            qDebug()<<"Danmu assistant is not running!"  ;
-           // return 0;
-        }
+        QObject::connect(&t1, &QTimer::timeout, [&]() {
+            if (mc.addPartner("mayu danmu") ) {
+            }
+            else {
+                qDebug()<<"Danmu assistant is not running!"  ;
+            }
+            t1.start(40000);
+        });
+        t1.start(1000);
     }
     else {
         QMessageBox::critical(0, "error",  "The media player was running!"   );
@@ -95,7 +96,7 @@ int main(int argc, char *argv[])
     player.loadMusicListFileNames();
 
     QObject::connect(&mc, &MessageCenter::sendMessage, &player, &Player::getDanmu);
-
+    QObject::connect(&player, &Player::informUser,   &mc, &MessageCenter::broadcast );
 #if defined(Q_WS_SIMULATOR)
     player.setAttribute(Qt::WA_LockLandscapeOrientation);
     player.showMaximized();
@@ -107,6 +108,11 @@ int main(int argc, char *argv[])
 
         t.start(10000);
         QObject::connect(&t, &QTimer::timeout, [&]() {
+            static bool init = false;
+            if (!init) {
+                init = true;
+                mc.broadcast(myTr("麻由的点歌助手上线"));
+            }
             //qDebug()<<"test";
             QDate d = QDate::currentDate();
             if (d.month()!=3) {

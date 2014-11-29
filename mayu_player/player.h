@@ -81,6 +81,7 @@ public:
     QStringList danmuHistory;
 signals:
     void fullScreenChanged(bool fullScreen);
+    void informUser(QString s);
 public slots:
     void getDanmu(QString s);
     void playNextSong();
@@ -91,6 +92,7 @@ private slots:
     void setPlayInfo();
     void refreshOrderList();
     void addHintInfo(QString s);
+    void remoteInfo(QString s);
 
     void open();
     void durationChanged(qint64 duration);

@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MessageCenter_t {
-    QByteArrayData data[11];
-    char stringdata[105];
+    QByteArrayData data[13];
+    char stringdata[125];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -38,12 +38,14 @@ QT_MOC_LITERAL(5, 42, 4),
 QT_MOC_LITERAL(6, 47, 9),
 QT_MOC_LITERAL(7, 57, 9),
 QT_MOC_LITERAL(8, 67, 5),
-QT_MOC_LITERAL(9, 73, 14),
-QT_MOC_LITERAL(10, 88, 16)
+QT_MOC_LITERAL(9, 73, 8),
+QT_MOC_LITERAL(10, 82, 10),
+QT_MOC_LITERAL(11, 93, 14),
+QT_MOC_LITERAL(12, 108, 16)
     },
     "MessageCenter\0sendMessage\0\0s\0globalHotkey\0"
-    "UINT\0broadcast\0addOutput\0title\0"
-    "registerHotkey\0unregisterHotkey"
+    "UINT\0broadcast\0addOutput\0title\0addInput\0"
+    "addPartner\0registerHotkey\0unregisterHotkey"
 };
 #undef QT_MOC_LITERAL
 
@@ -53,7 +55,7 @@ static const uint qt_meta_data_MessageCenter[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -61,14 +63,16 @@ static const uint qt_meta_data_MessageCenter[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   44,    2, 0x06 /* Public */,
-       4,    2,   47,    2, 0x06 /* Public */,
+       1,    1,   54,    2, 0x06 /* Public */,
+       4,    2,   57,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       6,    1,   52,    2, 0x0a /* Public */,
-       7,    1,   55,    2, 0x0a /* Public */,
-       9,    2,   58,    2, 0x0a /* Public */,
-      10,    0,   63,    2, 0x0a /* Public */,
+       6,    1,   62,    2, 0x0a /* Public */,
+       7,    1,   65,    2, 0x0a /* Public */,
+       9,    1,   68,    2, 0x0a /* Public */,
+      10,    1,   71,    2, 0x0a /* Public */,
+      11,    2,   74,    2, 0x0a /* Public */,
+      12,    0,   79,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    3,
@@ -76,6 +80,8 @@ static const uint qt_meta_data_MessageCenter[] = {
 
  // slots: parameters
     QMetaType::Void, QMetaType::QString,    3,
+    QMetaType::Bool, QMetaType::QString,    8,
+    QMetaType::Bool, QMetaType::QString,    8,
     QMetaType::Bool, QMetaType::QString,    8,
     QMetaType::Bool, 0x80000000 | 5, 0x80000000 | 5,    2,    2,
     QMetaType::Bool,
@@ -93,9 +99,13 @@ void MessageCenter::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 2: _t->broadcast((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 3: { bool _r = _t->addOutput((*reinterpret_cast< QString(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
-        case 4: { bool _r = _t->registerHotkey((*reinterpret_cast< UINT(*)>(_a[1])),(*reinterpret_cast< UINT(*)>(_a[2])));
+        case 4: { bool _r = _t->addInput((*reinterpret_cast< QString(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
-        case 5: { bool _r = _t->unregisterHotkey();
+        case 5: { bool _r = _t->addPartner((*reinterpret_cast< QString(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
+        case 6: { bool _r = _t->registerHotkey((*reinterpret_cast< UINT(*)>(_a[1])),(*reinterpret_cast< UINT(*)>(_a[2])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
+        case 7: { bool _r = _t->unregisterHotkey();
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
         default: ;
         }
@@ -142,13 +152,13 @@ int MessageCenter::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 8)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 6;
+        _id -= 8;
     }
     return _id;
 }

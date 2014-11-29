@@ -1,4 +1,5 @@
 ﻿#include "../share_library/messagecenter.h"
+#include "../share_library/Util.h"
 #include "voicecenter.h"
 #include <QApplication>
 #include <QTimer>
@@ -13,7 +14,7 @@ int main(int argc, char *argv[])
 
     if (mc.registerTitle("mayu voice")) {
         QObject::connect(&t, &QTimer::timeout, [&]() {
-            if (mc.addOutput("mayu danmu") ) {
+            if (mc.addPartner("mayu danmu") ) {
             }
             else {
                 qDebug()<<"Danmu assistant is not running!"  ;
@@ -32,6 +33,18 @@ int main(int argc, char *argv[])
     vc.hide();
 
     QObject::connect(&mc, &MessageCenter::sendMessage,  &vc,  &VoiceCenter::getDanmu);
+
+
+    QTimer onlineTimer;
+    onlineTimer.start(10000);
+    QObject::connect(&onlineTimer, &QTimer::timeout, [&]() {
+        static bool init = false;
+        if (!init) {
+            init = true;
+            mc.broadcast(myTr("麻由的语音弹幕上线"));
+        }
+        onlineTimer.stop();
+    });
 
     return a.exec();
 }

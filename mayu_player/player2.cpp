@@ -45,7 +45,9 @@
 #include "playlistmodel.h"
 #include "histogramwidget.h"
 #include "../share_library/httpfiledownloader.h"
+#include "../share_library/zhanqiutil.h"
 #include "../share_library/Util.h"
+
 #include "userbank.h"
 #include <QMediaService>
 #include <QMediaPlaylist>
@@ -148,7 +150,7 @@ void Player::playNextSong()
         QString f = a["fromname"].toString();
         if (f=="") continue;
         addHintInfo(myTr("尝试点歌 ") + f +" " + cm);
-
+        remoteInfo(myTr("尝试点歌 ") + f +" " + cm);
         QString us;
         QUrl url;
 
@@ -162,6 +164,8 @@ void Player::playNextSong()
             statusBar->showMessage(f+" "+cm);
             addHintInfo(myTr("百度音乐查找成功"));
             addHintInfo(netAuthor + " | " + netTitle);
+            remoteInfo(myTr("正在播放 ") + netAuthor + " | " + netTitle);
+            qDebug()<<url;
             playlist1->insertMedia(0,url);
 
             playlist1->setCurrentIndex(0);
@@ -187,8 +191,9 @@ void Player::playNextSong()
             statusBar->showMessage(f+" "+cm);
             addHintInfo(myTr("虾米音乐查找成功"));
             addHintInfo(netAuthor + " | " + netTitle);
+            remoteInfo(myTr("正在播放 ") + netAuthor + " | " + netTitle);
             playlist1->insertMedia(0,url);
-
+            qDebug()<<url;
             playlist1->setCurrentIndex(0);
             player->setPlaylist(playlist1);
             player->play();
@@ -203,7 +208,7 @@ void Player::playNextSong()
             addHintInfo(myTr("虾米音乐查找失败"));
 
         }
-
+        remoteInfo(myTr("歌曲查找失败"));
     }
     if (refreshOrderListFlag) refreshOrderList();
     orderInfo = "";
@@ -233,8 +238,13 @@ void Player::playNextSong()
 
 void Player::getDanmu(QString s)
 {
+
     danmuConnectionTimer.start(40000);
     QJsonObject a = QJsonDocument::fromJson(s.toUtf8()).object();
+
+    auto black = ZhanQiUtil::getBlackMap(a);
+    if (black["noordersong"]) return;
+
 
     QString host = myTr("御园麻由mayu");
     QString author = myTr("天蝎10000");
@@ -254,8 +264,13 @@ void Player::getDanmu(QString s)
                 UserBank::withdrawMoney(f,5);
                 statusBar->showMessage(f+myTr(" 切歌"),1000);
                 addHintInfo(f+ myTr(" 切歌"));
+                remoteInfo(f+ myTr(" 切歌"));
                 playNextSong();
 
+            }
+            else {
+                addHintInfo(myTr("麻由的药费未支付"));
+                remoteInfo(myTr("未支付麻由足够多的药费， 切歌失败"));
             }
             return;
         }
@@ -263,6 +278,7 @@ void Player::getDanmu(QString s)
         if (cm.indexOf(myTr("点歌"))!=0 && cm.indexOf(myTr("选歌"))!=0) {}
         else {
             addHintInfo(myTr("加入点歌队列 ") + f + " " + cm);
+            remoteInfo(myTr("加入点歌队列 ") + f + " " + cm);
             danmuHistory.push_back(s);
             if (player->state() == QMediaPlayer::StoppedState ) {
 
@@ -282,6 +298,7 @@ void Player::getDanmu(QString s)
         }
         else {
             addHintInfo(myTr("麻由的药费未支付"));
+            remoteInfo(myTr("未支付麻由足够多的药费， 抢歌失败"));
         }
     }
     else if ( cmdid == "Gift.Use" ) {
@@ -362,6 +379,10 @@ void Player::refreshOrderList(){
     aa.close();
 }
 
+void Player::remoteInfo(QString s) {
+    emit informUser(s);
+}
+
 void Player::addHintInfo(QString s)
 {
 //    qDebug()<<s;
@@ -370,18 +391,20 @@ void Player::addHintInfo(QString s)
     static QTextCodec *codec1 = QTextCodec::codecForName("GBK");
     static QTextCodec *codec2 = QTextCodec::codecForName("GB18030");
     static QTextCodec *codec3 = QTextCodec::codecForName("GB2312");
-    if (codec1) {
-        ba   = codec1->fromUnicode(s);
-        cout<<ba.data()<<endl;
-    }
-    if (codec2) {
-        ba   = codec2->fromUnicode(s);
-        cout<<ba.data()<<endl;
-    }
-    if (codec3) {
-        ba   = codec2->fromUnicode(s);
-        cout<<ba.data()<<endl;
-    }
+//    if (codec1) {
+//        ba   = codec1->fromUnicode(s);
+//        cout<<ba.data()<<endl;
+//    }
+//    if (codec2) {
+//        ba   = codec2->fromUnicode(s);
+//        cout<<ba.data()<<endl;
+//    }
+//    if (codec3) {
+//        ba   = codec2->fromUnicode(s);
+//        cout<<ba.data()<<endl;
+//    }
+
+    qDebug()<<s;
     s+= "\n";
 
 

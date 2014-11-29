@@ -5,7 +5,27 @@
 #include <QFile>
 #include <QDebug>
 #include <QTextCodec>
+#include <QJsonObject>
+#include <QJsonDocument>
+const QJsonObject & getGlobalParameter()  {
+    static QJsonObject jo;
+    static bool init = false;
+    if (!init) {
+        init = true;
+        QJsonDocument jd;
+        loadJsonFile("globalParameter.json", jd);
+        jo = jd.object();
 
+    }
+    return jo;
+}
+QString getGlobalParameterString(QString p, QString d){
+    auto gp = getGlobalParameter();
+    if (gp.contains(p)) {
+        return gp[p].toString();
+    }
+    return d;
+}
 
 void waitMillisec(int s )
 {
@@ -40,8 +60,26 @@ bool loadJsonFile(QString filename, QJsonDocument & d)
     QByteArray saveData = loadFile.readAll();
 
     d = QJsonDocument::fromJson(saveData);
+    static QTextCodec *codec1 = QTextCodec::codecForName("GBK");
+    static QTextCodec *codec2 = QTextCodec::codecForName("GB18030");
+    static QTextCodec *codec3 = QTextCodec::codecForName("GB2312");
 
-    return true;
+    if (! d.isEmpty()) return true;
+
+    if (codec1 != NULL) {
+        d = QJsonDocument::fromJson((codec1->toUnicode(saveData)).toUtf8());
+        if (! d.isEmpty()) return true;
+    }
+    else if (codec2 != NULL) {
+        d = QJsonDocument::fromJson((codec1->toUnicode(saveData)).toUtf8());
+        if (! d.isEmpty()) return true;
+    }
+    else if (codec3 != NULL) {
+        d = QJsonDocument::fromJson((codec1->toUnicode(saveData)).toUtf8());
+        if (! d.isEmpty()) return true;
+    }
+
+    return false;
 }
 
 
@@ -89,4 +127,14 @@ QByteArray consoleTr(QString s) {
 }
 void debugToConsole(QString s) {
     qDebug()<< consoleTr(s);
+}
+int getRandomInt() {
+    static bool init = false;
+    if (!init) {
+        init = true;
+        srand(QTime::currentTime().msecsSinceStartOfDay());
+
+    }
+
+    return rand();
 }

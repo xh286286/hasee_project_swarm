@@ -27,9 +27,13 @@ protected slots:
     void getSocketInfo();
     void socketError(QAbstractSocket::SocketError se);
     void dealError();
+
+    void postDanmuWork();
 public slots:
     bool postDanmu(QString s);
     void login(QString name, QString pass, QString uid, QString id);
+
+    void blockUser(QString name, int uid, int action = 1);
 
     void keepAlive();
 protected:
@@ -50,7 +54,9 @@ private:
     QSet<QString > historyMessage;
     QList< QJsonObject> infoPool;
 
-    QTimer connectionTimeout, keepaliveTimer;
+    QList<QString> danmuPool;
+
+    QTimer connectionTimeout, keepaliveTimer, postDanmuTimer;
     QJsonObject loginJo, roomviewerJo;
     QByteArray cache;
     HttpFileDownloader * hfd;

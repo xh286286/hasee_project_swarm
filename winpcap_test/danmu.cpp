@@ -117,11 +117,16 @@ void Danmu::paint(QPainter & painter) {
     interState = animation.front()->inter(originState);
 
     QRectF backRect = painter.boundingRect(interState.rect, Qt::AlignVCenter | Qt::AlignLeft, displayString);
-     painter.setPen(pWin->c_backRectColor);
+    QColor nc = pWin->c_backRectColor;
+    //qDebug()<<interState.alpha;
+    nc.setAlphaF(interState.alpha);
+    painter.setPen(nc);
     painter.drawRoundedRect(backRect,4,4);
 
-    if (presentFlag) painter.setPen("red");
-    else painter.setPen(pWin->c_fontColor);
+    if (presentFlag) nc = "red";
+    else nc = pWin->c_fontColor ;
+    nc.setAlphaF(interState.alpha);
+    painter.setPen(nc);
     painter.drawText(interState.rect, Qt::AlignVCenter | Qt::AlignLeft, displayString);
 
 

@@ -3,6 +3,7 @@
 #include <QDebug>
 
 #include "danmuconnection.h"
+#include "../share_library/Util.h"
 int get16_2(const char * s) {
     int a,b;
     if (s[0] <='9') {
@@ -23,18 +24,24 @@ int get16_2(const char * s) {
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-#if 0
+#if 1
     DanmuConnection dc;
     dc.debugFlag = true;
-    dc.login("mayumayu","yumayuma", "113289","317");
+    dc.login("aabbdaabbd","aabbcaabbc", "113289","317");
     QTime t;
     t.start();
+    int count = 0;
+    int x = 1;
     while(true) {
         bool a;
         if (t.elapsed() >5000)  {
-            a = dc.postDanmu("测试自动发言");
-
-          if (a) break;
+            count+=123123;
+            //a = dc.postDanmu(QString ::number(count));
+            //   QJsonObject({"action":1,"cmdid":"blockuser","ip":"111.8.57.138","msg":"111","nam
+            //   e":"九千万亿电竞女神","type":1,"uid":100305463})
+            dc.blockUser( myTr("九千万亿电竞女神"), 100305463, x);
+            x = 1-x;
+           t.restart();
         }
         QCoreApplication::processEvents();
     }

@@ -15,6 +15,10 @@ DanmuConnection::DanmuConnection(QObject *parent) :
     QObject::connect(&keepaliveTimer, &QTimer::timeout,  this, &DanmuConnection::keepAlive);
     state = 0;
     debugFlag = false;
+
+    postDanmuTimer.start(3000);
+
+    QObject::connect(&postDanmuTimer, &QTimer::timeout,  this, &DanmuConnection::postDanmuWork);
 }
 
 
@@ -100,21 +104,25 @@ void DanmuConnection::work4() {
     jo["r"] = 1;
     writeSocketData(2, jo);
 }
-bool DanmuConnection::postDanmu(QString s) {
-    if (debugFlag) qDebug()<<state;
-    if (state != 5) return false;
+
+void DanmuConnection::postDanmuWork() {
+    //if (debugFlag) qDebug()<<state;
+    if (state != 5) return;
+
 //    QJsonObject({"cmdid":"chatmessage","content":"测试2","level":15,"showmedal":1,"s
 //    peakinroom":1,"style":null,"toid":0,"usexuanzi":0})
-
+    if (danmuPool.size() ==0) return;
+    QString s = danmuPool.front();
+    danmuPool.pop_front();
     QString m = ZhanQiUtil::encodeString( s);
-    while( historyMessage.contains(m)) {
-        m+='_';
-    }
+//    while( historyMessage.contains(m)) {
+//        m+='_';
+//    }
     historyMessage.insert(m);
     QJsonObject jo;
     jo["cmdid"] = "chatmessage";
     jo["content"] = m;
-    jo["level"] = 15;
+    jo["level"] = 0;
     jo["showmedal"] = 1;
     jo["speakinroom"] = 0;
     jo["toid"] = 0;
@@ -125,7 +133,32 @@ bool DanmuConnection::postDanmu(QString s) {
     //QString s1 = "{\"level\":0,\"cmdid\":\"chatmessage\",\"style\":null,\"showmedal\":1,\"toid\":0,\"speakinroom\":0,\"content\":\"test312\",\"usexuanzi\":0}";
    // writeSocketString(2, s1);
     writeSocketData(2,jo);
-    return true;
+
+
+}
+void DanmuConnection::blockUser(QString name, int uid, int action) {
+    //if (debugFlag) qDebug()<<state;
+    if (state != 5) return;
+
+ //   QJsonObject({"action":1,"cmdid":"blockuser","ip":"111.8.57.138","msg":"111","nam
+ //   e":"九千万亿电竞女神","type":1,"uid":100305463})
+
+    QJsonObject jo;
+    jo["cmdid"] = "blockuser";
+    jo["action"] = action;
+    jo["ip"] = "111.8.57.138";
+    jo["msg"] = "222";
+    jo["name"] = name;
+    jo["type"] = 1;
+    jo["uid"] = uid;
+   if (debugFlag)  qDebug()<< "try";
+
+
+    writeSocketData(2,jo);
+}
+
+bool DanmuConnection::postDanmu(QString s) {
+    danmuPool.push_back(s);
 }
 
 void DanmuConnection::work5() {
@@ -166,6 +199,9 @@ void DanmuConnection::getSocketInfo() {
             infoPool.push_back(jo);
             count++;
             if (debugFlag) qDebug()<<cache.length()<<' '<<jo;
+        }
+        else {
+           // keepAlive();
         }
 
         cache = cache.mid(12+length);
@@ -277,6 +313,8 @@ void DanmuConnection::writeSocketData(int type, QJsonObject jo)
     else if (type == 3) {
         s[10] = get16("59");
         s[11] = get16("27");
+        s[6] = 0;
+        s[7] = 0;
         ds.clear();
     }
     else {

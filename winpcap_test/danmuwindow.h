@@ -7,7 +7,7 @@
 #include <QMap>
 #include <QSet>
 #include <QColor>
-
+#include <QJsonObject>
 #include "../tcp_socket_test/danmuconnection.h"
 class Danmu;
 
@@ -40,6 +40,7 @@ public:
 
 signals:
     void broadcastDanmu(QString s);
+    void informGift(QJsonObject );
 public slots:
     void getMessage();
     void getMessage2();
@@ -54,7 +55,7 @@ public slots:
 protected:
     void paintEvent(QPaintEvent *);
     void resizeEvent(QResizeEvent *);
-    void dealOneMessage(QJsonObject);
+    void dealOneMessage(QJsonObject, QString s);
     void addOneMessage(QString chatid, QString name, QString content);
 
     void addOnePresent(int gid, int count, QString uname, QString gname);

@@ -14,6 +14,7 @@
 #include <QTimer>
 
 #include "../share_library/Util.h"
+#include "../share_library/zhanqiutil.h"
 #include "danmuwindow.h"
 #include "workerthread.h"
 #include "danmu.h"
@@ -34,7 +35,7 @@ DanmuWindow::DanmuWindow(QWidget *parent) :
     flags |= Qt::WindowTransparentForInput;
     QWidget::setWindowFlags(flags);
     setAttribute(Qt::WA_TranslucentBackground, true);
-    setWindowOpacity(0.6);
+    setWindowOpacity(0.7);
 
     QTimer * timer=new QTimer;
     timer->setSingleShot(false);
@@ -52,6 +53,7 @@ DanmuWindow::DanmuWindow(QWidget *parent) :
     c_flowerChannel = 6;
 
     c_moveChangeFlag = true;
+    c_alphaChangeFlag = true;
 
     c_inTime = 300;
     c_lastTime = 12000;
@@ -59,16 +61,23 @@ DanmuWindow::DanmuWindow(QWidget *parent) :
     c_outTime = 300;
 
     c_fontColor = QColor(Qt::blue);
-    c_backRectColor = QColor(Qt::gray);
+    c_backRectColor = QColor(Qt::white);
 
+
+    QString uid,id,user,password;
+
+    uid = getGlobalParameterString("room_uid","113289");
+    id = getGlobalParameterString("room_uid","317");
+    user = getGlobalParameterString("secretary_user","aabbdaabbd");
+    password = getGlobalParameterString("secretary_password","aabbcaabbc");
 
     danmuConnectionPool.push_back( new DanmuConnection);
-    danmuConnectionPool[0]->login("mayumayu","yumayuma", "113289","317");
+    danmuConnectionPool[0]->login(user,password, uid,id);
 
     danmuConnectionPool.push_back( new DanmuConnection);
-    danmuConnectionPool[1]->login("","", "113289","317");
+    danmuConnectionPool[1]->login("","", uid,id);
 
-    danmuConnectionPool[0]->debugFlag = true;
+    //danmuConnectionPool[0]->debugFlag = true;
 
     autohideandshowTimer.start(10000);
     QObject::connect(&autohideandshowTimer, &QTimer::timeout, this, &DanmuWindow::hideandshow);
@@ -84,7 +93,7 @@ bool DanmuWindow::checkDuplicated(QString a) {
         historySet.insert(a);
         historyList.push_back(a);
 
-        if (historyList.size()>3000) {
+        if (historyList.size()>1000) {
             historySet.remove(historyList.front());
             historyList.pop_front();
         }
@@ -101,7 +110,7 @@ void DanmuWindow::postDanmuMessge(QString s) {
     danmuConnectionPool[0]->postDanmu(s);
 }
 
-void DanmuWindow::dealOneMessage(QJsonObject a)
+void DanmuWindow::dealOneMessage(QJsonObject a, QString sss)
 {
 
 
@@ -121,6 +130,12 @@ void DanmuWindow::dealOneMessage(QJsonObject a)
         test = s;
         QString f = a["fromname"].toString();
         if (f=="") return;
+
+        if (!checkDuplicated( s + " " + f)) return;
+
+        auto black = ZhanQiUtil::getBlackMap(a);
+        if (getRandomInt() % 100 < black["danmumiss"]) return;
+        emit broadcastDanmu(sss);
         addOneMessage(a["chatid"].toString(),f,s);
 
     }
@@ -140,8 +155,17 @@ void DanmuWindow::dealOneMessage(QJsonObject a)
         if (b["url"].toString() !="/mayu") return;
 
         if (!checkDuplicated(b["curexp"].toString() + "curexp" )) return;
-
+        emit broadcastDanmu(sss);
         addOnePresent(b["gid"].toInt(), b["count"].toInt(), b["nickname"].toString(), b["name"].toString());
+        emit informGift(a);
+    }
+    else if (cmdid == "notefanslevel") {
+        //86   QJsonObject({"cmdid":"notefanslevel","data":{"fanslevel":15,"fansname":"天蝎1000"}})
+        //qDebug()<< "notefans";
+        auto data = a["data"].toObject();
+        QString name = data["fansname"].toString();
+        if (!checkDuplicated(name + " fans" )) return;
+        addOneDebugInfor(data["fansname"].toString() + myTr(" 进入了直播间"));
     }
     else {
         //qDebug()<<a<<endl;
@@ -153,12 +177,12 @@ void DanmuWindow::messageDecode(QString s)
 
 
     QJsonObject a = QJsonDocument::fromJson(s.toUtf8()).object();
-    //qDebug()<<a;
+    qDebug()<<a;
     QString cmdid = a["cmdid"].toString();
     if (cmdid!="") {
-        dealOneMessage(a);
+        dealOneMessage(a,s);
 
-        emit broadcastDanmu(s);
+
     }
     else {
         //qDebug()<<s;
@@ -169,7 +193,9 @@ void DanmuWindow::getMessage2() {
     auto a = danmuConnectionPool[0]->getALLMess();
 
     for (int i=0; i<a.size(); i++) {
-        dealOneMessage (a[i]);
+        QJsonDocument jd(a[i]);
+
+        dealOneMessage (a[i], jd.toJson(QJsonDocument::Compact));
     }
 
 

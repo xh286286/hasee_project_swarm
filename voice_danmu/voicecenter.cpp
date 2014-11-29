@@ -1,5 +1,6 @@
 ﻿#include "voicecenter.h"
 #include "../share_library/Util.h"
+#include "../share_library/zhanqiutil.h"
 #include <QJsonDocument>
 #include <QTime>
 VoiceCenter::VoiceCenter(QWidget *parent) :
@@ -45,12 +46,16 @@ void VoiceCenter::getDanmu(QString s)
         //  get id
         int id = a["fromuid"].toInt();
 
-        int cd = 10000;
-        if (id == 299998) {
-            cd *=4 +30000;
-            a["fromname"] = myTr("进击");
+        auto black = ZhanQiUtil::getBlackMap(a);
+        if (black["novoice"]) return;
 
-        }
+
+
+
+        int cd = 15000;
+
+        cd +=black["voicecd"];
+        if (black["novoiceid"]) a["fromname"] = "";
 
         // get time
         int time = QTime::currentTime().msecsSinceStartOfDay();

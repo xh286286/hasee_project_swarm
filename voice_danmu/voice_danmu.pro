@@ -22,9 +22,11 @@ TEMPLATE = app
 SOURCES += main.cpp \
     voicecenter.cpp \
     ../share_library/messagecenter.cpp \
-    ../share_library/Util.cpp
+    ../share_library/Util.cpp \
+    ../share_library/zhanqiutil.cpp
 
 HEADERS += \
     voicecenter.h \
     ../share_library/messagecenter.h \
-    ../share_library/Util.h
+    ../share_library/Util.h \
+    ../share_library/zhanqiutil.h

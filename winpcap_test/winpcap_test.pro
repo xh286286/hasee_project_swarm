@@ -29,7 +29,8 @@ SOURCES += main.cpp \
     ../share_library/messagecenter.cpp \
     ../share_library/Util.cpp \
     ../tcp_socket_test/danmuconnection.cpp \
-    ../share_library/zhanqiutil.cpp
+    ../share_library/zhanqiutil.cpp \
+    autothankgift.cpp
 
 HEADERS += \
     workerthread.h \
@@ -42,7 +43,8 @@ HEADERS += \
     ../share_library/messagecenter.h \
     ../share_library/Util.h \
     ../tcp_socket_test/danmuconnection.h \
-    ../share_library/zhanqiutil.h
+    ../share_library/zhanqiutil.h \
+    autothankgift.h
 
 OTHER_FILES += \
     parse.txt \

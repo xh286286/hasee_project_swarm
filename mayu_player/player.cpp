@@ -404,7 +404,8 @@ void Player::statusChanged(QMediaPlayer::MediaStatus status)
     case QMediaPlayer::BufferedMedia:
         setStatusInfo(QString());
         player->setMuted(true);
-        QTimer::singleShot(200,this,SLOT(resumeMute()));
+        qDebug()<<"temp mute";
+        QTimer::singleShot(400,this,SLOT(resumeMute()));
         break;
     case QMediaPlayer::LoadingMedia:
         setStatusInfo(tr("Loading..."));

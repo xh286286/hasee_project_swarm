@@ -32,7 +32,8 @@ SOURCES += main.cpp\
     player2.cpp \
     ../share_library/httpfiledownloader.cpp \
     ../share_library/messagecenter.cpp \
-    ../share_library/Util.cpp
+    ../share_library/Util.cpp \
+    ../share_library/zhanqiutil.cpp
 
 HEADERS  += mainwindow.h \
     mydialog.h \
@@ -45,7 +46,8 @@ HEADERS  += mainwindow.h \
     CHotKeyEventFilter.hpp \
     ../share_library/httpfiledownloader.h \
     ../share_library/messagecenter.h \
-    ../share_library/Util.h
+    ../share_library/Util.h \
+    ../share_library/zhanqiutil.h
 
 FORMS    += mainwindow.ui
 
