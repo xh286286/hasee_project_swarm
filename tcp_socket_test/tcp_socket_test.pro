@@ -33,3 +33,7 @@ HEADERS += \
 
 OTHER_FILES += \
     connect.txt
+
+DISTFILES += \
+    back.txt \
+    connection.txt

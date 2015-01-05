@@ -1,4 +1,4 @@
-#include "autothankgift.h"
+﻿#include "autothankgift.h"
 #include "../share_library/Util.h"
 #include "../share_library/zhanqiutil.h"
 #include <QJsonObject>
@@ -59,7 +59,7 @@ void AutoThankGift::work() {
     giftHistory.remove(thankName);
 
 
-    int n = getRandomInt()% thankWord.size() ;
+
 
     QString word;
     if (thankWord .size() == 0) {
@@ -67,7 +67,8 @@ void AutoThankGift::work() {
         word = myTr("谢谢[name]送的[gift]。");
     }
     else {
-           word = thankWord[n];
+        int n = getRandomInt()% thankWord.size() ;
+        word = thankWord[n];
     }
 
     QString g;

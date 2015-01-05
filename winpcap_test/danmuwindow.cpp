@@ -1,5 +1,5 @@
 ﻿#include <cassert>
-
+#undef min
 #include <QDateTime>
 #include <QPainter>
 #include <QTimer>
@@ -10,9 +10,10 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QApplication>
-
+#include <QDir>
 #include <QTimer>
-
+#include "myplaintextedit.h"
+#include <QTextCursor>
 #include "../share_library/Util.h"
 #include "../share_library/zhanqiutil.h"
 #include "danmuwindow.h"
@@ -29,6 +30,9 @@ DanmuWindow::DanmuWindow(QWidget *parent) :
     assert (instance == NULL);
     instance = this;
 
+    historyTextEdit = new MyPlainTextEdit();
+    historyTextEdit->hide();
+    historyTextEdit->setWindowTitle(myTr("弹幕历史"));
     flags = Qt::ToolTip;
     flags |= Qt::WindowStaysOnTopHint;
     flags |= Qt::FramelessWindowHint;
@@ -68,8 +72,8 @@ DanmuWindow::DanmuWindow(QWidget *parent) :
 
     uid = getGlobalParameterString("room_uid","113289");
     id = getGlobalParameterString("room_uid","317");
-    user = getGlobalParameterString("secretary_user","aabbdaabbd");
-    password = getGlobalParameterString("secretary_password","aabbcaabbc");
+    user = getGlobalParameterString("secretary_user","aabbfaabbf");
+    password = getGlobalParameterString("secretary_password","aabbeaabbe");
 
     danmuConnectionPool.push_back( new DanmuConnection);
     danmuConnectionPool[0]->login(user,password, uid,id);
@@ -77,10 +81,50 @@ DanmuWindow::DanmuWindow(QWidget *parent) :
     danmuConnectionPool.push_back( new DanmuConnection);
     danmuConnectionPool[1]->login("","", uid,id);
 
-    //danmuConnectionPool[0]->debugFlag = true;
+    danmuConnectionPool[0]->debugFlag = true;
+
+//    for (int i=0; i<8; i++) {
+//        int t  = i;
+//        QString f="tianxie1";
+//        for (int j = 0; j<3; j++) {
+//            int x = t%2;
+//            t/=2;
+//            if (x==1) {
+//                f+='0';
+//            }
+//            else {
+//                f+='O';
+//            }
+
+//        }
+//        qDebug()<<f;
+//        danmuConnectionPool.push_back( new DanmuConnection);
+//        danmuConnectionPool.back()->login(f,f, uid,id);
+//    }
+//    for (int i=0; i<16; i++) {
+//        int t  = i;
+//        QString f="tianxie1";
+//        for (int j = 0; j<4; j++) {
+//            int x = t%2;
+//            t/=2;
+//            if (x==1) {
+//                f+='0';
+//            }
+//            else {
+//                f+='O';
+//            }
+
+//        }
+//        qDebug()<<f;
+//        danmuConnectionPool.push_back( new DanmuConnection);
+//        danmuConnectionPool.back()->login(f,f, uid,id);
+//    }
 
     autohideandshowTimer.start(10000);
     QObject::connect(&autohideandshowTimer, &QTimer::timeout, this, &DanmuWindow::hideandshow);
+}
+DanmuWindow:: ~DanmuWindow() {
+    delete historyTextEdit;
 }
 
 bool DanmuWindow::checkDuplicated(QString a) {
@@ -137,7 +181,7 @@ void DanmuWindow::dealOneMessage(QJsonObject a, QString sss)
         if (getRandomInt() % 100 < black["danmumiss"]) return;
         emit broadcastDanmu(sss);
         addOneMessage(a["chatid"].toString(),f,s);
-
+        addDanmuHistory("["+f+"]:"+s);
     }
     else if (cmdid == "useprop") {
         test = test+"\nflower";
@@ -147,6 +191,7 @@ void DanmuWindow::dealOneMessage(QJsonObject a, QString sss)
         test = a["cmdid"].toString();
     }
     else if (cmdid == "Gift.Use") {
+        //qDebug()<<a;
         QJsonObject b = a["data"].toObject();
         //qDebug()<<b["anchorname"].toString()<<endl;
         //qDebug()<<b["anchorname"].toString().toUtf8().toPercentEncoding()<<endl;
@@ -156,8 +201,13 @@ void DanmuWindow::dealOneMessage(QJsonObject a, QString sss)
 
         if (!checkDuplicated(b["curexp"].toString() + "curexp" )) return;
         emit broadcastDanmu(sss);
-        addOnePresent(b["gid"].toInt(), b["count"].toInt(), b["nickname"].toString(), b["name"].toString());
+        QString fromname =  b["nickname"].toString();
+        if (fromname=="") return;
+        QString giftname = b["name"].toString();
+        int count = b["count"].toInt();
+        addOnePresent(b["gid"].toInt(), count, fromname ,giftname );
         emit informGift(a);
+        addDanmuHistory("["+fromname+"] send "+ QString::number(count) + giftname);
     }
     else if (cmdid == "notefanslevel") {
         //86   QJsonObject({"cmdid":"notefanslevel","data":{"fanslevel":15,"fansname":"天蝎1000"}})
@@ -177,7 +227,7 @@ void DanmuWindow::messageDecode(QString s)
 
 
     QJsonObject a = QJsonDocument::fromJson(s.toUtf8()).object();
-    qDebug()<<a;
+    //qDebug()<<a;
     QString cmdid = a["cmdid"].toString();
     if (cmdid!="") {
         dealOneMessage(a,s);
@@ -456,8 +506,9 @@ void DanmuWindow::clearDead()
 
 void DanmuWindow::paintEvent(QPaintEvent *)
 {
+    //qDebug()<<"bbb1";
     clearDead();
-
+    //qDebug()<<"eee1";
     paintingTime = QDateTime::currentMSecsSinceEpoch();;
 
     QPainter painter(this);
@@ -469,10 +520,28 @@ void DanmuWindow::paintEvent(QPaintEvent *)
 //    painter.drawText(rect(), Qt::AlignCenter, test);
 
     if (danmuPool.size()==0) return;
-
+    //qDebug()<<"bbb2";
     for (int i=0; i<danmuPool.size(); i++) {
         danmuPool[i]->paint(painter);
     }
+    //qDebug()<<"eee2";
    // qDebug()<<danmuPool.size();
     updateLater();
+}
+
+
+void DanmuWindow::addDanmuHistory(QString s) {
+    readHistoryList.push_back(s);
+}
+
+void DanmuWindow::displayHistory() {
+    QString s;
+    for (int i=0; i<readHistoryList.size(); i++) {
+        s+= QString::number(i+1) + " " + readHistoryList[i] + "\n";
+    }
+    historyTextEdit->setPlainText(s);
+    auto c = historyTextEdit->textCursor();
+    c.movePosition( QTextCursor::End);
+    historyTextEdit ->setTextCursor(c);
+    historyTextEdit->show();
 }

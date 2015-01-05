@@ -3,6 +3,7 @@
 #include <qt_windows.h>
 #include <QWidget>
 
+
 class MessageCenter : public QWidget
 {
     Q_OBJECT

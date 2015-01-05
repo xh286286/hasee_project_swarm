@@ -55,7 +55,7 @@ void VoiceCenter::getDanmu(QString s)
         int cd = 15000;
 
         cd +=black["voicecd"];
-        if (black["novoiceid"]) a["fromname"] = "";
+        if (black["novoiceid"]) a["fromname"] = QString("");
 
         // get time
         int time = QTime::currentTime().msecsSinceStartOfDay();

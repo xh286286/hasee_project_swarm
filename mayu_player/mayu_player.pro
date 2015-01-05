@@ -4,58 +4,58 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network
+QT       += core gui
 QT += network \
       xml \
       multimedia \
       multimediawidgets \
       widgets
 CONFIG += c++11
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+ 
 
 CONFIG += console
 CONFIG -= app_bundle
 TARGET = mayu_player
 TEMPLATE = app
+ 
 
+RESOURCES += \
+    img.qrc
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    mydialog.cpp \
-    histogramwidget.cpp \
-    player.cpp \
-    playercontrols.cpp \
-    playlistmodel.cpp \
+OTHER_FILES += \
+    test.txt
+
+SOURCES += \
+    main.cpp \
     videowidget.cpp \
     userbank.cpp \
-    CHotKeyEventFilter.cpp \
+    playlistmodel.cpp \
+    playercontrols.cpp \
     player2.cpp \
+    player.cpp \
+    mydialog.cpp \
+    histogramwidget.cpp \
+    CHotKeyEventFilter.cpp \
     ../share_library/httpfiledownloader.cpp \
     ../share_library/messagecenter.cpp \
     ../share_library/Util.cpp \
     ../share_library/zhanqiutil.cpp
 
-HEADERS  += mainwindow.h \
-    mydialog.h \
-    histogramwidget.h \
-    player.h \
-    playercontrols.h \
-    playlistmodel.h \
+HEADERS += \
     videowidget.h \
     userbank.h \
+    playlistmodel.h \
+    playercontrols.h \
+    player.h \
+    mydialog.h \
+    histogramwidget.h \
     CHotKeyEventFilter.hpp \
     ../share_library/httpfiledownloader.h \
     ../share_library/messagecenter.h \
     ../share_library/Util.h \
     ../share_library/zhanqiutil.h
 
-FORMS    += mainwindow.ui
+SUBDIRS += \
+    ../share_library/share_library.pro
 
-OTHER_FILES += \
-    test1.pro.user \
-    test.txt \
-    test.js \
-    test2.js
 
-RESOURCES += \
-    img.qrc

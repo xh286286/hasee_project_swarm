@@ -1,5 +1,7 @@
 ﻿#include <QJsonObject>
-
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
 #include "windowsizesetting.h"
 #include "../share_library/Util.h"
 #include "danmuwindow.h"

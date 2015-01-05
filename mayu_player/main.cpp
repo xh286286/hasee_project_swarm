@@ -25,6 +25,7 @@ using std::endl;
 
 int main(int argc, char *argv[])
 {
+    cout<<1;
     srand(time(0));
 
 #ifdef Q_WS_MAEMO_6
@@ -32,7 +33,7 @@ int main(int argc, char *argv[])
     QApplication::setGraphicsSystem("raster");
 #endif
     QApplication app(argc, argv);
-
+        qDebug()<<1;
 //    QString s = myTr("水电费似懂非懂发");
 //        while(true) {
 //            qDebug()<<s.toUtf8().toPercentEncoding();

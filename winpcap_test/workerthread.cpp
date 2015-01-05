@@ -1,9 +1,5 @@
-﻿#include <qt_windows.h>
-
+﻿
 #include <QString>
-#include <algorithm>
-#include <cassert>
-#include <iostream>
 #include <QDebug>
 #include <QByteArray>
 #include <QThread>
@@ -13,9 +9,17 @@
 #include <QMutexLocker>
 #include <QCoreApplication>
 
+#include <algorithm>
+#include <cassert>
+#include <iostream>
+
+#include <qt_windows.h>
 #include "workerthread.h"
+
 #include "danmuwindow.h"
+
 #include "../share_library/Util.h"
+#include "pcap.h"
 using namespace std;
 bool threadEndFlag;
 QMutex m1;
@@ -221,6 +225,33 @@ void WorkerThread::startWork()
     //pcap_close(adhandle);
 
 }
+QString getIpString(const u_char * x) {
+    QString s;
+    for (int i=0; i<4; i++) {
+        int f = int(x[i]);
+        if (f<0) f+=256;
+        s+= QString::number(f);
+        if (i!=3) s+='.';
+    }
+    return s;
+}
+
+void checkIPAdress(const u_char * x) {
+    static QSet<QString> ipSet;
+    QString s;
+    s = getIpString(x);
+    if (ipSet.contains(s)) {}
+    else {
+        ipSet.insert(s);
+        qDebug()<<ipSet;
+    }
+    s = getIpString(x+4);
+    if (ipSet.contains(s)) {}
+    else {
+        ipSet.insert(s);
+        qDebug()<<ipSet;
+    }
+}
 
 void WorkerThread::work()
 {
@@ -330,7 +361,13 @@ void WorkerThread::work()
 
         if (tt == length) continue;
         u_char b[2] = { '\'', '{'};
+
         tt = search(pkt_data, pkt_data+header->len,b,b+2) - pkt_data;
+
+        //     检测  弹幕服务器的代码
+        //qDebug()<<"offset "<<tt;
+        //if (tt>40) checkIPAdress(pkt_data + (tt-39));
+
         QByteArray  ba;
         for (int i= tt+1; i<header->len; i++) {
             //cout<<pkt_data[i];

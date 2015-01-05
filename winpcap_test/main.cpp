@@ -1,8 +1,6 @@
 ﻿typedef  unsigned int u_int;
 typedef  unsigned short u_short;
 typedef  unsigned char u_char;
-#include "pcap.h"
-#include <QDate>
 
 
 #include <QString>
@@ -36,12 +34,16 @@ using namespace std;
 #include "autothankgift.h"
 
 /* prototype of the packet handler */
-
+void test1();
 int main(int argc, char *argv[])
 {
 
     QApplication a(argc, argv);
 
+
+
+
+    qDebug()<<1;
     AutoThankGift  atg;
     MessageCenter mc;
 
@@ -72,6 +74,7 @@ int main(int argc, char *argv[])
     QObject::connect(&atg, &AutoThankGift::postThankMessage,  &danmu_win, &DanmuWindow::postDanmuMessge  );
 
     WindowSizeSetting sizeSetting_win(0,& danmu_win);
+    sizeSetting_win.show();
     sizeSetting_win.hide();
 
 
@@ -94,6 +97,7 @@ int main(int argc, char *argv[])
     myMenu.addAction(myTr("欢迎使用麻由的弹幕小助手"), &myMenu, SLOT(about()) );
     myMenu.addAction(myTr("QQ群 310439712"), &myMenu, SLOT(about()) );
     myMenu.addAction(myTr("设置弹幕显示区域"), &sizeSetting_win, SLOT(show()) );
+    myMenu.addAction(myTr("显示刷新弹幕历史"), &danmu_win, SLOT(displayHistory()) );
     //myMenu.addAction(myTr("找回弹幕显示"), &myMenu, SLOT(hideAndShow()) );
     myMenu.addAction(myTr("重启监测模块"), &myMenu, SLOT(startDectecting()) );
     myMenu.addAction(myTr("停止监测模块"), &myMenu, SLOT(stopDectecting()) );
@@ -145,3 +149,8 @@ int main(int argc, char *argv[])
 }
 
 
+
+
+void test1() {
+    qDebug()<<1;
+}

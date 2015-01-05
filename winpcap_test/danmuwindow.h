@@ -10,13 +10,13 @@
 #include <QJsonObject>
 #include "../tcp_socket_test/danmuconnection.h"
 class Danmu;
-
+class MyPlainTextEdit;
 class DanmuWindow : public QWidget
 {
     Q_OBJECT
 public:
     explicit DanmuWindow(QWidget *parent = 0);
-
+    ~DanmuWindow();
     static DanmuWindow * instance;
 
     static void outputDebugInfor(QString s);
@@ -50,6 +50,8 @@ public slots:
 
     void hideandshow();
 
+    void addDanmuHistory(QString s);
+    void displayHistory();
 
     void postDanmuMessge(QString s);
 protected:
@@ -80,6 +82,9 @@ protected:
     QMap< QString , int> flowerRank;
 
     Qt::WindowFlags flags;
+
+    QList< QString > readHistoryList;
+    MyPlainTextEdit * historyTextEdit;
 
     QList< QString > historyList;
     QSet<QString> historySet;

@@ -30,7 +30,8 @@ SOURCES += main.cpp \
     ../share_library/Util.cpp \
     ../tcp_socket_test/danmuconnection.cpp \
     ../share_library/zhanqiutil.cpp \
-    autothankgift.cpp
+    autothankgift.cpp \
+    myplaintextedit.cpp
 
 HEADERS += \
     workerthread.h \
@@ -44,7 +45,8 @@ HEADERS += \
     ../share_library/Util.h \
     ../tcp_socket_test/danmuconnection.h \
     ../share_library/zhanqiutil.h \
-    autothankgift.h
+    autothankgift.h \
+    myplaintextedit.h
 
 OTHER_FILES += \
     parse.txt \

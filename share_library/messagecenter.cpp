@@ -1,7 +1,7 @@
 ﻿#include <QString>
 #include <QDebug>
 #include "messagecenter.h"
-
+#include <qt_windows.h>
 MessageCenter::MessageCenter(QWidget *parent) :
     QWidget(parent)
 {

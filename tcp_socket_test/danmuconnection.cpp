@@ -1,7 +1,9 @@
 #include "danmuconnection.h"
 #include "../share_library/httpfiledownloader.h"
 #include "../share_library/zhanqiutil.h"
+#include "../share_library/Util.h"
 #include <QJsonDocument>
+#include <QJsonArray>
 #include <QDebug>
 #include <QTimer>
 #include <cassert>
@@ -69,6 +71,28 @@ void DanmuConnection::work2() {
 
     hfd->postFromURL(u,ba, 10000);
 }
+
+
+QStringList DanmuConnection::getDanmuSeverList() {
+    static bool initFlag = false;
+    static QStringList danmuSeverList;
+
+    if (!initFlag) {
+        initFlag = true;
+        QJsonDocument jd;
+        loadJsonFile("danmuServer.json",jd);
+
+        QJsonArray ja = jd.array();
+        qDebug()<<ja;
+        for (int i=0; i<ja.size(); i++) {
+            danmuSeverList.push_back( ja[i].toString());
+        }
+        if (danmuSeverList.size() ==0) danmuSeverList.push_back("115.29.172.6");
+        qDebug()<<danmuSeverList;
+    }
+    return danmuSeverList;
+}
+
 void DanmuConnection::work3() {
     state = 3;
     if (debugFlag) qDebug()<<"state "<<state;
@@ -80,23 +104,29 @@ void DanmuConnection::work3() {
     QObject::connect(ts, &QTcpSocket::connected, this, &DanmuConnection::getSocketInfo);
     QObject::connect(ts, &QTcpSocket::readyRead, this, &DanmuConnection::getSocketInfo);
     QObject::connect(ts, SIGNAL( error(QAbstractSocket::SocketError )), this, SLOT(socketError(QAbstractSocket::SocketError )));
-    ts->connectToHost("112.124.114.222",15010);
 
+    static QStringList danmuSeverList = getDanmuSeverList();
+
+        static int danmuSeverIndex = 0;
+    QString severName = danmuSeverList[ danmuSeverIndex % danmuSeverList.size() ];
+    danmuSeverIndex++;
+    ts->connectToHost(severName ,15010);
+    qDebug()<<"connect to "<<severName;
     //182.92.104.225
-    if (debugFlag) qDebug()<<"connect";
+    if (debugFlag) qDebug()<<"connect  danmu sever!!";
 }
 void DanmuConnection::work4() {
     state = 4;
     if (debugFlag) qDebug()<<"state "<<state;
     QJsonObject jo;
-    jo["cmdid"] = "svrisokreq";
+    jo["cmdid"] = QString("svrisokreq");
     writeSocketData(1, jo);
 
-    jo["cmdid"] = "loginreq";
+    jo["cmdid"] = QString("loginreq");
     jo["roomid"] = id.toInt();
     jo["nickname"] = loginJo["data"].toObject()["nickname"];
     jo["t"] = 0;
-    jo["fhost"] = "";
+    jo["fhost"] = QString("");
     jo["gid"]  = roomviewerJo["data"].toObject()["gid"];
     jo["timestamp"]  = roomviewerJo["data"].toObject()["timestamp"];
     jo["uid"] = loginJo["data"].toObject()["uid"];
@@ -120,7 +150,7 @@ void DanmuConnection::postDanmuWork() {
 //    }
     historyMessage.insert(m);
     QJsonObject jo;
-    jo["cmdid"] = "chatmessage";
+    jo["cmdid"] = QString("chatmessage");
     jo["content"] = m;
     jo["level"] = 0;
     jo["showmedal"] = 1;
@@ -144,10 +174,10 @@ void DanmuConnection::blockUser(QString name, int uid, int action) {
  //   e":"九千万亿电竞女神","type":1,"uid":100305463})
 
     QJsonObject jo;
-    jo["cmdid"] = "blockuser";
+    jo["cmdid"] = QString("blockuser");
     jo["action"] = action;
-    jo["ip"] = "111.8.57.138";
-    jo["msg"] = "222";
+    jo["ip"] = QString("111.8.57.138");
+    jo["msg"] = QString("222");
     jo["name"] = name;
     jo["type"] = 1;
     jo["uid"] = uid;
@@ -159,6 +189,7 @@ void DanmuConnection::blockUser(QString name, int uid, int action) {
 
 bool DanmuConnection::postDanmu(QString s) {
     danmuPool.push_back(s);
+    return true;
 }
 
 void DanmuConnection::work5() {

@@ -17,6 +17,7 @@ class DanmuConnection : public QObject
 public:
     explicit DanmuConnection(QObject *parent = 0);
 
+    static QStringList getDanmuSeverList();
     bool busy();
     bool debugFlag;
     QList<QJsonObject> getALLMess() {  auto a = infoPool; infoPool.clear(); return a; }
@@ -30,6 +31,7 @@ protected slots:
 
     void postDanmuWork();
 public slots:
+
     bool postDanmu(QString s);
     void login(QString name, QString pass, QString uid, QString id);
 

@@ -49,10 +49,13 @@ bool    HttpFileDownloader::sycGetPageFromURL(const QUrl &url,  int timeout )
 
     if (_reply->error() != QNetworkReply::NoError) {
         QString loadresult = "error code " + QString::number( _reply->error());
+
+
         qDebug()<<loadresult;
         _reply->deleteLater();
         return false;
     }
+            //qDebug()<<_reply->rawHeaderList();
     _reply->deleteLater();
     return true;
 }

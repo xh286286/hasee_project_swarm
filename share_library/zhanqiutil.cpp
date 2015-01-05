@@ -1,4 +1,4 @@
-#include "Util.h"
+﻿#include "Util.h"
 #include "zhanqiutil.h"
 
 ZhanQiUtil::ZhanQiUtil()
@@ -32,12 +32,12 @@ const QList<QString> & ZhanQiUtil::getGiftList() {
     static bool init = false;
     if (!init) {
         init = true;
-        lq.push_back("顶");
-        lq.push_back("锅");
-        lq.push_back("溜");
-        lq.push_back("麻辣烫");
-        lq.push_back("女盆友");
-        lq.push_back("大宝剑");
+        lq.push_back(myTr("顶"));
+        lq.push_back(myTr("锅"));
+        lq.push_back(myTr("溜"));
+        lq.push_back(myTr("麻辣烫"));
+        lq.push_back(myTr("女盆友"));
+        lq.push_back(myTr("大宝剑"));
 
     }
     return lq;
@@ -48,12 +48,12 @@ const QMap<QString, int> & ZhanQiUtil::getGiftMap() {
     static bool init = false;
     if (!init) {
         init = true;
-        mqi["顶"] = 1;
-        mqi["锅"] = 1;
-        mqi["溜"] = 1;
-        mqi["麻辣烫"] = 60;
-        mqi["女盆友"] = 660;
-        mqi["大宝剑"] = 6660;
+        mqi[myTr("顶")] = 1;
+        mqi[myTr("锅")] = 1;
+        mqi[myTr("溜")] = 1;
+        mqi[myTr("麻辣烫")] = 60;
+        mqi[myTr("女盆友")] = 660;
+        mqi[myTr("大宝剑")] = 6660;
     }
     return mqi;
 }
@@ -67,15 +67,15 @@ const  QMap<QString, int >   & ZhanQiUtil::getBlackMap(const QJsonObject & a) {
         init = true;
 
         QMap<QString, int > saber, dongjing, mutong ;
-        saber["danmumiss"] = 20;
-        saber["voicecd"] = 30000;
-        saber["novoiceid"] = 1;
+        saber["danmumiss"] = 40;
+        saber["voicecd"] = 50000;
+
 
         dongjing["danmumiss"] = 80;
         dongjing["novoice"] = 1;
         dongjing["noordersong"] = 1;
 
-        mutong["danmumiss"] = 35;
+        mutong["danmumiss"] = 50;
 
 
 
@@ -84,7 +84,7 @@ const  QMap<QString, int >   & ZhanQiUtil::getBlackMap(const QJsonObject & a) {
         black2[myTr("东京")] = dongjing;
         black2[myTr("木桐")] = mutong;
 
-        black2[myTr("九千")] = dongjing;
+
 
         black1[299998] = saber;
     }

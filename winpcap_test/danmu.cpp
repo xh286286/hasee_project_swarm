@@ -99,9 +99,11 @@ void Danmu::init()
 }
 
 void Danmu::paint(QPainter & painter) {
+    if (animation.size()==0) return;
     qint64 passT = pWin->paintingTime - lastCheckTime;
     lastCheckTime = pWin->paintingTime;
    //qDebug()<<animation.size();
+
     while (animation.front()->leftLife < passT) {
         originState = *(animation.front());
         passT -= animation.front()->leftLife;
@@ -157,7 +159,7 @@ int Danmu::level()
     if (gift==myTr("超人内裤")) return 3*660;
     if (gift==myTr("女盆友")) return 3*660;
     if (gift==myTr("大宝剑")) return 3*20000;
-    if (gift==myTr("")) return 1;
-    if (gift==myTr("")) return 1;
-    return 0;
+    if (gift==myTr("")) return 2;
+    if (gift==myTr("")) return 2;
+    return 2;
 }

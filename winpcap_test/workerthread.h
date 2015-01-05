@@ -7,8 +7,10 @@
 typedef  unsigned int u_int;
 typedef  unsigned short u_short;
 typedef  unsigned char u_char;
-#include "pcap.h"
 
+
+struct  pcap_if;
+typedef struct pcap_if pcap_if_t;
 class WorkerThread : public QThread
 {
     Q_OBJECT
