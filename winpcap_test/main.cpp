@@ -97,8 +97,8 @@ int main(int argc, char *argv[])
     myMenu.addAction(myTr("欢迎使用麻由的弹幕小助手"), &myMenu, SLOT(about()) );
     myMenu.addAction(myTr("QQ群 310439712"), &myMenu, SLOT(about()) );
     myMenu.addAction(myTr("设置弹幕显示区域"), &sizeSetting_win, SLOT(show()) );
-    myMenu.addAction(myTr("显示刷新弹幕历史"), &danmu_win, SLOT(displayHistory()) );
-    //myMenu.addAction(myTr("找回弹幕显示"), &myMenu, SLOT(hideAndShow()) );
+    myMenu.addAction(myTr("显示弹幕历史"), &danmu_win, SLOT(displayHistory()) );
+    myMenu.addAction(myTr("显示或隐藏弹幕显示"), &myMenu, SLOT(hideAndShow()) );
     myMenu.addAction(myTr("重启监测模块"), &myMenu, SLOT(startDectecting()) );
     myMenu.addAction(myTr("停止监测模块"), &myMenu, SLOT(stopDectecting()) );
     myMenu.addAction(myTr("退出"), &myMenu, SLOT(endProgram()) );

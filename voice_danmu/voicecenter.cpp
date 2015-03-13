@@ -30,7 +30,8 @@ void VoiceCenter::getDanmu(QString s)
     QJsonObject a = QJsonDocument::fromJson(s.toUtf8()).object();
 
     QString host = myTr("御园麻由mayu");
-    QString author = myTr("天蝎10000");
+    QString author1 = myTr("天蝎10000");
+    QString author2 = myTr("天蝎1000");
     QString cmdid = a["cmdid"].toString();
     if ( cmdid == "chatmessage" ) {
 
@@ -38,7 +39,7 @@ void VoiceCenter::getDanmu(QString s)
         if (f=="") return;
 
         int level = a["level"].toInt();
-        if (level ==0 && f!=host && f!=author) return;
+        if (level ==0 && f!=host && f!=author1 && f!=author2) return;
 
         if (f == host) {
             a["fromname"] = myTr("大哥");
@@ -52,7 +53,9 @@ void VoiceCenter::getDanmu(QString s)
 
 
 
-        int cd = 15000;
+        int cd = 40000;
+
+        if (author1 == f || author2 == f  ) cd = 0;
 
         cd +=black["voicecd"];
         if (black["novoiceid"]) a["fromname"] = QString("");

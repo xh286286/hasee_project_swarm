@@ -66,24 +66,27 @@ const  QMap<QString, int >   & ZhanQiUtil::getBlackMap(const QJsonObject & a) {
     if (!init) {
         init = true;
 
-        QMap<QString, int > saber, dongjing, mutong ;
+        QMap<QString, int > saber, dongjing, mutong, mmmm , meng, puppy, xiamu;
+
+        mmmm["danmumiss"] = 100;
+        meng["danmumiss"] = 100;
+
         saber["danmumiss"] = 40;
         saber["voicecd"] = 50000;
 
+        xiamu["noordersong"] = 1;
 
-        dongjing["danmumiss"] = 80;
-        dongjing["novoice"] = 1;
-        dongjing["noordersong"] = 1;
+        puppy["danmumiss"] = 50;
 
-        mutong["danmumiss"] = 50;
-
-
+        black2[myTr("puppy")] = puppy;
 
         black2[myTr("saber")] = saber;
-        black2[myTr("进击的")] = saber;
-        black2[myTr("东京")] = dongjing;
-        black2[myTr("木桐")] = mutong;
 
+        black2[myTr("MMMM")] = mmmm;
+
+        black2[myTr("夏目")] = xiamu;
+
+        //black2[myTr("梦夢")] = meng;
 
 
         black1[299998] = saber;

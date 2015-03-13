@@ -21,3 +21,8 @@ OTHER_FILES += \
     212.txt \
     3444.txt \
     1122.txt
+
+DISTFILES += \
+    3333.txt \
+    room_info.txt \
+    5555.txt

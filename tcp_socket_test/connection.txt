@@ -7,3 +7,7 @@
 
 
 Ipv4: Src = 10.30.22.102, Dest = 182.92.220.139, Next Protocol = TCP, Packet ID = 26165, Total IP Length = 40
+
+
+content-type missing in HTTP POST, defaulting to application/x-www-form-urlencod
+ed. Use QNetworkRequest::setHeader() to fix this problem.

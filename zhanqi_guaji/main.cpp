@@ -143,18 +143,18 @@ void gua(DanmuConnection & dc, QString u, QString p, QString room) {
 
     dc.debugFlag = false;
 }
-
-
 void guaji() {
     int x = 0;
     QApplication a(x,0);
 
     qDebug()<<1;
     DanmuConnection dca[100];
-    QString ss1 [ 19] = {"mayu","kirito","sha77zhu","seraph_xiaot","chacha","icecreamrei","huamituan","alyssasearrs","1113430","2009","14689","1114920","12474","mirai","LMM","12838","11249","laoshusjq","ana0727"};
-    QString ss2 [ 12] = {"mayu","kirito","sha77zhu","seraph_xiaot","chacha","icecreamrei","huamituan","alyssasearrs","14689","1114920","ana0727","scorpio"};
+    QString ss1 [ 19] = {"mayu","kirito","sha77zhu","seraph_xiaot","chacha","icecreamrei","huamituan","alyssasearrs","1113430","2009","14689","suger","12474","mirai","LMM","12838","11249","laoshusjq","ana0727"};
+    QString ss2 [ 12] = {"mayu","kirito","sha77zhu","seraph_xiaot","chacha","icecreamrei","huamituan","alyssasearrs","14689","suger","ana0727","scorpio"};
+    QString ss3 [ 11] = {"mayu", "sha77zhu","seraph_xiaot","chacha","icecreamrei","huamituan","2009","14689","suger","ana0727","scorpio"};
     int count = 0;
-
+    int i1,i2,i3;
+    i1 = 0; i2 = 19+i1; i3 = 11+i2;
     for (int i=0; i<19 ; i++) {
         gua(dca[count],"aabbeaabbe", "aabbdaabbd", ss1[i]);
         count++;
@@ -163,8 +163,22 @@ void guaji() {
         gua(dca[count],"aabbdaabbd", "aabbcaabbc", ss2[i]);
         count++;
     }
-
+    for (int i=0; i<11 ; i++) {
+        gua(dca[count],"aabbiaabbi", "aabbhaabbh", ss3[i]);
+        count++;
+    }
     qDebug()<<"finished";
+
+//    QTimer  workcycle;
+
+//    workcycle.start(30000);
+
+//    QObject::connect(&workcycle, &QTimer::timeout, [&](){
+//        dca[i1].sendRoses();
+//        dca[i2].sendRoses();
+//        dca[i3].sendRoses();
+//    });
+
 
     a.exec();
 

@@ -71,15 +71,28 @@ DanmuWindow::DanmuWindow(QWidget *parent) :
     QString uid,id,user,password;
 
     uid = getGlobalParameterString("room_uid","113289");
-    id = getGlobalParameterString("room_uid","317");
+    id = getGlobalParameterString("room_id","317");
     user = getGlobalParameterString("secretary_user","aabbfaabbf");
     password = getGlobalParameterString("secretary_password","aabbeaabbe");
+
+
+
+
 
     danmuConnectionPool.push_back( new DanmuConnection);
     danmuConnectionPool[0]->login(user,password, uid,id);
 
+    // reboot 10min
+    QTimer * timer1 = new QTimer;
+    connect(timer1, &QTimer::timeout, danmuConnectionPool[0], &DanmuConnection::reboot);
+    timer1->start(600000);
+
+
     danmuConnectionPool.push_back( new DanmuConnection);
     danmuConnectionPool[1]->login("","", uid,id);
+
+    danmuConnectionPool.push_back( new DanmuConnection);
+    danmuConnectionPool[2]->login("","", uid,id);
 
     danmuConnectionPool[0]->debugFlag = true;
 
@@ -147,8 +160,10 @@ bool DanmuWindow::checkDuplicated(QString a) {
 
 }
 void DanmuWindow::hideandshow() {
+    if (this->isVisible()) {
     hide();
     show();
+    }
 }
 void DanmuWindow::postDanmuMessge(QString s) {
     danmuConnectionPool[0]->postDanmu(s);
@@ -157,14 +172,14 @@ void DanmuWindow::postDanmuMessge(QString s) {
 void DanmuWindow::dealOneMessage(QJsonObject a, QString sss)
 {
 
-
+    //qDebug()<<a;
     QString cmdid = a["cmdid"].toString();
 
     if (cmdid == "chatmessage") {
         if (danmuPool.size()==0){
             hideandshow();
         }
-
+        //qDebug()<<a;
         if (!checkDuplicated(a["chatid"].toString() + "chatid" )) return;
         QString s = a["content"].toString();
         //&quot;&apos;&amp;
@@ -216,6 +231,29 @@ void DanmuWindow::dealOneMessage(QJsonObject a, QString sss)
         QString name = data["fansname"].toString();
         if (!checkDuplicated(name + " fans" )) return;
         addOneDebugInfor(data["fansname"].toString() + myTr(" 进入了直播间"));
+    }
+    else if (cmdid == "rosebro") {
+        //QJsonObject({"cmdid":"rosebro","cnt":6,"name":"天蝎10000","rank":47})
+        //qDebug()<<a;
+        QString name = a["name"].toString();
+
+        static QMap < QString , qint64> lastSend;
+
+        qint64 now = QDateTime::currentDateTime().toMSecsSinceEpoch();
+        qint64 last = lastSend[name];
+
+        lastSend[name] = now;
+        qDebug()<<now<<' '<<last;
+        if (now - last < 20*60*1000) return;
+
+        emit broadcastDanmu(sss);
+        QString fromname =  name;
+        if (fromname=="") return;
+        QString giftname = myTr("玫瑰");
+        int count = 6;
+        addOnePresent(now, count, fromname ,giftname );
+        emit informGift(a);
+        addDanmuHistory("["+fromname+"] send "+ QString::number(count) + giftname);
     }
     else {
         //qDebug()<<a<<endl;
@@ -488,10 +526,10 @@ void DanmuWindow::updateLater() {
     if (t == NULL) {
         t = new QTimer;
         connect(t, SIGNAL(timeout()), this, SLOT(update()));
-        t->start(30);
+        t->start(100);
     }
     if (t->isActive()) return;
-    else t->start(30);
+    else t->start(100);
 }
 
 void DanmuWindow::clearDead()

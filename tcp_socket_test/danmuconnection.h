@@ -18,8 +18,18 @@ public:
     explicit DanmuConnection(QObject *parent = 0);
 
     static QStringList getDanmuSeverList();
+    static QStringList getDanmuSeverListFromNet();
+    bool viewRoom(QString name);
+
+    int danmuServerSeed;
+
+    int danmuServerPort;
+
     bool busy();
     bool debugFlag;
+
+    bool shutdownFlag;
+
     QList<QJsonObject> getALLMess() {  auto a = infoPool; infoPool.clear(); return a; }
 signals:
     void messReady();
@@ -32,10 +42,17 @@ protected slots:
     void postDanmuWork();
 public slots:
 
+    void reboot();
+
     bool postDanmu(QString s);
+    void login(QString name, QString pass);
     void login(QString name, QString pass, QString uid, QString id);
 
     void blockUser(QString name, int uid, int action = 1);
+
+    void sendGift(int pid, int count = 1);
+
+    void sendRoses();
 
     void keepAlive();
 protected:
@@ -64,7 +81,7 @@ private:
     HttpFileDownloader * hfd;
     QTcpSocket * ts;
     int state;
-    QString username, password,uid,id;
+    QString username, password,uid,id, room;
 };
 
 #endif // DANMUCONNECTION_H

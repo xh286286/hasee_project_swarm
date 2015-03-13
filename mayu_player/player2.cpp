@@ -60,6 +60,93 @@
 #include <iostream>
 using std::cout;
 using std::endl;
+
+QString Player::getMp3UrlFrom163(QString query) {
+//    QString head= "http://music.163.com/";
+//    QByteArray ba0 = head.toUtf8();
+//    qDebug()<<0;
+//    QUrl u0 ( ba0 );
+//    bool ok0  = downloader->sycGetPageFromURL(u0,  5000);
+//    if (!ok0) return "";
+
+//    qDebug()<<downloader->getPage();
+    QJsonObject a;
+    QByteArray postData;
+//    QString login= "http://music.163.com/api/login/token/refresh?csrf_token=";
+//    QByteArray ba1 = login.toUtf8();
+//    qDebug()<<1;
+//    QUrl u1 ( ba1 );
+//    QNetworkRequest   req1(u1);
+//    req1.setRawHeader( "Referer", "http://music.163.com/search/");
+//    req1.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+//  //  req1.setHeader(QNetworkRequest::UserAgentHeader,"User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36");
+
+//    bool ok1  = downloader->sycPostFromRequset(req1, postData, 5000);
+//    if (!ok1) return "";
+//    QJsonObject a = QJsonDocument::fromJson(downloader->getPage()).object();
+//    qDebug()<<a;
+
+
+    QString qh = "http://music.163.com/api/search/get/web?csrf_token=";
+
+    QByteArray ba = qh.toUtf8();
+    //qDebug()<<2;
+    QUrl u ( ba );
+    QNetworkRequest   req(u);
+    req.setRawHeader( "Referer", "http://music.163.com/search/");
+    req.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+    req.setHeader(QNetworkRequest::UserAgentHeader,"User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36");
+
+//hlpretag:<span class="s-fc7">
+//hlposttag:</span>
+//s:小鸡哔哔
+//type:1
+//offset:0
+//total:true
+//limit:30
+
+    postData.append("hlpretag=%3Cspan%20class%3D%22s-fc7%22%3E&hlposttag=%3C%2Fspan%3E&s=");
+    postData.append(query.toUtf8().toPercentEncoding());
+
+    postData.append("&type=1&offset=0&total=true&limit=30");
+    //qDebug()<<postData;
+    bool ok  = downloader->sycPostFromRequset(req, postData, 5000);
+    if (!ok) return "";
+
+    a = QJsonDocument::fromJson(downloader->getPage()).object();
+
+    QJsonArray ja = a["result"].toObject()["songs"].toArray();
+    //qDebug()<<ja.size();
+    if (ja.size()==0)     return "";
+
+    int id = ja[0].toObject()["id"].toInt();
+    //qDebug()<<id;
+    QString ids = QString::number(id);
+    QString qh1 = "http://music.163.com/api/song/detail/?id=";
+    qh1.append(ids);
+    qh1.append("&ids=%5B");
+    qh1.append(ids);
+    qh1.append("%5D&csrf_token=");
+
+    QUrl u2 ( qh1 );
+    QNetworkRequest   req2(u2);
+    req2.setRawHeader( "Referer", "http://music.163.com/");
+    req2.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+    req2.setHeader(QNetworkRequest::UserAgentHeader,"User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36");
+    //qDebug()<<u2;
+    ok  = downloader->sycGetPageFromRequest(req2, 5000);
+    if (!ok) return "";
+
+    a = QJsonDocument::fromJson(downloader->getPage()).object();
+    ja = a["songs"].toArray();
+    a = ja[0].toObject();
+    QString re = a["mp3Url"].toString();
+    //qDebug()<<re;
+    netTitle = a["name"].toString();
+    netAuthor = a["artists"].toArray()[0].toObject()["name"].toString();
+    return re;
+}
+
 QString Player::getMp3UrlFromBaidu(QString query)
 {
     QString qh = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=webapp_music&method=baidu.ting.search.catalogSug&format=json&callback=&query=";
@@ -154,7 +241,31 @@ void Player::playNextSong()
         QString us;
         QUrl url;
 
+        us = getMp3UrlFrom163(cm.mid(2));
+        url= QUrl(us);
 
+        if (url.isValid()) {
+            orderInfo = f+" "+cm;
+            statusBar->showMessage(f+" "+cm);
+            addHintInfo(myTr("网易音乐查找成功"));
+            addHintInfo(netAuthor + " | " + netTitle);
+            remoteInfo(myTr("正在播放 ") + netAuthor + " | " + netTitle);
+            qDebug()<<url;
+            playlist1->insertMedia(0,url);
+
+            playlist1->setCurrentIndex(0);
+            player->setPlaylist(playlist1);
+            player->play();
+            player->metaDataChanged();
+            refreshOrderList();
+
+            running = false;
+            return;
+        }
+        else {
+            addHintInfo(myTr("网易音乐查找失败"));
+
+        }
 
         us = getMp3UrlFromBaidu(cm.mid(2));
         url= QUrl(us);
@@ -306,9 +417,10 @@ void Player::getDanmu(QString s)
         if (data["url"].toString()!= "/mayu") return;
         int count = data["count"].toInt();
         QString fname = data["nickname"].toString();
-        int v = UserBank::evaluateGift(data["name"].toString());
+        QString giftName =  data["name"].toString();
+        int v = UserBank::evaluateGift(giftName);
         UserBank::saveMoney(data["nickname"].toString(), v*count);
-        addHintInfo(fname +  myTr("  存入麻由的药费 ") + QString::number(v*count));
+        addHintInfo(fname + " "+ giftName + " "+ QString::number(count) +" " +  myTr("  存入麻由的药费 ") + QString::number(v*count));
     }
 
 }

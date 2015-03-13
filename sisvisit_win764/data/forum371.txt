@@ -1,0 +1,2138 @@
+[
+    {
+        "author": "xiao77720",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2563513",
+        "title": "[玄幻]永恒国度之秘密花园(全集)(作者：天堂里的土)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2563881",
+        "title": "[玄幻]堕落天使咒(全集)(作者：陈苦)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "mimishow001",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2563930",
+        "title": "[都市]金麟岂是池中物(全本)(作者：monkey)[TXT/JAR/UMD]典藏",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2563953",
+        "title": "[玄幻]圣女修道院(全本)(作者：风中啸)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2564013",
+        "title": "[武侠]梦回天阙(全本)(作者：紫屋魔恋)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2564108",
+        "title": "[武侠]擎羊舞风云(全本)(作者：紫屋魔恋)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2564194",
+        "title": "[都市]胸大有罪(全本)(作者：秦守)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2564240",
+        "title": "[武侠]鹰翔长空(全本)(作者：紫屋魔恋)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "kliang",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2564378",
+        "title": "[少妇人妻]屈辱少妇系列[TXT][JAR][UMD]作者：佚名",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2564401",
+        "title": "[武侠]游龙传(全本)(作者：紫屋魔恋)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "kliang",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2564494",
+        "title": "[玄幻] 浪荡皇帝秘史(全本)[JAR][TXT][UMD]作者：长亭古道",
+        "type": ""
+    },
+    {
+        "author": "haoseshusheng",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2564560",
+        "title": "[都市] 花都迷情(全本)（作者：江山雪） [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2564691",
+        "title": "[都市]邻居、同学、女友(全本)(作者：佚名)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "pengziqq",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2564739",
+        "title": "[都市]偷香猎人(全本)(作者：请叫我流氓)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2564751",
+        "title": "[玄幻]成龙记(全本)(作者：失落)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "haoseshusheng",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2564811",
+        "title": "[古典] 红楼遗秘(全本)（作者：迷男）[TXT] [UMD][JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2564835",
+        "title": "[都市]手转星移(全本)(作者：qiutianfu)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mimishow001",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2564864",
+        "title": "[都市]淫乱秘史(全本)作者：未知)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "mimishow001",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2564992",
+        "title": "[都市]沙发上的小青(全本)(作者：朱莞亭)[TXT/JAR/UMD]典藏",
+        "type": ""
+    },
+    {
+        "author": "haoseshusheng",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2565007",
+        "title": "[都市] 百魔女(全本)（作者：大卫·恺撒）[TXT] [UMD][JAR]",
+        "type": ""
+    },
+    {
+        "author": "mimishow001",
+        "date": "2009-11-13",
+        "forum": "371",
+        "tid": "2565102",
+        "title": "[都市]淫女大家庭(全本)(作者：未知)[TXT/JAR/UMD]典藏",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2565236",
+        "title": "[武侠]魔女天娇美人志(全本)(作者：潜龙)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2565701",
+        "title": "[都市]人妻五部曲(全本)(作者：结城彩雨)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "mimishow001",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2565820",
+        "title": "[都市]苏婷的放荡生活(全本)作者：夜来香)[TXT/JAR/UMD]典藏",
+        "type": ""
+    },
+    {
+        "author": "mimishow001",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2565911",
+        "title": "[都市]色间道(全本)(作者：未知)[TXT/JAR/UMD]典藏",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2566174",
+        "title": "[武侠]散花天女(全本)(作者：紫屋魔恋)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2566191",
+        "title": "[武侠]江湖(全本)(作者：失落)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2566215",
+        "title": "[武俠] 修羅劫 (全本) (作者/失落) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2566243",
+        "title": "[武侠]逆天邪传(全本)(作者：苍天)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "kliang",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2566345",
+        "title": "[武侠] 倚天屠龙夺艳记(全) [TXT/UMD/JAR]作者：佚名",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2566355",
+        "title": "[都市]后宫学园(全本)(作者：黑月)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "kliang",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2566379",
+        "title": "[乱伦]孽欲 全 [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2566407",
+        "title": "[玄幻]博康舒大冒险(全本)(作者：微风妖来坊)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2566434",
+        "title": "[都市]星光伴我淫 (全本)(作者：佚名)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2566599",
+        "title": "[玄幻] 逍遙小散仙 (太監) (作者/迷男) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2566666",
+        "title": "[武侠]十景缎(全本)(作者：方寸光)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2566774",
+        "title": "[都市]海盗的悠闲生活(全本)(作者：黑月)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2566855",
+        "title": "[都市]狡猾的风水相师(全本)(作者：焚摩)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2566902",
+        "title": "[玄幻] 妙手神織 (全本) (作者/家榮) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "pengziqq",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2567097",
+        "title": "[武侠]江湖有鱼(全本)(作者：茶叶面包)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2567110",
+        "title": "[武俠] 神雕風流(又名神雕遊俠) (全本) (作者/蕭九) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "pengziqq",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2567563",
+        "title": "[都市]娇艳人生(全本)(作者：茶叶面包)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2567686",
+        "title": "[玄幻]睡着的武神(全本)(作者：陈苦)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2567711",
+        "title": "[玄幻]龙使(全本)(作者：闲来无事)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2567800",
+        "title": "[都市]美少妇的哀羞(全本)(作者：棍头)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2567829",
+        "title": "[都市]官能(全本)(作者：白纸)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2567869",
+        "title": "[武侠]魔刀丽影(全本)(作者：猎枪)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2568002",
+        "title": "[都市]大丑风流记(全本)(作者：江南哭哭生)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "mimishow001",
+        "date": "2009-11-14",
+        "forum": "371",
+        "tid": "2568009",
+        "title": "[都市]换妻颠峰之作(全本)(作者：未知)[TXT/JAR/UMD]典藏",
+        "type": ""
+    },
+    {
+        "author": "kliang",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2568093",
+        "title": "[校园] 校园寻美录(全本)[TXT][UMD][JAR]作者：佚名",
+        "type": ""
+    },
+    {
+        "author": "kliang",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2568129",
+        "title": "[都市] 奇缘四部曲(完整) [TXT/UMD/JAR]作者：佚名",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2568139",
+        "title": "[武侠]猎艳江湖梦(全本)(作者：陈苦)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2568172",
+        "title": "[都市]天使三部曲(全本)(作者：潜龙)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2568198",
+        "title": "[武侠]天武记(全本)(作者：紫屋魔恋)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2568501",
+        "title": "[武侠]正气寻妇录(全本)(作者：徐大)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "pengziqq",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2568897",
+        "title": "[都市]欲医忏悔录(全本)(作者：江湖乱)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2568981",
+        "title": "[武侠侦探]俪影蝎心·香艳杀劫(全本)(作者：秦守)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2569028",
+        "title": "[都市] 廢都(未刪節) (全本) (作者/賈平凹) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2569162",
+        "title": "[武侠]江山如此多娇1-25卷(太监)(作者：泥人)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2569179",
+        "title": "[武侠]玄媚剑(无删节版)(全本)(作者：说剑)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2569192",
+        "title": "[武侠]武林启示录1-22部(太监)(作者：影子武士)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2569758",
+        "title": "[武侠]狂剑风流(全本)(作者：猎枪)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "pengziqq",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2569956",
+        "title": "[都市]花都飘香(全本)(作者：等爱的玫瑰)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mimishow001",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2570264",
+        "title": "[都市]人性禁岛(全本)(作者：破禁果)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2570281",
+        "title": "[都市]玉麟传奇（太监）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mimishow001",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2570286",
+        "title": "[都市]少年阿宾(全本)(作者：ben)[TXT/JAR/UMD]典藏",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2570360",
+        "title": "[玄幻][萝莉今晚留下来(全本)(作者：不ok便利超商)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-15",
+        "forum": "371",
+        "tid": "2570415",
+        "title": "[都市]同学的可爱女友(全本)(作者：好色男）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2570958",
+        "title": "[玄幻]极道风流传说(全本)(作者：黑月)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2570966",
+        "title": "[武侠]照日天劫(太监)(作者：默默猴)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2570973",
+        "title": "[武侠]魔帝傲世行(太监)(作者：帅呆)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2571246",
+        "title": "[武侠]沧澜曲(太监)(作者：忘怀)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "pengziqq",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2571459",
+        "title": "[都市]寂寞官场(全本)(作者：俗人三昆)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2571583",
+        "title": "[都市] 冰峰魔戀 (全本) (作者/秦守) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "pengziqq",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2571684",
+        "title": "[武侠]娇艳江湖(太监)(作者：茶叶面包)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "kliang",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2571852",
+        "title": "[都市乱伦]病后奇迹[TXT/JAR/UMD]作者：佚名",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2572060",
+        "title": "[都市] Sexual Rhapsody (太監) (作者/不詳) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2572119",
+        "title": "[都市] 魔女的誘惑 (全本) (作者/靖兒) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "kliang",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2572140",
+        "title": "[都市] 我的完美女友何雨晴(全)[TXT/UMD/JAR]作者：佚名",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2572462",
+        "title": "[都市]炼狱天使(太监)(作者：半只青蛙)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "pengziqq",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2573011",
+        "title": "[都市]浪子情缘赤子心(全本)(作者：天地蜉蝣)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2573379",
+        "title": "[都市]老婆的两个表妹+续集+姐妹篇(全本)(作者：小半农）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2573392",
+        "title": "[武侠]武林淫乱史(全本)(作者：大魔鬼王）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2573424",
+        "title": "[科幻]克里斯蒂安战记(全本)(作者：黑月）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2573576",
+        "title": "[武侠]玲珑孽怨(全本)(作者：rking)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-16",
+        "forum": "371",
+        "tid": "2573605",
+        "title": "[都市]幸福家庭俱乐部(全本)(作者：微风)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-17",
+        "forum": "371",
+        "tid": "2573624",
+        "title": "[武侠]沧海行云录(太监)(作者：正在离婚中)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-17",
+        "forum": "371",
+        "tid": "2573954",
+        "title": "[武侠]携美游江湖(全本)(作者：面包)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-17",
+        "forum": "371",
+        "tid": "2574027",
+        "title": "[武侠]暗夜情魔1-2部第75章(太监)(作者：克来敦)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-17",
+        "forum": "371",
+        "tid": "2574041",
+        "title": "[武侠]广陵传1-5卷(太监)(作者：蝴蝶君下)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-17",
+        "forum": "371",
+        "tid": "2574054",
+        "title": "[都市]灰色三部曲(全本)(作者：天外飞星)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "pengziqq",
+        "date": "2009-11-17",
+        "forum": "371",
+        "tid": "2574396",
+        "title": "[玄幻]创世之子猎艳之旅(太监)(作者：诡禅)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "pengziqq",
+        "date": "2009-11-17",
+        "forum": "371",
+        "tid": "2574425",
+        "title": "[都市]生生缘(十色)(全本)(作者：玉骨钢心)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "pengziqq",
+        "date": "2009-11-17",
+        "forum": "371",
+        "tid": "2574435",
+        "title": "[都市]性福男人(全本)(作者：有情无爱)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-17",
+        "forum": "371",
+        "tid": "2574646",
+        "title": "[武侠]浪情侠女(全本)(作者：紫屋魔恋)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-17",
+        "forum": "371",
+        "tid": "2575321",
+        "title": "[武侠]玉女盟(全本)(作者：mashel)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "mimishow001",
+        "date": "2009-11-17",
+        "forum": "371",
+        "tid": "2576245",
+        "title": "[都市]小梅和我的故事(全本)(作者：arms)[TXT/JAR/UMD]典藏",
+        "type": ""
+    },
+    {
+        "author": "mimishow001",
+        "date": "2009-11-17",
+        "forum": "371",
+        "tid": "2576290",
+        "title": "[武侠]仙剑御香录(全本)(作者：)[TXT/JAR/UMD]典藏",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-18",
+        "forum": "371",
+        "tid": "2576328",
+        "title": "[武侠]风流邪龙(全本)(作者：风流龙哥)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-18",
+        "forum": "371",
+        "tid": "2576338",
+        "title": "[玄幻]缚美传(全本)(作者：姬芸)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-18",
+        "forum": "371",
+        "tid": "2576383",
+        "title": "[玄幻]皇朝秘史(太监)(作者：寒青上人)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-18",
+        "forum": "371",
+        "tid": "2576715",
+        "title": "[玄幻]魔皇至尊(太监)(作者：逸界魔王)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-18",
+        "forum": "371",
+        "tid": "2576818",
+        "title": "[都市]导火线(全本)(作者：天外飞星)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-18",
+        "forum": "371",
+        "tid": "2576824",
+        "title": "[都市]幸福的借种经历(全本)(作者：独孤一狼)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "pengziqq",
+        "date": "2009-11-18",
+        "forum": "371",
+        "tid": "2577139",
+        "title": "[玄幻]日出之王(全本)(作者：忘怀)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "pengziqq",
+        "date": "2009-11-18",
+        "forum": "371",
+        "tid": "2577142",
+        "title": "[都市]都市小钢炮(太监)(作者：钢子)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "pengziqq",
+        "date": "2009-11-18",
+        "forum": "371",
+        "tid": "2577147",
+        "title": "[武侠]阴功十八法(全本)(作者：卧龙生)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-18",
+        "forum": "371",
+        "tid": "2577219",
+        "title": "[武俠] 劍公子 (全本) (作者/cctt) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-18",
+        "forum": "371",
+        "tid": "2577346",
+        "title": "[武侠]浑沌无极(太监)(作者：armageddon)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-18",
+        "forum": "371",
+        "tid": "2577367",
+        "title": "[武侠]神斧英雄(全本)(作者：猎枪）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-18",
+        "forum": "371",
+        "tid": "2577397",
+        "title": "[玄幻]黑帝猎艳记(全本)(作者：海上金鰲）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-18",
+        "forum": "371",
+        "tid": "2577808",
+        "title": "[武俠] 護花劍 (全本) (作者/alijun) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-18",
+        "forum": "371",
+        "tid": "2578470",
+        "title": "[都市]荒唐传说(全本)(作者：天音丝缕)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-19",
+        "forum": "371",
+        "tid": "2578929",
+        "title": "[武侠]大唐群芳录(全本)(作者：晏山亭)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-19",
+        "forum": "371",
+        "tid": "2578940",
+        "title": "[玄幻]木里求丝称雄记(太监)(作者：鹰飞太空)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-19",
+        "forum": "371",
+        "tid": "2578964",
+        "title": "[玄幻]王子淫传(太监)(作者：白鲸)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-19",
+        "forum": "371",
+        "tid": "2579362",
+        "title": "[玄幻]情色搜神记(太监)(作者：佚名)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "mimishow001",
+        "date": "2009-11-19",
+        "forum": "371",
+        "tid": "2579374",
+        "title": "[都市]我是妈妈的主人(全本)(作者：xionger)[TXT/JAR/UMD]典藏",
+        "type": ""
+    },
+    {
+        "author": "mimishow001",
+        "date": "2009-11-19",
+        "forum": "371",
+        "tid": "2579403",
+        "title": "[都市]家的沦陷之“引牛入室”(全本)(作者：Stanleyeee)[TXT/JAR/UMD]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-19",
+        "forum": "371",
+        "tid": "2579447",
+        "title": "[武侠]大侠魂(全本)(作者：花间浪子)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-19",
+        "forum": "371",
+        "tid": "2579452",
+        "title": "[武侠]冷香谷(全本)(作者：花间浪子)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-19",
+        "forum": "371",
+        "tid": "2579455",
+        "title": "[武侠]三折剑(全本)(作者：花间浪子)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-19",
+        "forum": "371",
+        "tid": "2579739",
+        "title": "[ＳＭ] 青春烈火 (全本) (作者/屠美) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-19",
+        "forum": "371",
+        "tid": "2579801",
+        "title": "[同人] 豔說聊齋 (全本) (作者/周某人) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mimishow001",
+        "date": "2009-11-19",
+        "forum": "371",
+        "tid": "2580006",
+        "title": "[都市]现代女皇（全本）(作者：寻求美足)[TXT/JAR/UMD]典藏",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-19",
+        "forum": "371",
+        "tid": "2580874",
+        "title": "[玄幻]银剑天使(太监)(作者：暴龍哥吉拉)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-20",
+        "forum": "371",
+        "tid": "2581527",
+        "title": "[都市]终生性奴隶(全本)(作者：太阳黑子)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-20",
+        "forum": "371",
+        "tid": "2581546",
+        "title": "[都市]大地原忿(全本)(作者：中宵舞)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-20",
+        "forum": "371",
+        "tid": "2581575",
+        "title": "[武侠]柔情似水之武侠(全本)(作者：木士)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-20",
+        "forum": "371",
+        "tid": "2581956",
+        "title": "[武侠]如意楼(太监)(作者：snow_xefd)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-20",
+        "forum": "371",
+        "tid": "2582116",
+        "title": "[都市]贱妇(全本)(作者：佚名)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-20",
+        "forum": "371",
+        "tid": "2582122",
+        "title": "[都市]风流教师Z(全本)(作者：独孤寻欢)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-20",
+        "forum": "371",
+        "tid": "2582129",
+        "title": "[都市]小天风流史(全本)(作者：佚名)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-20",
+        "forum": "371",
+        "tid": "2582396",
+        "title": "[玄幻]圣女妖狐(全本)(作者：不色你报警)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-20",
+        "forum": "371",
+        "tid": "2582444",
+        "title": "[都市] 頭帶光環的女人 (全本) (作者/秋水伊人) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "oceanwoaini",
+        "date": "2009-11-20",
+        "forum": "371",
+        "tid": "2583060",
+        "title": "[都市]女白领的私生活（全本）(作者：佚名)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-20",
+        "forum": "371",
+        "tid": "2583067",
+        "title": "[都市] 都市大巫 (全本) (作者/棺材裏的笑聲) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-20",
+        "forum": "371",
+        "tid": "2583692",
+        "title": "[都市]邪龙天下(太监)(作者：血花四溅)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "gu19871128",
+        "date": "2009-11-20",
+        "forum": "371",
+        "tid": "2583958",
+        "title": "《战神转世传说》（1-41） 作者：大懒虫",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-21",
+        "forum": "371",
+        "tid": "2584112",
+        "title": "[玄幻]龙战士传说(太监)(作者：半只青蛙)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-21",
+        "forum": "371",
+        "tid": "2584156",
+        "title": "[武侠]少年游(太监)(作者：弄月)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-21",
+        "forum": "371",
+        "tid": "2584174",
+        "title": "[武侠]千古风流谈笑间(全本)(作者：花残剑)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-21",
+        "forum": "371",
+        "tid": "2584549",
+        "title": "[武侠]欲海逍遥(全本)(作者：alijun)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-21",
+        "forum": "371",
+        "tid": "2584558",
+        "title": "[武侠]铁汉娇娃(全本)(作者：北地色魔)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-21",
+        "forum": "371",
+        "tid": "2584563",
+        "title": "[武侠]珍珠令(全本)(作者：只为你)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-21",
+        "forum": "371",
+        "tid": "2584911",
+        "title": "[都市]爱上师娘的床(全本)(作者：正宗大悟山人)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "oceanwoaini",
+        "date": "2009-11-21",
+        "forum": "371",
+        "tid": "2584928",
+        "title": "[都市]豪乳荡妇（全本）(作者：佚名)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-21",
+        "forum": "371",
+        "tid": "2584986",
+        "title": "[都市]我和我妹妹雯雯(全本)(作者：20Xela）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-21",
+        "forum": "371",
+        "tid": "2584999",
+        "title": "[都市]张峰外传之春月塘逸事(全本)(作者：黛欲 ）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-21",
+        "forum": "371",
+        "tid": "2585009",
+        "title": "[玄幻]焚天愤天淫魔阴魔(太监)(作者：洒脱)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-21",
+        "forum": "371",
+        "tid": "2585022",
+        "title": "[都市]《春色田野》一二部(全本)(作者：茶叶面包）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "whz123123",
+        "date": "2009-11-21",
+        "forum": "371",
+        "tid": "2585721",
+        "title": "【都市乱伦】小毅  作者：小淫弟 （TXT/JAR/UMD)",
+        "type": ""
+    },
+    {
+        "author": "whz123123",
+        "date": "2009-11-21",
+        "forum": "371",
+        "tid": "2585776",
+        "title": "【都市】大学生交换女友1-2部（太监）作者：kc[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-22",
+        "forum": "371",
+        "tid": "2586461",
+        "title": "[都市] 風流英雄獵豔記 (全本) (作者/斷翼鳥) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-22",
+        "forum": "371",
+        "tid": "2586498",
+        "title": "[武俠] 天龍風流 (全本) (作者/宇宙浪子168) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-22",
+        "forum": "371",
+        "tid": "2586567",
+        "title": "[武俠] 夢想雲龍 (太監) (作者/02913493) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-22",
+        "forum": "371",
+        "tid": "2586722",
+        "title": "[武侠]御女心经(全本)(作者：王少)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-22",
+        "forum": "371",
+        "tid": "2586727",
+        "title": "[武侠]玉辟邪(全本)(作者：东方玉)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-22",
+        "forum": "371",
+        "tid": "2586735",
+        "title": "[玄幻]幻梦唯心(太监)(作者：天音丝缕)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-22",
+        "forum": "371",
+        "tid": "2586751",
+        "title": "[武侠]朱颜血-紫玫(全本)(作者：紫狂·浮萍居主 )[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-22",
+        "forum": "371",
+        "tid": "2586956",
+        "title": "[都市]爱恋筱莉儿(两个版本)(全本)(作者：皇极生)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-22",
+        "forum": "371",
+        "tid": "2586959",
+        "title": "[都市]罪恶之源(全本)(作者：gubaman)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-22",
+        "forum": "371",
+        "tid": "2586962",
+        "title": "[武侠]惊尘溅血(全本)(作者：紫狂)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-22",
+        "forum": "371",
+        "tid": "2587344",
+        "title": "[玄幻]法师帝国(太监)(作者：意乱情迷）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-22",
+        "forum": "371",
+        "tid": "2587358",
+        "title": "[武侠]龙舞剑法(全本)(作者：剑宗）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-22",
+        "forum": "371",
+        "tid": "2587370",
+        "title": "[都市]潜伏(全本)(作者：大灰 、刮刮鸡）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-22",
+        "forum": "371",
+        "tid": "2587657",
+        "title": "[武侠]朱颜血-雪芍(全本)(作者：紫狂·浮萍居主 )[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-22",
+        "forum": "371",
+        "tid": "2587675",
+        "title": "[都市]艳香迷醉(太监)(作者：罗兰佳洛斯 )[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "whz123123",
+        "date": "2009-11-22",
+        "forum": "371",
+        "tid": "2588092",
+        "title": "【玄幻】凰舞（全本）作者：无名氏【TXT/JAR/UMD】",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-23",
+        "forum": "371",
+        "tid": "2588944",
+        "title": "[武俠] 武林現場秀 (全本) (作者/松柏生) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-23",
+        "forum": "371",
+        "tid": "2588998",
+        "title": "[玄幻]圣魔邪灵(太监)(作者：白纸)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-23",
+        "forum": "371",
+        "tid": "2589006",
+        "title": "[武侠]剑魔(太监)(作者：不详)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "yushan126",
+        "date": "2009-11-23",
+        "forum": "371",
+        "tid": "2589009",
+        "title": "[都市] 淫男乱女 (全本) (作者/未知) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-23",
+        "forum": "371",
+        "tid": "2589026",
+        "title": "[玄幻]圣女传奇(全本)(作者：不详)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "yushan126",
+        "date": "2009-11-23",
+        "forum": "371",
+        "tid": "2589039",
+        "title": "[家庭乱伦] 我的淫乱生活 (全本) (作者/w520) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "yushan126",
+        "date": "2009-11-23",
+        "forum": "371",
+        "tid": "2589062",
+        "title": "[家庭乱伦] 做儿子的妈妈、女友、情人和妻子 (全本) (作者/未知) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-23",
+        "forum": "371",
+        "tid": "2589313",
+        "title": "[仙侠]仙剑奇侠传(全本)(作者：佚名)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-23",
+        "forum": "371",
+        "tid": "2589317",
+        "title": "[古典]江南第一风流才子(全本)(作者：仿为)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-23",
+        "forum": "371",
+        "tid": "2589321",
+        "title": "[古典]百妇谱(全本)(作者：佚名)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-23",
+        "forum": "371",
+        "tid": "2589677",
+        "title": "[都市] 重生成神 (全本) (作者/鹹魚翻身) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-23",
+        "forum": "371",
+        "tid": "2589749",
+        "title": "[都市]女文工团员最后的下落.加强版(全本)(作者：刮刮鸡）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-23",
+        "forum": "371",
+        "tid": "2589763",
+        "title": "[都市]杨小青自白(全本)(作者：朱莞葶）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-23",
+        "forum": "371",
+        "tid": "2589776",
+        "title": "[武侠]英雄难过美人关(64章)(作者：太阳雨）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-23",
+        "forum": "371",
+        "tid": "2590213",
+        "title": "[玄幻]骑士的血脉(太监)(作者：血珊瑚)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-24",
+        "forum": "371",
+        "tid": "2591482",
+        "title": "[都市]色遍天下(全本)(作者：小鱼大心 )[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-24",
+        "forum": "371",
+        "tid": "2591792",
+        "title": "[都市]性奴集中营(全本)(作者：屈指流徙 )[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-24",
+        "forum": "371",
+        "tid": "2591811",
+        "title": "[都市]烈火凤凰(太监)(作者：幻想)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-24",
+        "forum": "371",
+        "tid": "2591816",
+        "title": "[都市]游龙戏春(全本)(作者：龙戈)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-24",
+        "forum": "371",
+        "tid": "2591818",
+        "title": "[都市]革命逸事(全本)(作者：yanse)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-24",
+        "forum": "371",
+        "tid": "2592037",
+        "title": "[都市]魔辱之馆(全本)(作者：太阳黑子)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-24",
+        "forum": "371",
+        "tid": "2592044",
+        "title": "[都市]修罗都市(全本)(作者：紫狂)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-24",
+        "forum": "371",
+        "tid": "2592055",
+        "title": "[武侠]欲海神龙(全本)(作者：天外一道)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-25",
+        "forum": "371",
+        "tid": "2594011",
+        "title": "[都市]王老五的情欲生活(太监)(作者：坦然 )[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-25",
+        "forum": "371",
+        "tid": "2594036",
+        "title": "[都市]欲望男女(全本)(作者：佚名 )[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-25",
+        "forum": "371",
+        "tid": "2594211",
+        "title": "[古典]红楼梦之绮梦仙缘(全本)(作者：知乐)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-25",
+        "forum": "371",
+        "tid": "2594216",
+        "title": "[玄幻]绝代艳修之旅(全本)(作者：知乐)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "LHQ699",
+        "date": "2009-11-25",
+        "forum": "371",
+        "tid": "2594221",
+        "title": "[武侠]龙纹宝鼎(全本)(作者：卧龙生)[TXT/UMD/JAR]典藏",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-25",
+        "forum": "371",
+        "tid": "2594978",
+        "title": "[玄幻]江山绝色榜(全本)(作者：叶锋)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-26",
+        "forum": "371",
+        "tid": "2596654",
+        "title": "[武侠]天降神妻(全本)(作者：飘荡的云)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-26",
+        "forum": "371",
+        "tid": "2597161",
+        "title": "[玄幻]黑天使(全本)(作者：程嘉）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-11-26",
+        "forum": "371",
+        "tid": "2597175",
+        "title": "[都市]凌辱女友与杂篇(全本)(作者：胡作非）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-26",
+        "forum": "371",
+        "tid": "2598474",
+        "title": "[都市] 少婦白潔 (全本) (作者/豺狼末日) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-26",
+        "forum": "371",
+        "tid": "2598647",
+        "title": "[武侠]百花盛放(全本)(作者：紫屋魔恋)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-26",
+        "forum": "371",
+        "tid": "2598654",
+        "title": "[武侠]水之吟(全本)(作者：紫屋魔恋)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-26",
+        "forum": "371",
+        "tid": "2598666",
+        "title": "[武侠]雪山情迷(全本)(作者：紫屋魔恋)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-27",
+        "forum": "371",
+        "tid": "2599139",
+        "title": "[武侠]十年孤剑沧海盟(全本)(作者：武林樵子)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-11-27",
+        "forum": "371",
+        "tid": "2599220",
+        "title": "[武侠]欲望塔(全本)(作者：优孟衣冠)[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "whz123123",
+        "date": "2009-11-27",
+        "forum": "371",
+        "tid": "2600714",
+        "title": "【玄幻】折翼天使（全本）作者：江鱼【TXT/JAR/UMD】",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-28",
+        "forum": "371",
+        "tid": "2601294",
+        "title": "[玄幻] 九流術士 (第一部) (全本) (作者/michanll&amp;英雄) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-28",
+        "forum": "371",
+        "tid": "2601396",
+        "title": "[ＳＭ] 朱顏血 (全本) (作者/多人) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-28",
+        "forum": "371",
+        "tid": "2601626",
+        "title": "[玄幻] 女神的詭計 (全本) (作者/鳥人) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-28",
+        "forum": "371",
+        "tid": "2601797",
+        "title": "[玄幻]风月大陆(全本)(作者：端木)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-28",
+        "forum": "371",
+        "tid": "2601808",
+        "title": "[玄幻]苍穹之怒(全本)(作者：紫狂)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "southcross",
+        "date": "2009-11-28",
+        "forum": "371",
+        "tid": "2601813",
+        "title": "[都市]寒潭鹤影(全本)(作者：紫狂)[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-29",
+        "forum": "371",
+        "tid": "2605114",
+        "title": "[穿越] 半步多慾望傳說 (第一部) (全本) (作者/骷髏精靈/阿苦) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-29",
+        "forum": "371",
+        "tid": "2605744",
+        "title": "[都市] 溝女物語 (全本) (作者/Sunray) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-29",
+        "forum": "371",
+        "tid": "2606106",
+        "title": "[玄幻] 龍戰士外傳 (全本) (作者/半隻青蛙) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-29",
+        "forum": "371",
+        "tid": "2606144",
+        "title": "[都市] 鐵漢 (全本) (作者/失落) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-29",
+        "forum": "371",
+        "tid": "2606162",
+        "title": "[玄幻] 永恆國度之喋血鴛鴦 (全本) (作者/天堂裏的土) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-29",
+        "forum": "371",
+        "tid": "2606186",
+        "title": "[穿越] 一個太監闖後宮 (全本) (作者/風中嘯) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-30",
+        "forum": "371",
+        "tid": "2606245",
+        "title": "[武俠] 魔女天嬌 (全本) (作者/潛龍) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-11-30",
+        "forum": "371",
+        "tid": "2608061",
+        "title": "[玄幻] 風姿物語前傳 (又名風姿物語Ｈ版) (全本) (作者/羅森) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-12-1",
+        "forum": "371",
+        "tid": "2610144",
+        "title": "[乡村]童年+静静的辽河(全本)(作者：老张）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-12-1",
+        "forum": "371",
+        "tid": "2610165",
+        "title": "[都市]阿庆淫传修订版(全本)(作者：不详）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-12-1",
+        "forum": "371",
+        "tid": "2610186",
+        "title": "[都市]左手上天堂 右手下地狱(全本)(作者：lixi2007）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-12-2",
+        "forum": "371",
+        "tid": "2612416",
+        "title": "[都市] 風神記(又名風流神風流記) (全本) (作者/小峰峰) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-12-2",
+        "forum": "371",
+        "tid": "2612448",
+        "title": "[同人] 封神奪豔記 (全本) (作者/風流龍哥) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-12-2",
+        "forum": "371",
+        "tid": "2613293",
+        "title": "[穿越] 戲遊尋秦 (全本) (作者/老羅) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-12-2",
+        "forum": "371",
+        "tid": "2613329",
+        "title": "[ＳＭ] 來自未來 (全本) (作者/冒一下泡泡) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-12-2",
+        "forum": "371",
+        "tid": "2613682",
+        "title": "[武侠]绛阙虹飞(全本)(作者：武陵樵子 )[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-12-2",
+        "forum": "371",
+        "tid": "2613764",
+        "title": "[都市]丹药大亨(全本)(作者：飘荡的云 )[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-12-3",
+        "forum": "371",
+        "tid": "2616009",
+        "title": "[ＳＭ] 憐卿甘為身下奴 (全本) (作者/泓羽) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-12-3",
+        "forum": "371",
+        "tid": "2616416",
+        "title": "[武侠]绣衣云鬓(全本)(作者：花间浪子 )[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "xiao77720",
+        "date": "2009-12-4",
+        "forum": "371",
+        "tid": "2617030",
+        "title": "[都市]补习班姻缘(全本)(作者：次郎 )[TXT/JAR/UMD]",
+        "type": ""
+    },
+    {
+        "author": "038580395",
+        "date": "2009-12-4",
+        "forum": "371",
+        "tid": "2618416",
+        "title": "[都市]玄女经2 [全本][TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-12-5",
+        "forum": "371",
+        "tid": "2619492",
+        "title": "[都市] 執子之手＋續集死生契闊 (全本) (作者/極品雅詞) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-12-7",
+        "forum": "371",
+        "tid": "2624611",
+        "title": "[武俠] 四海龍女 (全本) (作者/夢秋痕) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-12-7",
+        "forum": "371",
+        "tid": "2624642",
+        "title": "[都市] 縱欲四海 (全本) (作者/還珠) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-12-7",
+        "forum": "371",
+        "tid": "2624815",
+        "title": "[都市] 梅花三女俠 (全本) (作者/wldr1234) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "wei8609",
+        "date": "2009-12-7",
+        "forum": "371",
+        "tid": "2626825",
+        "title": "【都市】山麓百货商店[典藏版]  作者：风流且非所愿 [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-12-7",
+        "forum": "371",
+        "tid": "2627083",
+        "title": "[都市]西苑魅影(全本)(作者：小手）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "luojf791",
+        "date": "2009-12-7",
+        "forum": "371",
+        "tid": "2627095",
+        "title": "[都市]男人四十风花雪(全本)(作者：l阳光）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-12-8",
+        "forum": "371",
+        "tid": "2627371",
+        "title": "[都市] 墮落之王 (全本) (作者/說劍) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-12-16",
+        "forum": "371",
+        "tid": "2649153",
+        "title": "[都市] 出軌 (全本) (作者/C600) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-12-16",
+        "forum": "371",
+        "tid": "2649184",
+        "title": "[ＳＭ] 逃出人販窩 (全本) (作者/飛花縛柳) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-12-19",
+        "forum": "371",
+        "tid": "2657309",
+        "title": "[武俠] 書劍恩仇錄續 (全本) (作者/福麒麟) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-12-19",
+        "forum": "371",
+        "tid": "2657323",
+        "title": "[武俠] 書劍恩仇錄後傳 (全本) (作者/藺石) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "我是大尾巴狼",
+        "date": "2009-12-20",
+        "forum": "371",
+        "tid": "2661523",
+        "title": "[淫荡人妻]老婆的情色生活（全本）[TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-12-30",
+        "forum": "371",
+        "tid": "2687189",
+        "title": "[都市] 男醫(又名婦科男醫) (全本) (作者/蕭九) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-12-30",
+        "forum": "371",
+        "tid": "2687852",
+        "title": "[改編] 楊家將薛家將 (全本) (作者/不詳) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2009-12-30",
+        "forum": "371",
+        "tid": "2688191",
+        "title": "[亂倫] 絕色家族 (全本) (主編/老色) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "mujayway",
+        "date": "2010-1-11",
+        "forum": "371",
+        "tid": "2720936",
+        "title": "[都市] 风流教师ZⅡ (全本) (作者/獨孤尋歡) [TXT/UMD/JAR]",
+        "type": ""
+    },
+    {
+        "author": "江南大刀",
+        "date": "2011-7-9",
+        "forum": "371",
+        "tid": "3947794",
+        "title": "[都市]《红颜至尊》[作者:水之寒]",
+        "type": ""
+    },
+    {
+        "author": "scar",
+        "date": "2011-8-13",
+        "forum": "371",
+        "tid": "4018953",
+        "title": "[都市]《穿行在人妻丛林》[作者:空姐姐][TXT/UMD]",
+        "type": ""
+    },
+    {
+        "author": "江南大刀",
+        "date": "2011-8-18",
+        "forum": "371",
+        "tid": "4029248",
+        "title": "[都市]《华丽人生》[作者:zzzzz6228866][TXT]",
+        "type": ""
+    },
+    {
+        "author": "blueburst",
+        "date": "2011-9-30",
+        "forum": "371",
+        "tid": "4104100",
+        "title": "[都市]《可爱女友和她的家人被轮奸调教》[作者:draguns88][TXT/JAR]",
+        "type": ""
+    },
+    {
+        "author": "shuixiaoking",
+        "date": "2011-10-10",
+        "forum": "371",
+        "tid": "4116499",
+        "title": "[都市]《金麟岂是池中物》[作者:monkey][EPUB]",
+        "type": ""
+    },
+    {
+        "author": "65457800",
+        "date": "2011-10-12",
+        "forum": "371",
+        "tid": "4119267",
+        "title": "[都市]《熟女情怀的归属》[作者:aa1456][TXT/UMD]",
+        "type": ""
+    },
+    {
+        "author": "th69ty",
+        "date": "2011-10-20",
+        "forum": "371",
+        "tid": "4129721",
+        "title": "[都市]《一千零一夜2010年&amp;2011年》[作者:抱残等]",
+        "type": ""
+    },
+    {
+        "author": "www52826",
+        "date": "2011-10-25",
+        "forum": "371",
+        "tid": "4139517",
+        "title": "[都市]《凌辱兽》[作者:未知]",
+        "type": ""
+    },
+    {
+        "author": "lwj77cn",
+        "date": "2011-10-27",
+        "forum": "371",
+        "tid": "4142004",
+        "title": "[都市]《我荒唐的乱欲生活》[作者:风迹]",
+        "type": ""
+    },
+    {
+        "author": "xxvs",
+        "date": "2011-10-30",
+        "forum": "371",
+        "tid": "4146333",
+        "title": "[奇幻]《圣女修道院》[作者：风中啸][TXT/EPUB]",
+        "type": ""
+    },
+    {
+        "author": "yanghuixs2008",
+        "date": "2011-10-30",
+        "forum": "371",
+        "tid": "4146748",
+        "title": "[都市]《王家贞的性奴生活》[作者:不详]",
+        "type": ""
+    },
+    {
+        "author": "wangtao511",
+        "date": "2011-11-6",
+        "forum": "371",
+        "tid": "4158477",
+        "title": "[合集]《一千零一夜2003-2011典藏版）作者：多人",
+        "type": ""
+    },
+    {
+        "author": "不超过七个汉子",
+        "date": "2012-2-24",
+        "forum": "371",
+        "tid": "4306227",
+        "title": "[都市]《少妇白洁》（第01-15章）[作者:豺狼末日][apk]",
+        "type": ""
+    },
+    {
+        "author": "不超过七个汉子",
+        "date": "2012-2-24",
+        "forum": "371",
+        "tid": "4306240",
+        "title": "[都市]《金鳞岂是池中物全收集(正文+外传)》[作者：Monkey][apk]",
+        "type": ""
+    },
+    {
+        "author": "不超过七个汉子",
+        "date": "2012-2-24",
+        "forum": "371",
+        "tid": "4306251",
+        "title": "[都市]《竹叶青成人小说全收集》[作者：竹叶青][apk]",
+        "type": ""
+    }
+]

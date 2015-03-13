@@ -18,8 +18,18 @@ void MyMenu::endProgram() {
 }
 void MyMenu::hideAndShow()
 {
-    DanmuWindow::instance->hide();
-    DanmuWindow::instance->show();
+    static bool showflag = true;
+    if (showflag) {
+
+        DanmuWindow::instance->hide();
+        showflag = false;
+    }
+    else {
+
+        DanmuWindow::instance->show();
+        showflag = true;
+        DanmuWindow::instance->addOneDebugInfor(myTr("打开弹幕显示"));
+    }
 }
 
 void MyMenu::startDectecting()

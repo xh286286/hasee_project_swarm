@@ -28,7 +28,7 @@ AutoThankGift::AutoThankGift(QObject *parent) :
 
 
 void AutoThankGift::dealPresent(QJsonObject jo) {
-    assert( jo["cmdid"].toString() == "Gift.Use");
+    //assert( jo["cmdid"].toString() == "Gift.Use");
     QJsonObject data = jo["data"].toObject();
     QString nickname = data["nickname"].toString();
     QString gift = data["name"].toString();

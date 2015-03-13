@@ -1,0 +1,74 @@
+
+  // 房间信息
+  window.oPageConfig.oRoom = {"id":"317","uid":"113289","nickname":"御园麻由mayu","gender":"1",
+  "avatar":"http:\/\/pic.cdn.zhanqi.tv\/avatar\/88\/5ba\/113289_1407665344.jpg",
+  "code":"11392","domain":"mayu","url":"\/mayu",
+  "title":"【麻由】锁锁锁锁 索尼爱我~！",
+  "gameId":"6",
+  "spic":"http:\/\/dlpic.cdn.zhanqi.tv\/\/live\/20150106\/317_4vefy_2015-01-06-21-04-44.jpg",
+  "bpic":"http:\/\/dlpic.cdn.zhanqi.tv\/\/live\/20150106\/317_4vefy_2015-01-06-21-04-44_big.jpg",
+  "template":"","online":"52","status":"0","level":"2","type":"1","liveTime":"0","userGroup":"1","allowRecord":"0","allowVideo":"0",
+  "publishUrl":"dlrtmp","videoId":"317_4vefy","chatStatus":"1","roomNotice":null,
+  "roomDesc":"<div style=\"text-align:center;\">\r\n\t<span style=\"line-height:1.5;\"><span style=\"font-size:24px;\">DOTA2 数字ID 124169520<\/span><\/span> \r\n<\/div>\r\n<p style=\"text-align:center;\">\r\n\t<span style=\"color:#e53333;font-size:32px;\"><strong>已送出 私人御医你倒是给我地址呀！<\/strong><\/span> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<img alt=\"\" src=\"http:\/\/pic.cdn.zhanqi.tv\/room_desc\/317\/20141218133455_80138.png\" \/> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><span style=\"font-size:16px;\"><span style=\"color:#e53333;font-size:24px;\"><span style=\"color:#4c33e5;font-size:24px;\">点歌测试中~<br \/>\r\n”勇者“才可以点歌<br \/>\r\n点歌方法：<br \/>\r\n在弹幕中输入 “点歌+歌名”（不需要加+号直接打歌名）<br \/>\r\n歌名中的空格以下划线_代替<\/span><\/span><\/span><\/strong><\/strong> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><span style=\"font-size:16px;\"><span style=\"color:#e53333;font-size:24px;\"><span style=\"color:#4c33e5;font-size:24px;\">如: 点歌let_it_go<br \/>\r\n要指定点歌版本请加上歌手名<br \/>\r\n<br \/>\r\n<\/span><\/span><\/span><\/strong><\/strong> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><span style=\"font-size:16px;\"><span style=\"color:#e53333;font-size:24px;\"><span style=\"color:#4c33e5;font-size:24px;\">送10个顶<br \/>\r\n再输入\" 切歌+任意数字“就可以切掉当前播放歌曲<\/span><\/span><\/span><\/strong><\/strong> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><span style=\"font-size:16px;\"><span style=\"color:#e53333;font-size:24px;\"><span style=\"color:#4c33e5;font-size:24px;\">如：切歌45498<br \/>\r\n<br \/>\r\n有些歌百度播放器搜索不到可能会无法播放~<br \/>\r\n<br \/>\r\n一首歌结束后 下一首歌 是最后一个点歌的人点的<br \/>\r\n<\/span><\/span><\/span><\/strong><\/strong> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><span style=\"font-size:16px;\"><span style=\"color:#e53333;font-size:24px;\"><span style=\"color:#003399;font-size:24px;\"><span style=\"color:#4c33e5;\"><\/span><\/span><br \/>\r\n<\/span><\/span><\/strong><\/strong> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><span style=\"font-size:16px;\"><span style=\"color:#e53333;font-size:24px;\">直播交流群<\/span><\/span><\/strong> <\/strong> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><span style=\"font-size:16px;\"><span style=\"color:#e53333;font-size:24px;\">①<\/span><span style=\"line-height:29px;font-style:normal;font-family:微软雅黑,Tahoma,宋体;color:#e53333;font-size:24px;vertical-align:top;font-weight:normal;\" id=\"group_number\" class=\"group_number\">310439712<\/span><br \/>\r\n<\/span><\/strong><\/strong> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><span style=\"font-size:16px;\"><span style=\"color:#e53333;font-size:24px;\">②<\/span><span style=\"line-height:29px;font-style:normal;font-family:微软雅黑,Tahoma,宋体;color:#e53333;font-size:24px;font-weight:normal;\">264234518<\/span><\/span><\/strong> <\/strong> \r\n<\/p>\r\n<p>\r\n\t<strong><strong><span style=\"font-size:16px;\"><span style=\"line-height:29px;font-style:normal;font-family:微软雅黑,Tahoma,宋体;color:#e53333;font-size:24px;font-weight:normal;\"><\/span><\/span><\/strong><\/strong> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><span style=\"background-color:#e53333;\"><span style=\"background-color:#ee33ee;\"><span style=\"line-height:29px;font-style:normal;font-family:微软雅黑,Tahoma,宋体;color:#ffffff;font-size:14px;\"><span style=\"background-color:#ffffff;color:#e53333;\"><strong>新浪微博<\/strong><\/span> <a href=\"http:\/\/weibo.com\/u\/1811348532\/\" target=\"_blank\"><span style=\"background-color:#ffffff;color:#e53333;\"><strong>http:\/\/weibo.com\/u\/1811348532\/<\/strong><\/span><\/a><\/span><\/span><\/span> <\/strong><\/strong> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><br \/>\r\n<span style=\"background-color:#e53333;\"><span style=\"background-color:#ee33ee;\"><span style=\"line-height:29px;font-style:normal;font-family:微软雅黑,Tahoma,宋体;color:#ffffff;font-size:14px;\"><span style=\"background-color:#ffffff;color:#e53333;\"><strong><\/strong><\/span><\/span><\/span><\/span><\/strong><\/strong> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong>战旗girls萌妹团 友情链接~<\/strong><\/strong> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><\/strong><\/strong> \r\n<\/p>\r\n<p>\r\n\t<strong><strong><br \/>\r\n<img src=\"file:\/\/C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\%W@GJ$ACOF(TYDYECOKVDYB.png\" \/>草莓味的 &nbsp;<a href=\"http:\/\/www.zhanqi.tv\/icecreamrei\" target=\"_blank\">http:\/\/www.zhanqi.tv\/icecreamrei<\/a>&nbsp;冰淇林<br \/>\r\n<\/strong><\/strong><strong><strong>团里胸最大的&nbsp;<a href=\"http:\/\/www.zhanqi.tv\/huamituan\" target=\"_blank\">http:\/\/www.zhanqi.tv\/huamituan<\/a> 花米&nbsp;<\/strong><\/strong> \r\n<\/p>\r\n<p>\r\n\t<strong><strong>贫乳合法萝莉&nbsp;<img src=\"file:\/\/C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\%W@GJ$ACOF(TYDYECOKVDYB.png\" \/><a href=\"http:\/\/www.zhanqi.tv\/chacha\" target=\"_blank\">http:\/\/www.zhanqi.tv\/chacha<\/a>&nbsp;绿茶&nbsp;<\/strong><\/strong> \r\n<\/p>\r\n<p>\r\n\t<br \/>\r\n<\/p>\r\n<strong><strong><br \/>\r\n<\/strong><\/strong> \r\n<p>\r\n\t<br \/>\r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<br \/>\r\n<\/p>\r\n<div align=\"center\">\r\n\t<p>\r\n\t\t<span style=\"color:#ff9900;font-size:16px;\"><strong>全宇宙最可爱的逗比<\/strong><\/span> \r\n\t<\/p>\r\n\t<p>\r\n\t\t<span style=\"color:#ff9900;font-size:16px;\"><strong>核心技能：卖萌 核心装备：猫耳<\/strong><\/span> \r\n\t<\/p>\r\n\t<p>\r\n\t\t<span style=\"color:#ff9900;font-size:16px;\"><strong>除了可爱简直一无是处嘛！<\/strong><\/span> \r\n\t<\/p>\r\n\t<p>\r\n\t\t<span style=\"color:#ff9900;font-size:16px;\"><strong><img alt=\"\" src=\"http:\/\/ww1.sinaimg.cn\/mw690\/6bf6fc34gw1ejwef866ypg20b40b4b2b.gif\" \/><\/strong><\/span> \r\n\t<\/p>\r\n\t<p>\r\n\t\t<span style=\"color:#ff9900;font-size:16px;\"><strong><img alt=\"\" src=\"http:\/\/ww1.sinaimg.cn\/mw690\/6bf6fc34gw1ejweh36927g207i06lh4t.gif\" width=\"400\" height=\"348\" \/><\/strong><\/span> \r\n\t<\/p>\r\n\t<p>\r\n\t\t<span style=\"color:#ff9900;font-size:16px;\"><strong><img alt=\"\" src=\"http:\/\/ww1.sinaimg.cn\/mw690\/6bf6fc34gw1ejwego9y48g20c80ashdt.gif\" width=\"401\" height=\"353\" \/><br \/>\r\n<\/strong><\/span> \r\n\t<\/p>\r\n\t<p>\r\n\t\t<span style=\"color:#ff9900;font-size:16px;\"><strong><br \/>\r\n<\/strong><\/span> \r\n\t<\/p>\r\n\t<p>\r\n\t\t<br \/>\r\n\t<\/p>\r\n<\/div>\r\n<br \/>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><strong><span style=\"font-size:16px;\">艾欧尼亚 <br \/>\r\n<\/span><\/strong><\/strong><\/strong> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><strong><span style=\"font-size:16px;\">ID 60亿宇宙美少女（新改的昵称）<\/span><\/strong> <\/strong><\/strong> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><span style=\"color:#e53333;\"><span style=\"background-color:#ffffff;\"><span style=\"font-size:14px;\"><span style=\"font-size:16px;\"><strong>彩笔塑料分段解说<\/strong><\/span><\/span><\/span><\/span> <\/strong><\/strong> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><span style=\"color:#ff9900;\"><span style=\"background-color:#ffffff;color:#ff9900;\"><span style=\"color:#ff9900;font-size:14px;\"><span style=\"color:#ff9900;font-size:16px;\"><strong>断腿流小师妹<\/strong><\/span><\/span><\/span><\/span> <\/strong><\/strong> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><span style=\"background-color:#ffffff;color:#64451d;font-size:14px;\"><strong>基佬们口下留情否则 一发毒♂针伺候~！<\/strong><\/span> <\/strong><\/strong> \r\n<\/p>\r\n<p>\r\n\t<strong><strong><span style=\"background-color:#ffffff;color:#64451d;font-size:14px;\"><strong><\/strong><\/span><\/strong><\/strong> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><strong><span style=\"color:#006600;font-size:14px;\"><strong>新浪微博和直播交流群恭候大家~^ ^<\/strong><\/span> <\/strong><\/strong><\/strong> \r\n<\/p>\r\n<p style=\"text-align:center;\">\r\n\t<strong><strong><span style=\"color:#006600;font-size:14px;\"><strong><span style=\"color:#009900;\">读了18年高三终于毕业的暑假档<\/span><\/strong><\/span> <\/strong><\/strong> \r\n<\/p>\r\n<strong> \r\n<div style=\"text-align:center;\">\r\n\t<strong><strong><span style=\"color:#006600;font-size:14px;\"><strong><span style=\"color:#009900;\">如无意外每晚8点直播~<\/span><\/strong><\/span><\/strong><\/strong> \r\n<\/div>\r\n<p style=\"text-align:center;\">\r\n\t<br \/>\r\n<\/p>\r\n<div style=\"text-align:center;\">\r\n\t<br \/>\r\n<\/div>\r\n<p style=\"text-align:center;\">\r\n\t<br \/>\r\n<\/p>\r\n<br \/>\r\n<p>\r\n\t<br \/>\r\n<\/p>\r\n<\/strong>",
+  "roomCover":"http:\/\/pic.cdn.zhanqi.tv\/room_cover\/fe588c2eedf10ea2f7c4edf78368a677.jpg",
+  "roomCoverType":"1","addTime":"2014-06-18 15:34:44","gameName":"英雄联盟",
+  "gameUrl":"\/games\/lol",
+  "gameIcon":"http:\/\/dlpic.cdn.zhanqi.tv\/uploads\/2014\/08\/gameicon-2014080620003509205.png",
+  "gameBpic":"http:\/\/dlpic.cdn.zhanqi.tv\/uploads\/2014\/12\/gamebpic-2014123115571990338.jpeg",
+  "videoIdKey":"317_4vefy",
+  "permission":{"fans":true,"guess":false,"replay":false,"multi":false,"shift":false},"fansTitle":"勇者",
+  "flashvars":{"Servers":"eyJsb2ciOnsiaXAiOiIxMTMuMzEuODcuODYiLCJwb3J0IjoxNTAwMX0sImxpc3QiOlt7ImlwIjoiMTEzLjMxLjg3Ljg2IiwicG9ydCI6MTUwMTAsImNoYXRyb29tX2lkIjoyLCJpZCI6Mn0seyJpcCI6IjE4Mi45Mi4xMDQuMjI1IiwicG9ydCI6MTUwMTAsImNoYXRyb29tX2lkIjoxMSwiaWQiOjExfSx7ImlwIjoiMTgyLjkyLjY4LjIyMSIsInBvcnQiOjE1MDEwLCJjaGF0cm9vbV9pZCI6MTIsImlkIjoxMn0seyJpcCI6IjExNS4yOS4xNjcuMTc5IiwicG9ydCI6MTUwMTAsImNoYXRyb29tX2lkIjoyMSwiaWQiOjIxfSx7ImlwIjoiMTE0LjIxNS4xNzkuMjE4IiwicG9ydCI6MTUwMTAsImNoYXRyb29tX2lkIjoyMiwiaWQiOjIyfSx7ImlwIjoiMTE1LjI5LjE3Mi42IiwicG9ydCI6MTUwMTAsImNoYXRyb29tX2lkIjoyMywiaWQiOjIzfSx7ImlwIjoiMTE1LjI5LjE2OS4yMjgiLCJwb3J0IjoxNTAxMCwiY2hhdHJvb21faWQiOjI0LCJpZCI6MjR9LHsiaXAiOiIxMTUuMjkuMTQ0LjI0MSIsInBvcnQiOjE1MDEwLCJjaGF0cm9vbV9pZCI6MjYsImlkIjoyNn0seyJpcCI6IjExNS4yOC4zMi43IiwicG9ydCI6MTUwMTAsImNoYXRyb29tX2lkIjoyNywiaWQiOjI3fSx7ImlwIjoiMTE0LjIxNS4xMzkuMzgiLCJwb3J0IjoxNTAxMCwiY2hhdHJvb21faWQiOjI4LCJpZCI6Mjh9LHsiaXAiOiIxMjEuNDIuMTAuMjIzIiwicG9ydCI6MTUwMTAsImNoYXRyb29tX2lkIjoyOSwiaWQiOjI5fSx7ImlwIjoiMTgyLjkyLjE0OS4yNSIsInBvcnQiOjE1MDEwLCJjaGF0cm9vbV9pZCI6MzEsImlkIjozMX0seyJpcCI6IjE4Mi45Mi4yMzEuMTY2IiwicG9ydCI6MTUwMTAsImNoYXRyb29tX2lkIjozMiwiaWQiOjMyfSx7ImlwIjoiMTgyLjkyLjIyMC4xMzkiLCJwb3J0IjoxNTAxMCwiY2hhdHJvb21faWQiOjMzLCJpZCI6MzN9LHsiaXAiOiIxMjMuNTYuODYuMjU0IiwicG9ydCI6MTUwMTAsImNoYXRyb29tX2lkIjozNCwiaWQiOjM0fV19",
+  "ServerIp":[],"ServerPort":[],"ChatRoomId":[],"NetToolUrl":"http:\/\/qpftp.bianfeng.com\/zhanqi\/tool.zip",
+  "VideoUrl":"rtmp:\/\/dlrtmp.cdn.zhanqi.tv\/zqlive","VideoID":"317_4vefy",
+  "UseDlReview":1,
+  "VideoLevels":"eyJtdWxyYXRlIjpbWyJkbF9saXZlIiwicnRtcCIsIjMxN180dmVmeSIsIkxJVkUiLCIwIiwxLCIiXV0sInJldmlldyI6W1siZGxfcmV2aWV3IiwiaGxzIiwiMzE3XzR2ZWZ5Lm0zdTgiLCJMSVZFIiwiMCIsMSwiIl1dLCJtdWxyYXRlSGxzIjpbWyJkbF9saXZlIiwiaGxzIiwiMzE3XzR2ZWZ5Lm0zdTgiLCJMSVZFIiwiMCIsMSwiIl1dfQ==",
+  "cdns":"eyJ2aWQiOiIzMTdfNHZlZnkiLCJicm9jYXN0IjoiMCIsImNkbnMiOiIxMXw0Mnw2MSIsInJhdGUiOiIiLCJyZXZpZXciOiIxMyJ9",
+  "Status":0,"RoomId":317,"ComLayer":true,
+  "VideoTitle":"【麻由】锁锁锁锁 索尼爱我~！",
+  "WebHost":"http:\/\/www.zhanqi.tv","VideoType":"LIVE"},
+  "anchorAttr":{"hots":{"name":"老虎1","level":"13","fight":"211303","nowLevelStart":"159000","nextLevelFight":"218000"}},"follows":1709};
+  window.bCloseLeft = true;
+  window.taskShareRoom = true;
+  var flagLiveRoom = true;
+  var noneGoTop = true;
+  var abTest = 0;
+  oPageConfig.oUrl.sGetViewInfoUrl = '/api/public/room.viewer';
+  oPageConfig.oUrl.sSetLiveStartUrl = '/api/anchor/live_user.startlive';
+  oPageConfig.oUrl.sSetLiveStopUrl = '/api/anchor/live_user.stoplive';
+  oPageConfig.oUrl.sLotteryUrl = '/api/anchor/lottery.simple';  // 抽奖地址
+  oPageConfig.oUrl.sGetLiveStatusUrl = '/api/anchor/live_user.getlivestatus';
+  oPageConfig.oUrl.sGetVideoForRecordUrl = '/api/anchor/replay.getvideolist';  // 视频列表
+  oPageConfig.oUrl.sRecordStopUrl = '/api/anchor/replay.stop';  // 结束重播
+  oPageConfig.oUrl.sGetRecordStatusUrl = '/api/anchor/replay.isreplay'; // 是否设置重播
+  oPageConfig.oUrl.sFansBeSignUrl = '/api/actives/signin/fans.status';  // 粉丝签到判断
+  oPageConfig.oUrl.sFansSignUrl = '/api/actives/signin/fans.sign';  // 粉丝签到判断
+  oPageConfig.oUrl.sFansweekrankUrl = '/api/static/room.fansweekrank/${roomId}-${count}.json?_t=${t}';
+  oPageConfig.oUrl.sCheckSlotmachineChange = '/api/actives/lottery/info.6';
+  oPageConfig.oUrl.sSlotmachineSubmit = '/api/actives/lottery/lottery.6';
+  window.flashReadyDtd = $.Deferred();
+
+
+{"log":{"ip":"113.31.87.86","port":15001},
+"list":[
+{"ip":"113.31.87.86","port":15010,"chatroom_id":2,"id":2},
+
+
+
+{"ip":"115.29.167.179","port":15010,"chatroom_id":21,"id":21},
+{"ip":"115.29.172.6","port":15010,"chatroom_id":23,"id":23},
+{"ip":"115.29.169.228","port":15010,"chatroom_id":24,"id":24},
+{"ip":"115.29.144.241","port":15010,"chatroom_id":26,"id":26},
+{"ip":"115.28.32.7","port":15010,"chatroom_id":27,"id":27},
+z
+{"ip":"114.215.179.218","port":15010,"chatroom_id":22,"id":22},
+{"ip":"114.215.139.38","port":15010,"chatroom_id":28,"id":28},
+
+{"ip":"121.42.10.223","port":15010,"chatroom_id":29,"id":29},
+
+{"ip":"182.92.149.25","port":15010,"chatroom_id":31,"id":31},
+{"ip":"182.92.231.166","port":15010,"chatroom_id":32,"id":32},
+{"ip":"182.92.220.139","port":15010,"chatroom_id":33,"id":33},
+{"ip":"182.92.104.225","port":15010,"chatroom_id":11,"id":11},
+{"ip":"182.92.68.221","port":15010,"chatroom_id":12,"id":12},
+
+{"ip":"123.56.86.254","port":15010,"chatroom_id":34,"id":34}]}

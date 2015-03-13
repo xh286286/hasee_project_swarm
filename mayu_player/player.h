@@ -85,6 +85,11 @@ signals:
 public slots:
     void getDanmu(QString s);
     void playNextSong();
+
+    QString getMp3UrlFrom163(QString query);
+    QString getMp3UrlFromBaidu(QString query);
+    QString getMp3UrlFromXiami(QString query);
+
 protected:
     void	closeEvent(QCloseEvent * event);
 private slots:
@@ -100,9 +105,6 @@ private slots:
     void metaDataChanged();
 
 
-
-    QString getMp3UrlFromBaidu(QString query);
-    QString getMp3UrlFromXiami(QString query);
 
     void previousClicked();
 

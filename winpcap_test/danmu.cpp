@@ -43,6 +43,8 @@ void Danmu::refresh(int count)
     while(animation.size()>1) animation.pop_back();
 
     double multi = log( level() * double(inc)) *10;
+    if (multi <1 ) multi = 1;
+    if (multi > 200) multi = 200;
     animation.push_back(new DanmuState(r,1, pWin->c_flowerLastTime * multi ));
 
     animation.push_back(ds);
@@ -80,6 +82,8 @@ void Danmu::init()
     }
     else {
         double multi = log( level() * double(inc))  *10;
+        if (multi <1 ) multi = 1;
+        if (multi > 200) multi = 200;
         animation.push_back(new DanmuState(r,1, pWin->c_flowerLastTime * multi ));
 
     }

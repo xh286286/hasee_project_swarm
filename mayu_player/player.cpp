@@ -163,6 +163,9 @@ Player::Player(QWidget *parent)
     connect(controls, SIGNAL(changeMuting(bool)), player, SLOT(setMuted(bool)));
     connect(controls, SIGNAL(changeRate(qreal)), player, SLOT(setPlaybackRate(qreal)));
 
+
+    controls->setVolume(50);
+    player->setVolume(50);
    // connect(controls, SIGNAL(stop()), videoWidget, SLOT(update()));
 
     connect(controls, SIGNAL(next()), this, SLOT(playNextSong()));
@@ -195,6 +198,8 @@ Player::Player(QWidget *parent)
     displayLayout->addWidget(playlistView2);
     QBoxLayout *controlLayout = new QHBoxLayout;
     controlLayout->setMargin(0);
+
+
 
     controlLayout->addWidget(acceptOrderButton);
     controlLayout->addStretch(1);

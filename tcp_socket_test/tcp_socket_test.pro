@@ -23,17 +23,21 @@ SOURCES += main.cpp \
     danmuconnection.cpp \
     ../share_library/httpfiledownloader.cpp \
     ../share_library/zhanqiutil.cpp \
-    ../share_library/Util.cpp
+    ../share_library/Util.cpp \
+    zhanqihttpconnection.cpp
 
 HEADERS += \
     danmuconnection.h \
     ../share_library/httpfiledownloader.h \
     ../share_library/zhanqiutil.h \
-    ../share_library/Util.h
+    ../share_library/Util.h \
+    zhanqihttpconnection.h
 
 OTHER_FILES += \
     connect.txt
 
 DISTFILES += \
     back.txt \
-    connection.txt
+    connection.txt \
+    http.txt \
+    ../zhanqi_video_record/room_info.txt

@@ -7,6 +7,7 @@
 #include <QDebug>
 #include <QTimer>
 #include <cassert>
+//#include <QCoreApplication>
 DanmuConnection::DanmuConnection(QObject *parent) :
     QObject(parent)
 {
@@ -17,12 +18,61 @@ DanmuConnection::DanmuConnection(QObject *parent) :
     QObject::connect(&keepaliveTimer, &QTimer::timeout,  this, &DanmuConnection::keepAlive);
     state = 0;
     debugFlag = false;
-
+    shutdownFlag = false;
     postDanmuTimer.start(3000);
-
+    danmuServerSeed = -1;
+    danmuServerPort  = 15010;
     QObject::connect(&postDanmuTimer, &QTimer::timeout,  this, &DanmuConnection::postDanmuWork);
 }
 
+
+bool DanmuConnection::viewRoom(QString room) {
+    this->room = room;
+    QString h = "http://zhanqi.tv/";
+
+    h+= room;
+
+    qDebug()<<room;
+
+    while(true) {
+
+        HttpFileDownloader hfd;
+        bool ok = hfd.sycGetPageFromURL(QUrl(h));
+        if (!ok) continue;
+        QString re = hfd.getPage();
+
+
+        if (re.size() <1000) continue;
+        int x = re.indexOf("uid");
+
+        if (x<0) {
+            //QCoreApplication::processEvents();
+            qDebug()<<"get room info failed !!!";
+            continue;
+        }
+        int a,b,c,d;
+        a=re.indexOf(":",x);
+        b=re.indexOf(",",x);
+        c=re.lastIndexOf(":",x);
+        d=re.lastIndexOf(",",x);
+        QString s1,s2;
+        s1 = re.mid(a+2,b-a-3);
+        s2 = re.mid(c+2,d-c-3);
+
+        if (debugFlag) qDebug()<< "get room info " <<s1<<' '<<s2;
+        uid = s1;
+        id = s2;
+
+        break;
+    }
+    return true;
+}
+void DanmuConnection::login(QString name, QString pass) {
+    username  = name ;
+    password = pass;
+
+    work1();
+}
 
 void DanmuConnection::login(QString name, QString pass, QString uid, QString id) {
     username  = name ;
@@ -32,6 +82,10 @@ void DanmuConnection::login(QString name, QString pass, QString uid, QString id)
 
     work1();
 
+}
+void DanmuConnection::reboot() {
+    if (debugFlag) qDebug()<<"reboot";
+    work1();
 }
 
 void DanmuConnection::work1() {
@@ -71,6 +125,69 @@ void DanmuConnection::work2() {
 
     hfd->postFromURL(u,ba, 10000);
 }
+QStringList DanmuConnection::getDanmuSeverListFromNet() {
+
+    QString h = "http://zhanqi.tv/mayu";
+
+    int trycount = 4;
+    while(true) {
+        if (trycount  <= 0) {
+            qDebug()<< " load danmu server list from net  failed!!!!!";
+            return  QStringList();
+        }
+        qDebug()<<"get danmu server list from net ";
+        trycount --;
+
+        HttpFileDownloader hfd;
+        bool ok = hfd.sycGetPageFromURL(QUrl(h));
+        if (!ok) continue;
+        QString re = hfd.getPage();
+
+        if (re.size() <1000) continue;
+        int x = re.indexOf("\"Servers\":\"");  //1;
+        int y = re.indexOf("\"", x+30);
+
+
+        if (x<0) {
+            //QCoreApplication::processEvents();
+            qDebug()<<"get danmu server list from net failed !!!";
+            continue;
+        }
+
+        QString s1 ;
+        s1 = re.mid(x+11, y-x-11);
+        //qDebug()<< "get  danmu server base64  " <<s1 ;
+
+        QByteArray s2 = QByteArray::fromBase64(s1.toLatin1());
+        //qDebug()<< "get  danmu server json  " <<s2 ;
+
+
+        QJsonDocument jd = QJsonDocument::fromJson(s2);
+        //qDebug()<< "get  danmu server json object " <<jd ;
+
+        QJsonObject jo = jd.object();
+        QJsonArray ja = jo["list"].toArray();
+
+        qDebug()<< "danmu server number "<< ja.size();
+
+        if (ja.size()<5) {
+            qDebug()<<"get not enough danmu server list from net !!!";
+            return QStringList();
+        }
+        QStringList rel;
+        QJsonArray ja1;
+        for (int i=0; i<ja.size(); i++) {
+            rel.push_back(ja[i].toObject()["ip"].toString());
+            ja1.push_back(rel[i]);
+        }
+
+        jd = QJsonDocument(ja1);
+        saveJsonFile("danmuServer.json",jd);
+
+        return rel;
+    }
+    return QStringList();
+}
 
 
 QStringList DanmuConnection::getDanmuSeverList() {
@@ -84,10 +201,14 @@ QStringList DanmuConnection::getDanmuSeverList() {
 
         QJsonArray ja = jd.array();
         qDebug()<<ja;
+        QSet<QString > pool;
         for (int i=0; i<ja.size(); i++) {
-            danmuSeverList.push_back( ja[i].toString());
+            QString s = ja[i].toString();
+            if (pool.contains(s)) continue;
+            pool.insert(s);
+            danmuSeverList.push_back(s);
         }
-        if (danmuSeverList.size() ==0) danmuSeverList.push_back("115.29.172.6");
+        if (danmuSeverList.size() ==0) danmuSeverList.push_back("115.29.169.228");
         qDebug()<<danmuSeverList;
     }
     return danmuSeverList;
@@ -107,11 +228,22 @@ void DanmuConnection::work3() {
 
     static QStringList danmuSeverList = getDanmuSeverList();
 
-        static int danmuSeverIndex = 0;
-    QString severName = danmuSeverList[ danmuSeverIndex % danmuSeverList.size() ];
-    danmuSeverIndex++;
-    ts->connectToHost(severName ,15010);
-    qDebug()<<"connect to "<<severName;
+    static int danmuSeverIndex = 0;
+
+    int index;
+
+    if (danmuServerSeed<0) {
+        index = danmuSeverIndex;
+        danmuSeverIndex++;
+    }
+    else {
+        index = danmuServerSeed;
+    }
+
+    QString severName = danmuSeverList[ index % danmuSeverList.size() ];
+
+    ts->connectToHost(severName ,danmuServerPort);
+    qDebug()<<"connect to "<<severName <<" "<< danmuServerPort<<" "<< QTime::currentTime().toString();
     //182.92.104.225
     if (debugFlag) qDebug()<<"connect  danmu sever!!";
 }
@@ -166,10 +298,58 @@ void DanmuConnection::postDanmuWork() {
 
 
 }
+void DanmuConnection::sendRoses() {
+    if (state != 5) {
+        qDebug()<< "error  action while not state 5 !!!";
+        return;
+    }
+//    71   QJsonObject({"cmdid":"rosebro","cnt":6,"name":"天蝎10000","rank":47})
+//    QJsonObject({"cmdid":"rosebro","cnt":6,"name":"天蝎10000","rank":47})
+    //QJsonObject({"cmdid":"roseuse","code":0,"message":""})
+    QJsonObject jo;
+    jo["cmdid"] = QString("roseuse");
+    jo["code"] = 0;
+    jo["message"] = QString( myTr(""));
+
+
+   if (debugFlag)  qDebug()<< "try";
+
+
+    writeSocketData(2,jo);
+}
+
+void DanmuConnection::sendGift(int pid, int count) {
+//    顶 3
+//    QJsonObject({"cmdid":"Gift.Use","count":1,"pid":3})
+//    溜 1
+//    锅 4
+    if (state != 5) {
+        qDebug()<< "error  action while not state 5 !!!";
+        return;
+    }
+    if (pid !=1 && pid != 3 && pid!=4) {
+        qDebug()<<"wrong gift code";
+        return;
+    }
+    QJsonObject jo;
+    jo["cmdid"] = QString("Gift.Use");
+    jo["count"] = count;
+    jo["pid"] =pid;
+
+    jo["uid"] = uid;
+   if (debugFlag)  qDebug()<< "try";
+
+
+    writeSocketData(2,jo);
+
+}
+
 void DanmuConnection::blockUser(QString name, int uid, int action) {
     //if (debugFlag) qDebug()<<state;
-    if (state != 5) return;
-
+    if (state != 5) {
+        qDebug()<< "error  action while not state 5 !!!";
+        return;
+    }
  //   QJsonObject({"action":1,"cmdid":"blockuser","ip":"111.8.57.138","msg":"111","nam
  //   e":"九千万亿电竞女神","type":1,"uid":100305463})
 
@@ -205,7 +385,7 @@ void DanmuConnection::getSocketInfo() {
         work4();
         return;
     }
-    connectionTimeout.start(40000);
+    connectionTimeout.start(60000);
     state = 5;
     QByteArray ba = ts->readAll();
     //qDebug()<<ba;
@@ -232,6 +412,7 @@ void DanmuConnection::getSocketInfo() {
             if (debugFlag) qDebug()<<cache.length()<<' '<<jo;
         }
         else {
+           if (debugFlag) qDebug()<<cache.length()<<' '<<jo<<' '<<QTime::currentTime();
            // keepAlive();
         }
 
@@ -253,11 +434,22 @@ void DanmuConnection::getHttpInfo() {
     if (debugFlag) qDebug()<<hfd->getPage();
     if (state == 1) {
         loginJo =  QJsonDocument::fromJson(hfd->getPage()) .object();
+
+        if (password != "" ) {
+            if (loginJo["code"].isNull() || loginJo["code"].toInt() !=0)     {
+
+                work1();
+            }
+        }
+
         work2();
     }
     else if (state ==2) {
         roomviewerJo = QJsonDocument::fromJson(hfd->getPage()) .object();
 
+        if ( roomviewerJo["code"].isNull() ||  roomviewerJo["code"].toInt() !=0) {
+            work1();
+        }
         work3();
     }
 }
@@ -284,8 +476,9 @@ int get16(const char * s) {
 }
 
 void DanmuConnection::keepAlive() {
-    //if (debugFlag) qDebug()<<state<<' ' <<" keepalive";
     if (state != 5) return  ;
+
+    //if (debugFlag) qDebug()<<state<<' ' <<" keepalive";
     writeSocketData(3,QJsonObject());
 }
 

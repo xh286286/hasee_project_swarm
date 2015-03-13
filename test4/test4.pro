@@ -11,18 +11,9 @@ QT += widgets network
 TARGET = test4
 CONFIG   += console
 CONFIG   -= app_bundle
+CONFIG += c++11
 
 TEMPLATE = app
 
 
-SOURCES += main.cpp \
-    ../share_library/httpfiledownloader.cpp \
-    ../share_library/Util.cpp \
-    ../share_library/zhanqiutil.cpp \
-    ../tcp_socket_test/danmuconnection.cpp
-
-HEADERS += \
-    ../share_library/httpfiledownloader.h \
-    ../share_library/Util.h \
-    ../share_library/zhanqiutil.h \
-    ../tcp_socket_test/danmuconnection.h
+SOURCES += main.cpp

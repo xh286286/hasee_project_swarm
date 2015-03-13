@@ -24,6 +24,42 @@ HttpFileDownloader::~HttpFileDownloader()
     //_reply->deleteLater();
     _downloadManager->deleteLater();
 }
+
+bool    HttpFileDownloader::sycPostFromURL(const QUrl &url, QByteArray ba,  int timeout) {
+    bool flag = postFromURL(url,ba, timeout);
+    assert(flag);
+
+    QTime t;
+    t.start();
+    while(true) {
+        {
+            QMutexLocker l(&replyMutex);
+            if (!_reply->isRunning())break;
+
+        }
+        QCoreApplication::processEvents();
+        if (t.elapsed()>timeout) {
+            qDebug()<<"timeout";
+            _reply->deleteLater();
+            return "timeout";
+        }
+    }
+
+    //qDebug()<<"rece   time spend " << t.elapsed();
+
+    if (_reply->error() != QNetworkReply::NoError) {
+        QString loadresult = "error code " + QString::number( _reply->error());
+
+
+        qDebug()<<loadresult;
+        _reply->deleteLater();
+        return false;
+    }
+            //qDebug()<<_reply->rawHeaderList();
+    _reply->deleteLater();
+    return true;
+}
+
 bool    HttpFileDownloader::sycGetPageFromURL(const QUrl &url,  int timeout )
 {
     bool flag = getPageFromURL(url,timeout);
@@ -59,6 +95,84 @@ bool    HttpFileDownloader::sycGetPageFromURL(const QUrl &url,  int timeout )
     _reply->deleteLater();
     return true;
 }
+
+
+bool    HttpFileDownloader::postFromRequset(const QNetworkRequest &req,  QByteArray ba,  int timeout  ) {
+
+
+    _errno = QNetworkReply::NoError;
+    pageContent = "";
+    fileFlag = false;
+    okflag = false;
+    this->timeout = timeout;
+    _timeOut->stop();
+    _timeOut->start(timeout);
+    /* confirm the url is valid or not */
+//    if (!url.isValid())
+//    {
+//        setErrorMessage(QString("Error:URL has specify a invalid name."));
+//        return false;
+//    }
+
+//    if (url.scheme() != "http")
+//    {
+//        setErrorMessage(QString("Error:URL must start with 'http:'"));
+//        return false;
+//    }
+
+//    if (url.path().isEmpty())
+//    {
+//        setErrorMessage(QString("Error:URL's path is empty."));
+//        return false;
+//    }
+
+
+    _url = req.url();
+
+    _reply = _downloadManager->post(req, ba);
+    connect(_reply, SIGNAL(readyRead()), this, SLOT(slotReadyRead()));
+    connect(_reply, SIGNAL(downloadProgress(qint64, qint64)), this, SLOT(replayDownloadProgress(qint64, qint64)));
+    connect(_reply, SIGNAL(error(QNetworkReply::NetworkError)), this, SLOT(slotError(QNetworkReply::NetworkError)));
+//    connect(_reply, SIGNAL(readyRead()), this, SLOT(readBuffer()));
+    return true;
+}
+
+bool    HttpFileDownloader::sycPostFromRequset(const QNetworkRequest &req,  QByteArray ba,  int timeout ) {
+
+    bool flag = postFromRequset(req,ba, timeout);
+    assert(flag);
+
+    QTime t;
+    t.start();
+    while(true) {
+        {
+            QMutexLocker l(&replyMutex);
+            if (!_reply->isRunning())break;
+
+        }
+        QCoreApplication::processEvents();
+        if (t.elapsed()>timeout) {
+            qDebug()<<"timeout";
+            _reply->deleteLater();
+            return "timeout";
+        }
+    }
+
+    //qDebug()<<"rece   time spend " << t.elapsed();
+
+    if (_reply->error() != QNetworkReply::NoError) {
+        QString loadresult = "error code " + QString::number( _reply->error());
+
+
+        qDebug()<<loadresult;
+        _reply->deleteLater();
+        return false;
+    }
+            //qDebug()<<_reply->rawHeaderList();
+    _reply->deleteLater();
+    return true;
+}
+
 bool    HttpFileDownloader::postFromURL(const QUrl &url, QByteArray ba,  int timeout) {
     _errno = QNetworkReply::NoError;
     pageContent = "";
@@ -89,11 +203,73 @@ bool    HttpFileDownloader::postFromURL(const QUrl &url, QByteArray ba,  int tim
 
     _url = url;
 
-    _reply = _downloadManager->post(QNetworkRequest(url), ba);
+    QNetworkRequest req(url);
+
+    req.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+    req.setHeader(QNetworkRequest::UserAgentHeader,"User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36");
+
+    _reply = _downloadManager->post(req, ba);
     connect(_reply, SIGNAL(readyRead()), this, SLOT(slotReadyRead()));
     connect(_reply, SIGNAL(downloadProgress(qint64, qint64)), this, SLOT(replayDownloadProgress(qint64, qint64)));
     connect(_reply, SIGNAL(error(QNetworkReply::NetworkError)), this, SLOT(slotError(QNetworkReply::NetworkError)));
 //    connect(_reply, SIGNAL(readyRead()), this, SLOT(readBuffer()));
+    return true;
+}
+bool    HttpFileDownloader::getPageFromRequest(const QNetworkRequest &req,  int timeout ) {
+    _errno = QNetworkReply::NoError;
+    pageContent = "";
+    fileFlag = false;
+    okflag = false;
+    this->timeout = timeout;
+    _timeOut->stop();
+    _timeOut->start(timeout);
+    /* confirm the url is valid or not */
+
+
+
+    _url = req.url();
+
+
+    _reply = _downloadManager->get(req);
+    connect(_reply, SIGNAL(readyRead()), this, SLOT(slotReadyRead()));
+    connect(_reply, SIGNAL(downloadProgress(qint64, qint64)), this, SLOT(replayDownloadProgress(qint64, qint64)));
+    connect(_reply, SIGNAL(error(QNetworkReply::NetworkError)), this, SLOT(slotError(QNetworkReply::NetworkError)));
+//    connect(_reply, SIGNAL(readyRead()), this, SLOT(readBuffer()));
+    return true;
+}
+
+bool    HttpFileDownloader::sycGetPageFromRequest(const QNetworkRequest &req,   int timeout  ) {
+    bool flag = getPageFromRequest(req,timeout);
+    assert(flag);
+
+    QTime t;
+    t.start();
+    while(true) {
+        {
+            QMutexLocker l(&replyMutex);
+            if (!_reply->isRunning())break;
+
+        }
+        QCoreApplication::processEvents();
+        if (t.elapsed()>timeout) {
+            qDebug()<<"timeout";
+            _reply->deleteLater();
+            return "timeout";
+        }
+    }
+
+    //qDebug()<<"rece   time spend " << t.elapsed();
+
+    if (_reply->error() != QNetworkReply::NoError) {
+        QString loadresult = "error code " + QString::number( _reply->error());
+
+
+        qDebug()<<loadresult;
+        _reply->deleteLater();
+        return false;
+    }
+            //qDebug()<<_reply->rawHeaderList();
+    _reply->deleteLater();
     return true;
 }
 
@@ -128,7 +304,12 @@ bool    HttpFileDownloader::getPageFromURL(const QUrl &url,  int timeout  )
 
     _url = url;
 
-    _reply = _downloadManager->get(QNetworkRequest(url));
+    QNetworkRequest req(url);
+
+    req.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+    req.setHeader(QNetworkRequest::UserAgentHeader,"User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36");
+
+    _reply = _downloadManager->get(req);
     connect(_reply, SIGNAL(readyRead()), this, SLOT(slotReadyRead()));
     connect(_reply, SIGNAL(downloadProgress(qint64, qint64)), this, SLOT(replayDownloadProgress(qint64, qint64)));
     connect(_reply, SIGNAL(error(QNetworkReply::NetworkError)), this, SLOT(slotError(QNetworkReply::NetworkError)));
@@ -180,7 +361,12 @@ bool HttpFileDownloader::getFileFromURL(const QUrl &url, const QString &filePath
     _url = url;
     _filePath = filePath;
 
-    _reply = _downloadManager->get(QNetworkRequest(url));
+    QNetworkRequest req(url);
+
+    req.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+    req.setHeader(QNetworkRequest::UserAgentHeader,"User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36");
+
+    _reply = _downloadManager->get(req);
     _reply->setReadBufferSize(100000000);
     connect(_reply, SIGNAL(readyRead()), this, SLOT(slotReadyRead()));
     connect(_reply, SIGNAL(downloadProgress(qint64, qint64)), this, SLOT(replayDownloadProgress(qint64, qint64)));

@@ -8,7 +8,7 @@
 #include <QNetworkReply>
 #include <QTimer>
 #include <QProgressBar>
-
+#include <QNetworkRequest>
 class HttpFileDownloader : public QObject
 {
 Q_OBJECT
@@ -19,6 +19,13 @@ public:
     bool    getPageFromURL(const QUrl &url,  int timeout = 20000);
     bool    postFromURL(const QUrl &url, QByteArray ba,  int timeout = 20000);
     bool    sycGetPageFromURL(const QUrl &url,  int timeout = 20000);
+    bool    sycPostFromURL(const QUrl &url, QByteArray ba,  int timeout = 20000);
+
+    bool    getPageFromRequest(const QNetworkRequest &req,  int timeout = 20000);
+    bool    sycGetPageFromRequest(const QNetworkRequest &req,   int timeout = 20000);
+    bool    postFromRequset(const QNetworkRequest &req,  QByteArray ba,  int timeout = 20000);
+    bool    sycPostFromRequset(const QNetworkRequest &req,  QByteArray ba,  int timeout = 20000);
+
     bool downloadOK() const { return okflag;}
     qint64 getFileLength() const { return dataLength;}
     const QString &getLastErrorMessage(); /* if error occurs, use this to get the error message */

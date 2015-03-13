@@ -37,3 +37,13 @@ e":"九千万亿电竞女神","type":1,"uid":100305463})
 
 QJsonObject({"action":0,"cmdid":"blockuser","hash":"hash_0","ip":"111.8.57.138",
 "name":"九千万亿电竞女神","type":1,"uid":100305463})
+
+顶 3
+QJsonObject({"cmdid":"Gift.Use","count":1,"pid":3})
+溜 1
+锅 4
+
+
+
+QJsonObject({"cmdid":"rosebro","cnt":6,"name":"天蝎10000","rank":47})
+QJsonObject({"cmdid":"roseuse","code":0,"message":""})

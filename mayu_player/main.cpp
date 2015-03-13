@@ -81,6 +81,7 @@ int main(int argc, char *argv[])
 
 
     Player player;
+    //player.getMp3UrlFrom163(myTr("小鸡哔哔"));
     QIcon ico(QString(":/ico/scorpio3.ico"));
     player.setWindowIcon(ico);
    // QObject::connect(& (mc), &MessageCenter::globalHotkey, [&](UINT, UINT){  player.playNextSong(); qDebug()<<"hotkey play next song";   });

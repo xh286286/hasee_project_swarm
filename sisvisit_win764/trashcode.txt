@@ -1,0 +1,87 @@
+﻿    //r.setRawHeader("Proxy-Authorization","Basic bGl4dWZlbmcuaG46bWVuZ2U2NTEyMTk=");
+    //r.setRawHeader("Proxy-Connection","keep-alive");
+    //r.setRawHeader("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
+    //r.setRawHeader("User-Agent","Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36");
+    //r.setRawHeader("Accept-Encoding","gzip,deflate,sdch");
+    //r.setRawHeader("Accept-Language","zh-CN,zh;q=0.8");
+    //r.setRawHeader("","");
+
+
+//    QObject::connect(a, SIGNAL(error(QNetworkReply::NetworkError)), this, SLOT(visiterror(QNetworkReply::NetworkError)));
+//    QObject::connect(a, SIGNAL(downloadProgress(qint64 , qint64 )), this, SLOT(downloadProgress(qint64 , qint64 )));
+
+
+    /*loadresult = sendquest(url);
+    int a0 = loadresult.indexOf(myTr("现在将转入登录前页面"));
+    if (a0>=0) {
+        outputInfor( ("已经登陆,请勿重复登陆"));
+        loginmutex.unlock();
+        return;
+    }
+    int a1 = loadresult.indexOf("name=\"formhash\"");
+    if (a1<0) {
+        outputInfor( ("无法访问指定页面,请检查网络, 或者检查IP地址 "));
+        //outputInfor( Util::host.toLocal8Bit().data());
+        outputInfor( Util::host);
+        loginmutex.unlock();
+        return;
+    }
+    a1 = loadresult.indexOf("value",a1);
+    a1+=7;
+    hashcode = loadresult.mid(a1,8);
+    outputInfor("hashcode ");
+    //outputInfor(hashcode.toLocal8Bit().data());
+    outputInfor(hashcode);
+*/
+
+
+
+void MainWindow::test2()
+{
+    return;
+    int a[17] = {322, 383, 359, 390, 403, 391,  454, 278, 387, 415, 366, 385, 368,  402,  307,  405, 371};
+    for (int i=0; i<17; i++) {
+        QJsonDocument jd;
+        QString s = "forum";
+        s+=QString::number(a[i]);
+        s+=".txt";
+        MainWindow::outputInfor("loadfile");
+        MainWindow::outputInfor(s);
+        FileCenter::load(s,jd);
+        SisThread::read(jd.array());
+    }
+
+
+
+    KeywordSet::filterKeyword();
+    AuthorSet::filterAuthor();
+
+    KeywordSet::buildAllRefer();
+    AuthorSet::buildAllRefer();
+
+    KeywordSet::buildAllDepthRefer();
+    AuthorSet::buildAllDepthRefer();
+
+    QJsonArray a1,a2;
+    KeywordSet::write(a1);
+    AuthorSet::write(a2);
+
+    FileCenter::save("k1.txt", QJsonDocument(a1));
+    FileCenter::save("k2.txt", QJsonDocument(a2));
+
+    int count = 0;
+    for (auto i = KeywordSet::pool.begin(); i!= KeywordSet::pool.end(); i++) {
+        if ((*i) -> qualify()) count++;
+    }
+    qDebug()<< "keywordset qualify "<<count;
+
+    count = 0;
+    for (auto i = AuthorSet::pool.begin(); i!= AuthorSet::pool.end(); i++) {
+        if ((*i) -> qualify()) count++;
+    }
+    qDebug()<< "authorset qualify "<<count;
+
+}
+
+
+

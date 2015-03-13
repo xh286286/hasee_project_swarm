@@ -14,6 +14,7 @@ UserBank::UserBank(QObject *parent) :
 }
 int UserBank::evaluateGift(QString u)
 {
+    if (u == myTr("duang")) return 1;
     if (u == myTr("顶")) return 1;
     if (u == myTr("锅")) return 1;
     if (u == myTr("溜")) return 1;
@@ -59,8 +60,10 @@ bool UserBank::load()
         QJsonObject b = a[i].toObject();
         record[b["name"].toString()] = b["money"].toInt();
     }
-    record[myTr("天蝎1000")] = 10000000;
-    record[myTr("天蝎10000")] = 10000000;
+    record[myTr("麻由の天蝎1000")] = 10000000;
+    record[myTr("麻由の天蝎10000")] = 10000000;
+    record[myTr("麻由の天蝎1000000")] = 10000000;
+
     return true;
 }
 
