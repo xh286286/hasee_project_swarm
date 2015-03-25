@@ -153,6 +153,9 @@ QJsonArray NetworkUtil::getPosterListPid(QString tid, int n, QString jobfile)
         qDebug()<< "supplement " << total+1 << "total "<< n;
         QString page;
         while(! sendreply(tid,message,0,&page))  {}
+
+        waitMillisec(31000);
+
         total++;
         int t = page.toInt() * 10 - 9;
         if (total < t) total = t;

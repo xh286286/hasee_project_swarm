@@ -125,9 +125,12 @@ int main(int argc, char *argv[])
                 t.stop();;
                 return;
             }
-            if (d.day()==18) t.start(60000);
+            if (d.day()==18) {
+                t.start(60000);
+                return;
+            }
             //qDebug()<<"test";
-            QString s = myTr("{\"chatid\":\"8526706110\",\"cmdid\":\"chatmessage\",\"content\":\"点歌祝你生日快乐\",\"fromid\":1709988274,\"fromname\":\"天蝎1000\",\"fromuid\":359887,\"intotallist\":0,\"inweeklist\":0,\"ip\":\"101.254.181.34\",\"level\":0,\"permission\":30,\"rank\":\"primary\",\"showmedal\":1,\"speakinroom\":1,\"style\":null,\"time\":\"20:49\",\"toid\":0,\"usexuanzi\":0}");
+            QString s = myTr("{\"chatid\":\"8526706110\",\"cmdid\":\"chatmessage\",\"content\":\"点歌生日快乐\",\"fromid\":1709988274,\"fromname\":\"天蝎1000\",\"fromuid\":359887,\"intotallist\":0,\"inweeklist\":0,\"ip\":\"101.254.181.34\",\"level\":0,\"permission\":30,\"rank\":\"primary\",\"showmedal\":1,\"speakinroom\":1,\"style\":null,\"time\":\"20:49\",\"toid\":0,\"usexuanzi\":0}");
             player.danmuHistory.push_back(s);
 
             player.playNextSong();

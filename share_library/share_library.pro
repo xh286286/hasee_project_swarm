@@ -4,12 +4,12 @@
 #
 #-------------------------------------------------
 
-QT       += core
+QT       += core network widgets
 
 QT       -= gui
 
 TARGET = share_library
-CONFIG   += console
+CONFIG   += console c++11
 CONFIG   -= app_bundle
 
 TEMPLATE = app
@@ -19,10 +19,12 @@ SOURCES += main.cpp \
     httpfiledownloader.cpp \
     messagecenter.cpp \
     Util.cpp \
-    zhanqiutil.cpp
+    zhanqiutil.cpp \
+    xhdebuglog.cpp
 
 HEADERS += \
     httpfiledownloader.h \
     messagecenter.h \
     Util.h \
-    zhanqiutil.h
+    zhanqiutil.h \
+    xhdebuglog.h

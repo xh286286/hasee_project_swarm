@@ -76,7 +76,10 @@ DanmuWindow::DanmuWindow(QWidget *parent) :
     password = getGlobalParameterString("secretary_password","aabbeaabbe");
 
 
-
+//    uid = "100007714";
+//    id = "1378";
+//    user = "";
+//    password = "";
 
 
     danmuConnectionPool.push_back( new DanmuConnection);
@@ -211,7 +214,7 @@ void DanmuWindow::dealOneMessage(QJsonObject a, QString sss)
         //qDebug()<<b["anchorname"].toString()<<endl;
         //qDebug()<<b["anchorname"].toString().toUtf8().toPercentEncoding()<<endl;
         //qDebug()<<myTr("御园麻由mayu").toUtf8().toPercentEncoding()<<endl;
-        //"/alyssasearrs"
+        //"/alyssasearrs"   /huamituan
         if (b["url"].toString() !="/mayu") return;
 
         if (!checkDuplicated(b["curexp"].toString() + "curexp" )) return;

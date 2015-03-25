@@ -127,7 +127,10 @@ int main(int argc, char *argv[])
                 t.stop();;
                 return;
             }
-            if (d.day()==18) t.start(60000);
+            if (d.day()==18)  {
+                t.start(60000);
+                return;
+            }
             danmu_win.addOneDebugInfor(myTr("天蝎祝麻由生日快乐"));
             waitMillisec(200);
 

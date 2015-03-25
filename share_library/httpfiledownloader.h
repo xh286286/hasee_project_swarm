@@ -7,13 +7,13 @@
 #include <QFile>
 #include <QNetworkReply>
 #include <QTimer>
-#include <QProgressBar>
+//#include <QProgressBar>
 #include <QNetworkRequest>
 class HttpFileDownloader : public QObject
 {
 Q_OBJECT
 public:
-    explicit HttpFileDownloader(QObject *parent = 0, QProgressBar *_progressBar = 0);
+    explicit HttpFileDownloader(QObject *parent = 0 );
     ~HttpFileDownloader();
     bool    getFileFromURL(const QUrl &url, const QString &filePath, int timeout = 20000); /* get file from url which we need to download, and restore to filePath */
     bool    getPageFromURL(const QUrl &url,  int timeout = 20000);
@@ -57,7 +57,7 @@ private:
     QString _errMsg;
     QNetworkReply::NetworkError _errno;
     QFile    _file;
-    QProgressBar *_progressBar;
+    //QProgressBar *_progressBar;
     QTimer        *_timeOut;
     QString _filePath;
     QUrl    _url;

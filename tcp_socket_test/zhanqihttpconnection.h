@@ -21,12 +21,16 @@ public:
 
     void setUser(QString user, QString password);
     void login();
-    void viewRoom();
+    void viewRoom(QString room);
+    bool debugFlag;
 signals:
 
 public slots:
 
 private:
+    HttpFileDownloader * hfd;
+
+    QJsonObject loginJo, roomviewerJo;
     QString user, password;
     QJsonObject userInfo;
 

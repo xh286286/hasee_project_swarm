@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core
+QT       += core network
 
 QT       -= gui
 
@@ -15,7 +15,8 @@ CONFIG   -= app_bundle
 TEMPLATE = app
 
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    ../share_library/httpfiledownloader.cpp
 
 OTHER_FILES += \
     212.txt \
@@ -26,3 +27,6 @@ DISTFILES += \
     3333.txt \
     room_info.txt \
     5555.txt
+
+HEADERS += \
+    ../share_library/httpfiledownloader.h

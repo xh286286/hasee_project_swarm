@@ -9,8 +9,8 @@
 #include <QMutexLocker>
 QMutex replyMutex;
 
-HttpFileDownloader::HttpFileDownloader(QObject *parent, QProgressBar *bar) :
-    QObject(parent), _progressBar(bar)
+HttpFileDownloader::HttpFileDownloader(QObject *parent ) :
+    QObject(parent)
 {
     _downloadManager = new QNetworkAccessManager(this);
     _timeOut = new QTimer(this);
@@ -459,11 +459,11 @@ void HttpFileDownloader::replayDownloadProgress(qint64 done, qint64 total) /* do
   //      qDebug()<<QString("%1%").arg(a);
         lastStep +=10;
     }
-    if ((0 != _progressBar) && (0 != total))
-    {
-        _progressBar->setMaximum(total);
-        _progressBar->setValue(done);
-    }
+//    if ((0 != _progressBar) && (0 != total))
+//    {
+//        _progressBar->setMaximum(total);
+//        _progressBar->setValue(done);
+//    }
 }
 
 void HttpFileDownloader::readBuffer()

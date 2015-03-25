@@ -99,7 +99,7 @@ int work3() {
 
 //1396","uid":"359887
     DanmuConnection dc,dc1,dc2,dc3,dc4,dc5;
-    dc.debugFlag = true;
+    dc1.debugFlag = true;
 
     //QString room = "scorpio";
     QString room = "mayu";
@@ -108,10 +108,10 @@ int work3() {
     while(! dc.viewRoom(room));
     //dc.login("aabbdaabbd","aabbcaabbc");
 
-    dc.login("","");
+   // dc.login("","");
 
-//    while(! dc1.viewRoom(room));
-//    dc1.login("aabbeaabbe","aabbdaabbd");
+   while(! dc1.viewRoom(room));
+    dc1.login("aabbiaabbi","aabbhaabbh");
 
 //    while(! dc2.viewRoom(room));
 //    dc2.login("aabbiaabbi","aabbhaabbh");

@@ -27,7 +27,7 @@ public:
 
     bool busy();
     bool debugFlag;
-
+    bool cookieLoginFlag;
     bool shutdownFlag;
 
     QList<QJsonObject> getALLMess() {  auto a = infoPool; infoPool.clear(); return a; }
@@ -38,6 +38,8 @@ protected slots:
     void getSocketInfo();
     void socketError(QAbstractSocket::SocketError se);
     void dealError();
+
+    void noinfoError();
 
     void postDanmuWork();
 public slots:
@@ -72,6 +74,8 @@ private:
 
     QSet<QString > historyMessage;
     QList< QJsonObject> infoPool;
+
+    QMap<QString, QString> cookieMap;
 
     QList<QString> danmuPool;
 

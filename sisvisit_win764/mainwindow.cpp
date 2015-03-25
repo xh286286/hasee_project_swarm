@@ -588,12 +588,42 @@ void fasongpost() {
     NetworkUtil::sendquest(QUrl("http://174.127.195.201/bbs/misc.php?action=rate&inajax=1"), &data);
 
 }
+void cangjingetongji() {
+    qDebug()<< "tong ji cangjingge";
+       {
+        int a = 405;
+        QJsonDocument jd;
+        QString s = "forum";
+        s+=QString::number(a);
+        s+=".txt";
+        MainWindow::outputInfor("loadfile");
+        MainWindow::outputInfor(s);
+        FileCenter::load(s,jd);
+        SisThread::read(jd.array());
+    }
+    auto x = SisThread::pool.keys();
+    QString s;
+    for (int i=0; i< x.size(); i++) {
+        auto y = SisThread::pool[x[i]];
+        s+=y->postString();
+        s+="\n";
+    }
+
+    QFile file("tongji123.txt");
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text))             return ;
+
+    QTextStream out(&file);
+
+    out << s;
+    qDebug()<< "end tong ji";
+}
 
 void MainWindow::test4()
 {
     MyMutexLocker mml2("mainwindowtest4",1000);
     if (!mml2.success()) return;
-    tongjitiezi();
+    //tongjitiezi();
+    cangjingetongji();
  }
 void MainWindow::robfloor()
 {
